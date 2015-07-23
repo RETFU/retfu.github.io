@@ -5,7 +5,7 @@ author:
   url: http://fabienfuret.net
 output: index.html
 controls: true
-style: style.css
+style: assets/style.css
 
 --
 
@@ -19,6 +19,11 @@ style: style.css
 * Maux de dos chroniques
 * Augmente les risques d’infarctus, d’obésité etc…
 * Passivité
+--
+
+### Mise en place
+
+![Schema](assets/schema.png)
 
 --
 
@@ -30,11 +35,17 @@ style: style.css
 
 --
 
-### Cheap mais efficace!
+# Cheap mais efficace!
 
 --
 
-### 1ère semaine
+--
+
+--
+
+# 1ère semaine
+
+--
 
 --
 
@@ -48,7 +59,9 @@ style: style.css
 
 --
 
-### 3 mois après
+# 3 mois après
+
+--
 
 --
 
@@ -64,7 +77,7 @@ style: style.css
 ### Conseils
 
 * Il faut alterner ~70% debout et ~30% assis
-* Profitez des coups de fil, lecture de mail, de tweet pour s’asseoir
+* Profitez des coups de fil, des mails, des tweets pour s’asseoir
 * Bougez, ça donne un rythme quand on code
 * Ecouter son corps
 * Investir dans un desk electrique

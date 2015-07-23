@@ -1,0 +1,73 @@
+/*
+overriding basic theme
+ */
+body {
+	font-size: 3em;
+}
+
+.slide-content {
+	font-size: 0.9em;
+	width: 980px;
+  height:780px;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+h2 {
+  font-size: 1.3em;
+}
+
+h3 {
+  font-size: 1.2em;
+
+
+}
+
+ul {
+  line-height: 2em;
+}
+
+.author h1 {
+  font-size: 1em;
+}
+
+.author h3 {
+  font-size: 0.7em;
+}
+
+pre {
+  font-size: 0.7em;
+}
+
+/*
+Slides
+ */
+#slide-3 img   {
+  display:block;
+  margin:auto;
+}
+
+#slide-6   {
+  background: url('assets/slide3.jpg');
+  background-size: cover;
+}
+
+#slide-7   {
+  background: url('assets/slide3b.jpg');
+  background-size: cover;
+}
+
+#slide-9   {
+  background: url('assets/slide4.jpg');
+  background-size: cover;
+  color: #eee;
+}
+
+#slide-12 {
+  background: url('assets/giphy.gif');
+  background-position: center center;
+  background-size: cover;
+  color: #eee;
+}

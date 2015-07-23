@@ -1,11 +1,15 @@
-# Talk REST in peace
+# REST in peace 
 
 ...
 
-## Usage
+###  Installation
 
-...
+```bash
+npm install -g cleaver
+```
 
-## Installation
+### Usage
 
-...
+```bash
+cleaver talk.md
+```

@@ -396,75 +396,94 @@ pre .chunk {
 overriding basic theme
  */
 body {
-	font-size: 3em;
+	font-size: 2.5em;
 }
 
 .slide-content {
 	font-size: 0.9em;
 	width: 980px;
-  height:780px;
+	height:780px;
+	margin-top:40px;
 }
 
 h1 {
-  font-size: 2em;
+	font-size: 2em;
 }
 
 h2 {
-  font-size: 1.3em;
+	font-size: 1.3em;
 }
 
 h3 {
-  font-size: 1.2em;
+	font-size: 1.2em;
 
 
 }
 
 ul {
-  line-height: 2em;
+	line-height: 1.8em;
 }
 
+blockquote {
+	padding: 0 15px;
+	color: #777;
+	border-left: 4px solid #ddd;
+	margin: 0px;
+}
+
+table {
+	padding: 0; 
+	border-collapse: collapse;
+	width:100%;
+}
+	table tr {
+		border-top: 1px solid #cccccc;
+		background-color: white;
+		margin: 0;
+		padding: 0; 
+ }
+		table tr:nth-child(2n) {
+			background-color: #f8f8f8; 
+		}
+		table tr th {
+			font-weight: bold;
+			border: 1px solid #cccccc;
+			text-align: left;
+			margin: 0;
+			padding: 10px 17px; 
+		}
+		table tr td {
+			border: 1px solid #cccccc;
+			text-align: left;
+			margin: 0;
+			padding: 10px 17px; 
+		}
+		table tr th :first-child, table tr td :first-child {
+			margin-top: 0; 
+		}
+		table tr th :last-child, table tr td :last-child {
+			margin-bottom: 0; 
+		}
+
 .author h1 {
-  font-size: 1em;
+	font-size: 1em;
 }
 
 .author h3 {
-  font-size: 0.7em;
-}
-
-pre {
-  font-size: 0.7em;
+	font-size: 0.7em;
 }
 
 /*
 Slides
  */
-#slide-3 img   {
-  display:block;
-  margin:auto;
+#slide-8 table {
+	font-size: 0.6em;
 }
 
-#slide-6   {
-  background: url('assets/slide3.jpg');
-  background-size: cover;
+#slide-9 table {
+	font-size: 0.6em;
 }
 
-#slide-7   {
-  background: url('assets/slide3b.jpg');
-  background-size: cover;
-}
-
-#slide-9   {
-  background: url('assets/slide4.jpg');
-  background-size: cover;
-  color: #eee;
-}
-
-#slide-12 {
-  background: url('assets/giphy.gif');
-  background-position: center center;
-  background-size: cover;
-  color: #eee;
-}
   </style>
 </head>
 <body>
@@ -476,10 +495,180 @@ Slides
     <section class="slide-content"><h1 id="rest-in-peace">REST in peace</h1>
 </section>
   </div>
-  <div class="slide hidden" id="slide-2">
-    <section class="slide-content"></section>
+  <div class="slide hidden  " id="slide-2">
+    <section class="slide-content"><h3 id="les-bases-1-x-">Les Bases (1/x)</h3>
+<ul>
+<li>SSL </li>
+<li>UTF-8 partout</li>
+<li>Versionner via l&#39;URL: <a href="https://api.domain.com/v2">https://api.domain.com/v2</a><blockquote>
+<p>Max 2 versions en prod sinon c&#39;est ingérable
+<br/>Via Header <code>Accept: application/json; version=2</code></p>
+</blockquote>
+</li>
+</ul>
+</section>
   </div>
   <div class="slide hidden" id="slide-3">
+    <section class="slide-content"><h3 id="qu-est-ce-que-rest-1-x-">Qu&#39;est-ce que REST? (1/x)</h3>
+<ul>
+<li>CRUD HTTP</li>
+<li>Stateless</li>
+</ul>
+</section>
+  </div>
+  <div class="slide hidden" id="slide-4">
+    <section class="slide-content"><h3 id="qu-est-ce-que-rest-1-x-">Qu&#39;est-ce que REST? (1/x)</h3>
+<p>Modèle de maturité de Richardson</p>
+<ul>
+<li>Level1: les ressources</li>
+<li>Level2: verbes et code erreur HTTP</li>
+<li>Level3: hypermédia</li>
+</ul>
+</section>
+  </div>
+  <div class="slide hidden" id="slide-5">
+    <section class="slide-content"><h3 id="les-bases-1-x-">Les Bases (1/x)</h3>
+<p>URI = <a href="https://api.domain.com/v2/items/5">https://api.domain.com/v2/items/5</a> </p>
+<p>Ressource = <a href="https://api.domain.com/v2/">https://api.domain.com/v2/</a> <strong>items/5</strong></p>
+<p>Représentation</p>
+<pre><code class="lang-json">{
+  "<span class="attribute">id</span>": <span class="value"><span class="number">7856</span></span>,
+  "<span class="attribute">name</span>": <span class="value"><span class="string">"Jo"</span></span>,
+  "<span class="attribute">age</span>": <span class="value"><span class="number">18</span></span>,
+  "<span class="attribute">isGeek</span>": <span class="value"><span class="literal">true</span>
+  ...
+}</span></code></pre>
+</section>
+  </div>
+  <div class="slide hidden" id="slide-6">
+    <section class="slide-content"><h3 id="les-bases-1-x-">Les Bases (1/x)</h3>
+<p><br/></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>String</td>
+<td>Encodée en UTF-8</td>
+</tr>
+<tr>
+<td>Integer</td>
+<td>Entier signé en 32-bit ou 64-bit</td>
+</tr>
+<tr>
+<td>Float</td>
+<td>Nombre flottant signé en 32-bit ou 64-bit</td>
+</tr>
+<tr>
+<td>Boolean</td>
+<td>true ou false</td>
+</tr>
+<tr>
+<td>Date</td>
+<td><strong>UTC</strong> et au format <a href="https://en.wikipedia.org/wiki/ISO_8601">ISO8601</a><br/><code>2015-07-31T20:00:01Z</code></td>
+</tr>
+</tbody>
+</table>
+</section>
+  </div>
+  <div class="slide hidden" id="slide-7">
+    <section class="slide-content"><h3 id="ressources-1-x-">Ressources (1/x)</h3>
+<ul>
+<li>API REST expose des ressources</li>
+<li>Ne reflète pas forcément votre modèle de donnée</li>
+<li>Toujours au pluriel</li>
+<li>Nommé avec des - ou des _</li>
+<li>les ids sont des UUID</li>
+</ul>
+</section>
+  </div>
+  <div class="slide hidden" id="slide-8">
+    <section class="slide-content"><h3 id="ressources-1-x-">Ressources (1/x)</h3>
+<p>HTTP est le socle qui nous permet d&#39;interragir avec nos ressources.</p>
+<table>
+<thead>
+<tr>
+<th>URL</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GET /items</td>
+<td>Liste d&#39;item</td>
+</tr>
+<tr>
+<td>GET /items/1782</td>
+<td>Item 1782</td>
+</tr>
+<tr>
+<td>POST /items</td>
+<td>Creation d&#39;un nouvel item</td>
+</tr>
+<tr>
+<td>PUT /items</td>
+<td>Mise à jour de plusieurs items</td>
+</tr>
+<tr>
+<td>PUT /items/1782</td>
+<td>Mise à jour de l&#39;item 1782</td>
+</tr>
+<tr>
+<td><strong>PATCH</strong> /items/1782</td>
+<td>Mise à jour partielle de l&#39;item 1782</td>
+</tr>
+<tr>
+<td>DELETE /items/1782</td>
+<td>Suppression de l&#39;item 1782</td>
+</tr>
+</tbody>
+</table>
+</section>
+  </div>
+  <div class="slide hidden" id="slide-9">
+    <section class="slide-content"><h3 id="ressources-1-x-">Ressources (1/x)</h3>
+<p>Nos ressources ont parfois des relations</p>
+<table>
+<thead>
+<tr>
+<th>URL</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GET /items/1782/comments</td>
+<td>Liste de commentaire de l&#39;item 1782</td>
+</tr>
+<tr>
+<td>GET /items/1782/comments/56</td>
+<td>Commentaire 56 de l&#39;item #1782</td>
+</tr>
+<tr>
+<td>POST /items/1782/comments</td>
+<td>Création d&#39;un commentaire pour l&#39;item 1782</td>
+</tr>
+<tr>
+<td>PUT /items/1782/comments/56</td>
+<td>Mise à jour du commentaire 56 pour l&#39;item 1782</td>
+</tr>
+<tr>
+<td><strong>PATCH</strong> /items/1782/comments/56</td>
+<td>Mise à jour partielle du commentaire #56 pour l&#39;item #1782</td>
+</tr>
+<tr>
+<td>DELETE /items/1782/comments/56</td>
+<td>Suppression du commentaire 56 pour l&#39;item 1782</td>
+</tr>
+</tbody>
+</table>
+</section>
+  </div>
+  <div class="slide hidden" id="slide-10">
     <section class="slide-content"><div class="author">
   <h1 class="name">Fabien Furet</h1>
     <h3 class="twitter">

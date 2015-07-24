@@ -35,6 +35,7 @@ blockquote {
 	color: #777;
 	border-left: 4px solid #ddd;
 	margin: 0px;
+	font-size:0.8em;
 }
 
 table {
@@ -71,6 +72,10 @@ table {
 			margin-bottom: 0; 
 		}
 
+pre {
+	font-size: 0.8em;
+}
+
 .author h1 {
 	font-size: 1em;
 }
@@ -82,10 +87,22 @@ table {
 /*
 Slides
  */
-#slide-8 table {
+#slide-13 table {
+	margin-top:30px;
 	font-size: 0.6em;
 }
 
-#slide-9 table {
+#slide-14 table {
+	margin-top:30px;
+	font-size: 0.6em;
+}
+
+#slide-15 table {
+	margin-top:30px;
+	font-size: 0.6em;
+}
+
+#slide-24 table {
+	margin-top:30px;
 	font-size: 0.6em;
 }

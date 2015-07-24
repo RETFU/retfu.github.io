@@ -429,6 +429,7 @@ blockquote {
 	color: #777;
 	border-left: 4px solid #ddd;
 	margin: 0px;
+	font-size:0.8em;
 }
 
 table {
@@ -465,6 +466,10 @@ table {
 			margin-bottom: 0; 
 		}
 
+pre {
+	font-size: 0.8em;
+}
+
 .author h1 {
 	font-size: 1em;
 }
@@ -476,11 +481,23 @@ table {
 /*
 Slides
  */
-#slide-8 table {
+#slide-13 table {
+	margin-top:30px;
 	font-size: 0.6em;
 }
 
-#slide-9 table {
+#slide-14 table {
+	margin-top:30px;
+	font-size: 0.6em;
+}
+
+#slide-15 table {
+	margin-top:30px;
+	font-size: 0.6em;
+}
+
+#slide-24 table {
+	margin-top:30px;
 	font-size: 0.6em;
 }
 
@@ -496,38 +513,27 @@ Slides
 </section>
   </div>
   <div class="slide hidden  " id="slide-2">
-    <section class="slide-content"><h3 id="les-bases-1-x-">Les Bases (1/x)</h3>
-<ul>
-<li>SSL </li>
-<li>UTF-8 partout</li>
-<li>Versionner via l&#39;URL: <a href="https://api.domain.com/v2">https://api.domain.com/v2</a><blockquote>
-<p>Max 2 versions en prod sinon c&#39;est ingérable
-<br/>Via Header <code>Accept: application/json; version=2</code></p>
-</blockquote>
-</li>
-</ul>
+    <section class="slide-content"><h3 id="qu-est-ce-que-rest-1-x-">Qu&#39;est-ce que REST? (1/x)</h3>
+<p>Representational State Transfer</p>
 </section>
   </div>
   <div class="slide hidden" id="slide-3">
+    <section class="slide-content"><h1 id="rtfm">RTFM</h1>
+</section>
+  </div>
+  <div class="slide hidden  " id="slide-4">
     <section class="slide-content"><h3 id="qu-est-ce-que-rest-1-x-">Qu&#39;est-ce que REST? (1/x)</h3>
 <ul>
 <li>CRUD HTTP</li>
-<li>Stateless</li>
-</ul>
-</section>
-  </div>
-  <div class="slide hidden" id="slide-4">
-    <section class="slide-content"><h3 id="qu-est-ce-que-rest-1-x-">Qu&#39;est-ce que REST? (1/x)</h3>
-<p>Modèle de maturité de Richardson</p>
-<ul>
-<li>Level1: les ressources</li>
-<li>Level2: verbes et code erreur HTTP</li>
-<li>Level3: hypermédia</li>
+<li>Sans état</li>
+<li>Cachable</li>
+<li>Pas un standard mais un style d&#39;architecture</li>
+<li>Utilise des standards</li>
 </ul>
 </section>
   </div>
   <div class="slide hidden" id="slide-5">
-    <section class="slide-content"><h3 id="les-bases-1-x-">Les Bases (1/x)</h3>
+    <section class="slide-content"><h3 id="qu-est-ce-que-rest-1-x-">Qu&#39;est-ce que REST? (1/x)</h3>
 <p>URI = <a href="https://api.domain.com/v2/items/5">https://api.domain.com/v2/items/5</a> </p>
 <p>Ressource = <a href="https://api.domain.com/v2/">https://api.domain.com/v2/</a> <strong>items/5</strong></p>
 <p>Représentation</p>
@@ -540,7 +546,38 @@ Slides
 }</span></code></pre>
 </section>
   </div>
-  <div class="slide hidden" id="slide-6">
+  <div class="slide hidden  " id="slide-6">
+    <section class="slide-content"><h3 id="qu-est-ce-que-rest-1-x-">Qu&#39;est-ce que REST? (1/x)</h3>
+<p>Modèle de maturité de Richardson</p>
+<ul>
+<li>Level1: les ressources</li>
+<li>Level2: verbes et code erreurs HTTP</li>
+<li>Level3: <strong>hypermédia</strong></li>
+</ul>
+</section>
+  </div>
+  <div class="slide hidden" id="slide-7">
+    <section class="slide-content"><h1 id="no-restfull-don-t-care">No RESTFull don&#39;t care</h1>
+</section>
+  </div>
+  <div class="slide hidden" id="slide-8">
+    <section class="slide-content"><h3 id="les-bases-1-x-">Les Bases (1/x)</h3>
+<ul>
+<li>SSL </li>
+<li>UTF-8 partout</li>
+<li>Versionner via l&#39;URL: <a href="https://api.domain.com/v2">https://api.domain.com/v2</a><blockquote>
+<p>Max 2 versions en prod sinon c&#39;est ingérable
+<br/>Via Header <code>Accept: application/json; version=2</code></p>
+</blockquote>
+</li>
+</ul>
+</section>
+  </div>
+  <div class="slide hidden" id="slide-9">
+    <section class="slide-content"><h3 id="les-bases-1-x-">Les Bases (1/x)</h3>
+</section>
+  </div>
+  <div class="slide hidden" id="slide-10">
     <section class="slide-content"><h3 id="les-bases-1-x-">Les Bases (1/x)</h3>
 <p><br/></p>
 <table>
@@ -575,20 +612,22 @@ Slides
 </table>
 </section>
   </div>
-  <div class="slide hidden" id="slide-7">
-    <section class="slide-content"><h3 id="ressources-1-x-">Ressources (1/x)</h3>
+  <div class="slide hidden" id="slide-11">
+    <section class="slide-content"><h1 id="ressources">Ressources</h1>
+</section>
+  </div>
+  <div class="slide hidden" id="slide-12">
+    <section class="slide-content"><h3 id="convention-formalisme">Convention / Formalisme</h3>
 <ul>
-<li>API REST expose des ressources</li>
-<li>Ne reflète pas forcément votre modèle de donnée</li>
 <li>Toujours au pluriel</li>
 <li>Nommé avec des - ou des _</li>
 <li>les ids sont des UUID</li>
+<li>Ne reflète pas forcément votre modèle de donnée</li>
 </ul>
 </section>
   </div>
-  <div class="slide hidden" id="slide-8">
-    <section class="slide-content"><h3 id="ressources-1-x-">Ressources (1/x)</h3>
-<p>HTTP est le socle qui nous permet d&#39;interragir avec nos ressources.</p>
+  <div class="slide hidden" id="slide-13">
+    <section class="slide-content"><h3 id="interactions">Interactions</h3>
 <table>
 <thead>
 <tr>
@@ -629,9 +668,8 @@ Slides
 </table>
 </section>
   </div>
-  <div class="slide hidden" id="slide-9">
-    <section class="slide-content"><h3 id="ressources-1-x-">Ressources (1/x)</h3>
-<p>Nos ressources ont parfois des relations</p>
+  <div class="slide hidden" id="slide-14">
+    <section class="slide-content"><h3 id="relations">Relations</h3>
 <table>
 <thead>
 <tr>
@@ -668,7 +706,214 @@ Slides
 </table>
 </section>
   </div>
-  <div class="slide hidden" id="slide-10">
+  <div class="slide hidden" id="slide-15">
+    <section class="slide-content"><h3 id="actions">Actions</h3>
+<p>On utilise toujours <strong>POST</strong>.</p>
+<table>
+<thead>
+<tr>
+<th>URL</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>POST /items/1782/translate</td>
+<td>Traduit l&#39;item 1782</td>
+</tr>
+<tr>
+<td>POST /items/1782/enable</td>
+<td>Active l&#39;item 1782</td>
+</tr>
+<tr>
+<td>POST /items/1782/comments/56/star</td>
+<td>Met en favori le commentaire 56 de l&#39;item 1782</td>
+</tr>
+</tbody>
+</table>
+</section>
+  </div>
+  <div class="slide hidden" id="slide-16">
+    <section class="slide-content"><h1 id="authentification">Authentification</h1>
+</section>
+  </div>
+  <div class="slide hidden" id="slide-17">
+    <section class="slide-content"><h3 id="http-basic-authentification">HTTP basic authentification</h3>
+<p>On envoie le header Authorization:</p>
+<pre><code class="lang-http"><span class="attribute">Authorization</span>: <span class="string">Basic cGhwOm1lZXR1cA==</span></code></pre>
+<ul>
+<li>username:password encodé en base64</li>
+<li>toujours utilisé avec SSL</li>
+<li>on doit maîtrise le client et le serveur</li>
+</ul>
+<blockquote>
+<p>Rapide à mettre en place, mais pas très secure, on doit avoir les credentials sur le client</p>
+</blockquote>
+</section>
+  </div>
+  <div class="slide hidden" id="slide-18">
+    <section class="slide-content"><h3 id="basique-api-key-">Basique API Key?</h3>
+</section>
+  </div>
+  <div class="slide hidden" id="slide-19">
+    <section class="slide-content"><h3 id="query-authentification">Query Authentification</h3>
+<pre><code class="lang-http">GET /items?param=X&amp;timestamp=1261496500&amp;apiKey=XYZ&amp;signature=3051d3c053e291b723f169</code></pre>
+<ul>
+<li>le client signe la requête <br/><code>SHA256( items?param=X&amp;timestamp=1261496500&amp;apiKey=XYZ )</code></li>
+<li>le serveur <ul>
+<li>valide la signature</li>
+<li>vérifie si timestamp &lt; X secondes (X étant définit sur le serveur)</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>Il faut que le client et le serveur soit configuré de la même façon niveau date pour avoir des timestamps comparables</p>
+</blockquote>
+</section>
+  </div>
+  <div class="slide hidden" id="slide-20">
+    <section class="slide-content"><h3 id="oauth2">OAuth2</h3>
+<p>RTFM</p>
+</section>
+  </div>
+  <div class="slide hidden" id="slide-21">
+    <section class="slide-content"><h1 id="requ-te">Requête</h1>
+</section>
+  </div>
+  <div class="slide hidden" id="slide-22">
+    <section class="slide-content"><h3 id="headers">Headers</h3>
+<pre><code class="lang-bash">$ curl -X POST https://api.domain.com/v2/items \
+    -H <span class="string">"Content-Type: application/json;charset=utf-8"</span> \
+    -H <span class="string">"Accept: application/json"</span> \
+    -H <span class="string">"Accept-Encoding: gzip"</span> \
+    -H <span class="string">"X-Request-UUID: 454684315618613"</span> \
+    -d <span class="string">'{"name": "Jo", "age": 55, "isGeek": true}'</span>
+
+{
+  <span class="string">"id"</span>: 7856,
+  <span class="string">"name"</span>: <span class="string">"Jo"</span>,
+  <span class="string">"age"</span>: 18,
+  <span class="string">"isGeek"</span>: <span class="literal">true</span>
+  ...
+}</code></pre>
+</section>
+  </div>
+  <div class="slide hidden" id="slide-23">
+    <section class="slide-content"><h3 id="body">Body</h3>
+<ul>
+<li>JSON pour POST, PUT ou PATCH</li>
+<li>Sérialisation identique entre le body requète et réponse</li>
+<li>Passer des représentations complètes ou partielles</li>
+<li>Bénéficier du typage JSON: <code>Array</code> <code>String</code> <code>Number</code> <code>Object</code> <code>Boolean</code> <code>Null</code></li>
+</ul>
+<blockquote>
+<p>On peut supporter <code>x-www-form-urlencoded</code> en parallèle
+Obligera côter serveur à typer les valeurs manuelement et on n&#39;aura pas de structure de ressource out of box.</p>
+</blockquote>
+</section>
+  </div>
+  <div class="slide hidden" id="slide-24">
+    <section class="slide-content"><h3 id="erreurs">Erreurs</h3>
+<table>
+<thead>
+<tr>
+<th>HTTP status code</th>
+<th>Information</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>406 Not acceptable</td>
+<td>Format de retour non disponible<br/>(la requête demande du XML alors qu&#39;on ne gère que du JSON)</td>
+</tr>
+<tr>
+<td>415 Unsupported Media Type</td>
+<td>Content type pas supporté<br/>(on envoie du XML alors qu&#39;on ne suppporte que JSON)</td>
+</tr>
+</tbody>
+</table>
+</section>
+  </div>
+  <div class="slide hidden" id="slide-25">
+    <section class="slide-content"><h1 id="r-ponse">Réponse</h1>
+</section>
+  </div>
+  <div class="slide hidden" id="slide-26">
+    <section class="slide-content"><h3 id="formats">Formats</h3>
+<ul>
+<li>JSON uniquement</li>
+<li>JSON pretty print</li>
+</ul>
+<p><img src="assets/jsonvsxml.png" alt="JSON vs XML"></p>
+<blockquote>
+<p>Plus personne n&#39;utilise XML sauf dans un contexte grand compte / DSI
+Donc <code>Accept: application/json; application/xml</code> mais on garde JSON en choix n°1</p>
+</blockquote>
+</section>
+  </div>
+  <div class="slide hidden" id="slide-27">
+    <section class="slide-content"><h3 id="formats">Formats</h3>
+<p>Pas d&#39;enveloppe</p>
+<pre><code class="lang-json">{
+  "<span class="attribute">id</span>": <span class="value"><span class="number">7856</span></span>,
+  "<span class="attribute">name</span>": <span class="value"><span class="string">"Jo"</span></span>,
+  "<span class="attribute">age</span>": <span class="value"><span class="number">18</span></span>,
+  "<span class="attribute">isGeek</span>": <span class="value"><span class="literal">true</span>
+}</span></code></pre>
+<p>Plutôt que</p>
+<pre><code class="lang-json">{
+  "<span class="attribute">item</span>": <span class="value">{
+    "<span class="attribute">id</span>": <span class="value"><span class="number">7856</span></span>,
+    "<span class="attribute">name</span>": <span class="value"><span class="string">"Jo"</span></span>,
+    "<span class="attribute">age</span>": <span class="value"><span class="number">18</span></span>,
+    "<span class="attribute">isGeek</span>": <span class="value"><span class="literal">true</span></span>,
+    "<span class="attribute">country_id</span>": <span class="value"><span class="number">569</span>
+  }</span>
+}</span></code></pre>
+</section>
+  </div>
+  <div class="slide hidden" id="slide-28">
+    <section class="slide-content"><h3 id="formats">Formats</h3>
+<p>Si on a des ressources imbriquées</p>
+<pre><code class="lang-json">{
+  "<span class="attribute">id</span>": <span class="value"><span class="number">7856</span></span>,
+  "<span class="attribute">name</span>": <span class="value"><span class="string">"Jo"</span></span>,
+  "<span class="attribute">age</span>": <span class="value"><span class="number">18</span></span>,
+  "<span class="attribute">isGeek</span>": <span class="value"><span class="literal">true</span></span>,
+  "<span class="attribute">country</span>": <span class="value">{
+    "<span class="attribute">id</span>": <span class="value"><span class="number">569</span>
+  }</span>
+}</span></code></pre>
+<p>Plutôt que</p>
+<pre><code class="lang-json">{
+  "<span class="attribute">id</span>": <span class="value"><span class="number">7856</span></span>,
+  "<span class="attribute">name</span>": <span class="value"><span class="string">"Jo"</span></span>,
+  "<span class="attribute">age</span>": <span class="value"><span class="number">18</span></span>,
+  "<span class="attribute">isGeek</span>": <span class="value"><span class="literal">true</span></span>,
+  "<span class="attribute">country_id</span>": <span class="value"><span class="number">569</span>
+}</span></code></pre>
+</section>
+  </div>
+  <div class="slide hidden" id="slide-29">
+    <section class="slide-content"><h3 id="formats">Formats</h3>
+<pre><code class="lang-http"><span class="attribute">X-Resource-Nested</span>: <span class="string">true</span></code></pre>
+<pre><code class="lang-json">{
+  "<span class="attribute">id</span>": <span class="value"><span class="number">7856</span></span>,
+  "<span class="attribute">name</span>": <span class="value"><span class="string">"Jo"</span></span>,
+  "<span class="attribute">age</span>": <span class="value"><span class="number">18</span></span>,
+  "<span class="attribute">isGeek</span>": <span class="value"><span class="literal">true</span></span>,
+  "<span class="attribute">country</span>": <span class="value">{
+    "<span class="attribute">id</span>": <span class="value"><span class="number">569</span></span>,
+    "<span class="attribute">name</span>": <span class="value"><span class="string">"France"</span></span>,
+    "<span class="attribute">codeISO</span>": <span class="value"><span class="string">"FR"</span>
+  }</span>
+}</span></code></pre>
+</section>
+  </div>
+  <div class="slide hidden" id="slide-30">
+    <section class="slide-content"></section>
+  </div>
+  <div class="slide hidden" id="slide-31">
     <section class="slide-content"><div class="author">
   <h1 class="name">Fabien Furet</h1>
     <h3 class="twitter">

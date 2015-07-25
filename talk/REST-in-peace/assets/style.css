@@ -93,7 +93,12 @@ pre {
 /*
 Slides
  */
-#slide-8 table {
+#slide-7 table {
+	margin-top:30px;
+	font-size: 0.6em;
+}
+
+#slide-10 table {
 	margin-top:30px;
 	font-size: 0.6em;
 }
@@ -108,27 +113,22 @@ Slides
 	font-size: 0.6em;
 }
 
-#slide-13 table {
+#slide-16 table {
 	margin-top:30px;
 	font-size: 0.6em;
 }
 
-#slide-17 table {
+#slide-22 table {
 	margin-top:30px;
 	font-size: 0.6em;
 }
 
-#slide-23 table {
+#slide-26 table {
 	margin-top:30px;
 	font-size: 0.6em;
 }
 
-#slide-27 table {
-	margin-top:30px;
-	font-size: 0.6em;
-}
-
-#slide-38 table {
+#slide-37 table {
 	margin-top:30px;
 	font-size: 0.6em;
 }

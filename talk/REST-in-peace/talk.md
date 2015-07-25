@@ -78,16 +78,17 @@ Modèle de maturité de Richardson
 
 --
 
-# Ressources
+# Ressource
 
 --
 
-### Convention / Formalisme
+### Définition
 
 * Toujours au pluriel
 * Nommé avec des - ou des _
-* Les ids des représentations sont des UUID
 * Ne reflète pas forcément votre modèle de donnée
+* Une ressource = une URI
+* Une ressource = plusieurs représentations<br/>(JSON, XML, MessagePack...)
 
 --
 
@@ -100,7 +101,6 @@ Modèle de maturité de Richardson
 | POST /items | Creation d'un nouvel item |
 | PUT /items | Mise à jour de plusieurs items |
 | PUT /items/1782 | Mise à jour de l'item 1782 |
-| **PATCH** /items/1782  | Mise à jour partielle de l'item 1782 |
 | DELETE /items/1782 | Suppression de l'item 1782 |
 
 --
@@ -113,7 +113,6 @@ Modèle de maturité de Richardson
 | GET /items/1782/comments/56 | Commentaire 56 de l'item #1782 |
 | POST /items/1782/comments | Création d'un commentaire pour l'item 1782 |
 | PUT /items/1782/comments/56 | Mise à jour du commentaire 56 pour l'item 1782 |
-| **PATCH** /items/1782/comments/56 | Mise à jour partielle du commentaire #56 pour l'item #1782 |
 | DELETE /items/1782/comments/56 | Suppression du commentaire 56 pour l'item 1782 |
 
 --
@@ -127,6 +126,100 @@ On utilise toujours **POST**.
 | POST /items/1782/translate | Traduit l'item 1782 |
 | POST /items/1782/enable | Active l'item 1782 |
 | POST /items/1782/comments/56/star | Met en favori le commentaire 56 de l'item 1782 |
+
+--
+
+# Représentation
+
+--
+
+### JSON sinon rien
+
+* JSON uniquement
+
+![JSON vs XML](assets/jsonvsxml.png)
+
+> Plus personne n'utilise XML sauf dans un contexte grand compte / DSI
+> Donc `Accept: application/json; application/xml` mais on garde JSON en choix n°1
+
+* JSON pretty print
+* Les ids des représentations sont des UUID
+
+--
+
+### Pas d'enveloppe
+
+```json
+{
+  "id": 7856,
+  "name": "Jo",
+  "age": 18,
+  "isGeek": true
+}
+```
+
+Plutôt que
+
+```json
+{
+  "item": {
+    "id": 7856,
+    "name": "Jo",
+    "age": 18,
+    "isGeek": true
+  }
+}
+```
+
+--
+
+### Imbrication
+
+```json
+{
+  "id": 7856,
+  "name": "Jo",
+  "age": 18,
+  "isGeek": true,
+  "country": {
+    "id": 569
+  }
+}
+```
+
+Plutôt que
+
+```json
+{
+  "id": 7856,
+  "name": "Jo",
+  "age": 18,
+  "isGeek": true,
+  "country_id": 569
+}
+```
+
+--
+
+### Imbrication
+
+```http
+X-Resource-Nested: true
+```
+
+```json
+{
+  "id": 7856,
+  "name": "Jo",
+  "age": 18,
+  "isGeek": true,
+  "country": {
+    "id": 569,
+    "name": "France",
+    "codeISO": "FR"
+  }
+}
+```
 
 --
 
@@ -176,99 +269,6 @@ $ curl -X POST https://api.domain.com/v2/items \
 --
 
 # Réponse
-
---
-
-### Formats
-
-* JSON uniquement
-* JSON pretty print
-
-![JSON vs XML](assets/jsonvsxml.png)
-
-> Plus personne n'utilise XML sauf dans un contexte grand compte / DSI
-> Donc `Accept: application/json; application/xml` mais on garde JSON en choix n°1
-
---
-
-### Formats
-
-Pas d'enveloppe
-
-```json
-{
-  "id": 7856,
-  "name": "Jo",
-  "age": 18,
-  "isGeek": true
-}
-```
-
-Plutôt que
-
-```json
-{
-  "item": {
-    "id": 7856,
-    "name": "Jo",
-    "age": 18,
-    "isGeek": true,
-    "country_id": 569
-  }
-}
-```
-
---
-
-### Formats
-
-Si on a des ressources imbriquées
-
-```json
-{
-  "id": 7856,
-  "name": "Jo",
-  "age": 18,
-  "isGeek": true,
-  "country": {
-    "id": 569
-  }
-}
-```
-
-Plutôt que
-
-```json
-{
-  "id": 7856,
-  "name": "Jo",
-  "age": 18,
-  "isGeek": true,
-  "country_id": 569
-}
-```
-
---
-
-### Formats
-
-```http
-X-Resource-Nested: true
-```
-
-```json
-{
-  "id": 7856,
-  "name": "Jo",
-  "age": 18,
-  "isGeek": true,
-  "country": {
-    "id": 569,
-    "name": "France",
-    "codeISO": "FR"
-  }
-}
-```
 
 --
 

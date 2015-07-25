@@ -507,22 +507,22 @@ Slides
 	font-size: 0.6em;
 }
 
-#slide-16 table {
+#slide-21 table {
 	margin-top:30px;
 	font-size: 0.6em;
 }
 
-#slide-22 table {
+#slide-24 table {
 	margin-top:30px;
 	font-size: 0.6em;
 }
 
-#slide-26 table {
+#slide-28 table {
 	margin-top:30px;
 	font-size: 0.6em;
 }
 
-#slide-37 table {
+#slide-40 table {
 	margin-top:30px;
 	font-size: 0.6em;
 }
@@ -626,16 +626,17 @@ Slides
 </section>
   </div>
   <div class="slide hidden" id="slide-8">
-    <section class="slide-content"><h1 id="ressources">Ressources</h1>
+    <section class="slide-content"><h1 id="ressource">Ressource</h1>
 </section>
   </div>
   <div class="slide hidden" id="slide-9">
-    <section class="slide-content"><h3 id="convention-formalisme">Convention / Formalisme</h3>
+    <section class="slide-content"><h3 id="d-finition">Définition</h3>
 <ul>
 <li>Toujours au pluriel</li>
 <li>Nommé avec des - ou des _</li>
-<li>Les ids des représentations sont des UUID</li>
 <li>Ne reflète pas forcément votre modèle de donnée</li>
+<li>Une ressource = une URI</li>
+<li>Une ressource = plusieurs représentations<br/>(JSON, XML, MessagePack...)</li>
 </ul>
 </section>
   </div>
@@ -670,10 +671,6 @@ Slides
 <td>Mise à jour de l&#39;item 1782</td>
 </tr>
 <tr>
-<td><strong>PATCH</strong> /items/1782</td>
-<td>Mise à jour partielle de l&#39;item 1782</td>
-</tr>
-<tr>
 <td>DELETE /items/1782</td>
 <td>Suppression de l&#39;item 1782</td>
 </tr>
@@ -706,10 +703,6 @@ Slides
 <tr>
 <td>PUT /items/1782/comments/56</td>
 <td>Mise à jour du commentaire 56 pour l&#39;item 1782</td>
-</tr>
-<tr>
-<td><strong>PATCH</strong> /items/1782/comments/56</td>
-<td>Mise à jour partielle du commentaire #56 pour l&#39;item #1782</td>
 </tr>
 <tr>
 <td>DELETE /items/1782/comments/56</td>
@@ -747,10 +740,86 @@ Slides
 </section>
   </div>
   <div class="slide hidden" id="slide-13">
-    <section class="slide-content"><h1 id="requ-te">Requête</h1>
+    <section class="slide-content"><h1 id="repr-sentation">Représentation</h1>
 </section>
   </div>
   <div class="slide hidden" id="slide-14">
+    <section class="slide-content"><h3 id="json-sinon-rien">JSON sinon rien</h3>
+<ul>
+<li>JSON uniquement</li>
+</ul>
+<p><img src="assets/jsonvsxml.png" alt="JSON vs XML"></p>
+<blockquote>
+<p>Plus personne n&#39;utilise XML sauf dans un contexte grand compte / DSI
+Donc <code>Accept: application/json; application/xml</code> mais on garde JSON en choix n°1</p>
+</blockquote>
+<ul>
+<li>JSON pretty print</li>
+<li>Les ids des représentations sont des UUID</li>
+</ul>
+</section>
+  </div>
+  <div class="slide hidden" id="slide-15">
+    <section class="slide-content"><h3 id="pas-d-enveloppe">Pas d&#39;enveloppe</h3>
+<pre><code class="lang-json">{
+  "<span class="attribute">id</span>": <span class="value"><span class="number">7856</span></span>,
+  "<span class="attribute">name</span>": <span class="value"><span class="string">"Jo"</span></span>,
+  "<span class="attribute">age</span>": <span class="value"><span class="number">18</span></span>,
+  "<span class="attribute">isGeek</span>": <span class="value"><span class="literal">true</span>
+}</span></code></pre>
+<p>Plutôt que</p>
+<pre><code class="lang-json">{
+  "<span class="attribute">item</span>": <span class="value">{
+    "<span class="attribute">id</span>": <span class="value"><span class="number">7856</span></span>,
+    "<span class="attribute">name</span>": <span class="value"><span class="string">"Jo"</span></span>,
+    "<span class="attribute">age</span>": <span class="value"><span class="number">18</span></span>,
+    "<span class="attribute">isGeek</span>": <span class="value"><span class="literal">true</span>
+  }</span>
+}</span></code></pre>
+</section>
+  </div>
+  <div class="slide hidden" id="slide-16">
+    <section class="slide-content"><h3 id="imbrication">Imbrication</h3>
+<pre><code class="lang-json">{
+  "<span class="attribute">id</span>": <span class="value"><span class="number">7856</span></span>,
+  "<span class="attribute">name</span>": <span class="value"><span class="string">"Jo"</span></span>,
+  "<span class="attribute">age</span>": <span class="value"><span class="number">18</span></span>,
+  "<span class="attribute">isGeek</span>": <span class="value"><span class="literal">true</span></span>,
+  "<span class="attribute">country</span>": <span class="value">{
+    "<span class="attribute">id</span>": <span class="value"><span class="number">569</span>
+  }</span>
+}</span></code></pre>
+<p>Plutôt que</p>
+<pre><code class="lang-json">{
+  "<span class="attribute">id</span>": <span class="value"><span class="number">7856</span></span>,
+  "<span class="attribute">name</span>": <span class="value"><span class="string">"Jo"</span></span>,
+  "<span class="attribute">age</span>": <span class="value"><span class="number">18</span></span>,
+  "<span class="attribute">isGeek</span>": <span class="value"><span class="literal">true</span></span>,
+  "<span class="attribute">country_id</span>": <span class="value"><span class="number">569</span>
+}</span></code></pre>
+</section>
+  </div>
+  <div class="slide hidden" id="slide-17">
+    <section class="slide-content"><h3 id="imbrication">Imbrication</h3>
+<pre><code class="lang-http"><span class="attribute">X-Resource-Nested</span>: <span class="string">true</span></code></pre>
+<pre><code class="lang-json">{
+  "<span class="attribute">id</span>": <span class="value"><span class="number">7856</span></span>,
+  "<span class="attribute">name</span>": <span class="value"><span class="string">"Jo"</span></span>,
+  "<span class="attribute">age</span>": <span class="value"><span class="number">18</span></span>,
+  "<span class="attribute">isGeek</span>": <span class="value"><span class="literal">true</span></span>,
+  "<span class="attribute">country</span>": <span class="value">{
+    "<span class="attribute">id</span>": <span class="value"><span class="number">569</span></span>,
+    "<span class="attribute">name</span>": <span class="value"><span class="string">"France"</span></span>,
+    "<span class="attribute">codeISO</span>": <span class="value"><span class="string">"FR"</span>
+  }</span>
+}</span></code></pre>
+</section>
+  </div>
+  <div class="slide hidden" id="slide-18">
+    <section class="slide-content"><h1 id="requ-te">Requête</h1>
+</section>
+  </div>
+  <div class="slide hidden" id="slide-19">
     <section class="slide-content"><h3 id="headers">Headers</h3>
 <pre><code class="lang-bash">$ curl -X POST https://api.domain.com/v2/items \
     -H <span class="string">"Content-Type: application/json;charset=utf-8"</span> \
@@ -767,7 +836,7 @@ Slides
 }</code></pre>
 </section>
   </div>
-  <div class="slide hidden" id="slide-15">
+  <div class="slide hidden" id="slide-20">
     <section class="slide-content"><h3 id="body">Body</h3>
 <ul>
 <li>JSON pour POST, PUT ou PATCH</li>
@@ -781,7 +850,7 @@ Obligera côter serveur à typer les valeurs manuelement et on n&#39;aura pas de
 </blockquote>
 </section>
   </div>
-  <div class="slide hidden" id="slide-16">
+  <div class="slide hidden" id="slide-21">
     <section class="slide-content"><h3 id="erreurs">Erreurs</h3>
 <table>
 <thead>
@@ -803,83 +872,11 @@ Obligera côter serveur à typer les valeurs manuelement et on n&#39;aura pas de
 </table>
 </section>
   </div>
-  <div class="slide hidden" id="slide-17">
+  <div class="slide hidden" id="slide-22">
     <section class="slide-content"><h1 id="r-ponse">Réponse</h1>
 </section>
   </div>
-  <div class="slide hidden" id="slide-18">
-    <section class="slide-content"><h3 id="formats">Formats</h3>
-<ul>
-<li>JSON uniquement</li>
-<li>JSON pretty print</li>
-</ul>
-<p><img src="assets/jsonvsxml.png" alt="JSON vs XML"></p>
-<blockquote>
-<p>Plus personne n&#39;utilise XML sauf dans un contexte grand compte / DSI
-Donc <code>Accept: application/json; application/xml</code> mais on garde JSON en choix n°1</p>
-</blockquote>
-</section>
-  </div>
-  <div class="slide hidden" id="slide-19">
-    <section class="slide-content"><h3 id="formats">Formats</h3>
-<p>Pas d&#39;enveloppe</p>
-<pre><code class="lang-json">{
-  "<span class="attribute">id</span>": <span class="value"><span class="number">7856</span></span>,
-  "<span class="attribute">name</span>": <span class="value"><span class="string">"Jo"</span></span>,
-  "<span class="attribute">age</span>": <span class="value"><span class="number">18</span></span>,
-  "<span class="attribute">isGeek</span>": <span class="value"><span class="literal">true</span>
-}</span></code></pre>
-<p>Plutôt que</p>
-<pre><code class="lang-json">{
-  "<span class="attribute">item</span>": <span class="value">{
-    "<span class="attribute">id</span>": <span class="value"><span class="number">7856</span></span>,
-    "<span class="attribute">name</span>": <span class="value"><span class="string">"Jo"</span></span>,
-    "<span class="attribute">age</span>": <span class="value"><span class="number">18</span></span>,
-    "<span class="attribute">isGeek</span>": <span class="value"><span class="literal">true</span></span>,
-    "<span class="attribute">country_id</span>": <span class="value"><span class="number">569</span>
-  }</span>
-}</span></code></pre>
-</section>
-  </div>
-  <div class="slide hidden" id="slide-20">
-    <section class="slide-content"><h3 id="formats">Formats</h3>
-<p>Si on a des ressources imbriquées</p>
-<pre><code class="lang-json">{
-  "<span class="attribute">id</span>": <span class="value"><span class="number">7856</span></span>,
-  "<span class="attribute">name</span>": <span class="value"><span class="string">"Jo"</span></span>,
-  "<span class="attribute">age</span>": <span class="value"><span class="number">18</span></span>,
-  "<span class="attribute">isGeek</span>": <span class="value"><span class="literal">true</span></span>,
-  "<span class="attribute">country</span>": <span class="value">{
-    "<span class="attribute">id</span>": <span class="value"><span class="number">569</span>
-  }</span>
-}</span></code></pre>
-<p>Plutôt que</p>
-<pre><code class="lang-json">{
-  "<span class="attribute">id</span>": <span class="value"><span class="number">7856</span></span>,
-  "<span class="attribute">name</span>": <span class="value"><span class="string">"Jo"</span></span>,
-  "<span class="attribute">age</span>": <span class="value"><span class="number">18</span></span>,
-  "<span class="attribute">isGeek</span>": <span class="value"><span class="literal">true</span></span>,
-  "<span class="attribute">country_id</span>": <span class="value"><span class="number">569</span>
-}</span></code></pre>
-</section>
-  </div>
-  <div class="slide hidden" id="slide-21">
-    <section class="slide-content"><h3 id="formats">Formats</h3>
-<pre><code class="lang-http"><span class="attribute">X-Resource-Nested</span>: <span class="string">true</span></code></pre>
-<pre><code class="lang-json">{
-  "<span class="attribute">id</span>": <span class="value"><span class="number">7856</span></span>,
-  "<span class="attribute">name</span>": <span class="value"><span class="string">"Jo"</span></span>,
-  "<span class="attribute">age</span>": <span class="value"><span class="number">18</span></span>,
-  "<span class="attribute">isGeek</span>": <span class="value"><span class="literal">true</span></span>,
-  "<span class="attribute">country</span>": <span class="value">{
-    "<span class="attribute">id</span>": <span class="value"><span class="number">569</span></span>,
-    "<span class="attribute">name</span>": <span class="value"><span class="string">"France"</span></span>,
-    "<span class="attribute">codeISO</span>": <span class="value"><span class="string">"FR"</span>
-  }</span>
-}</span></code></pre>
-</section>
-  </div>
-  <div class="slide hidden" id="slide-22">
+  <div class="slide hidden" id="slide-23">
     <section class="slide-content"><h3 id="headers">Headers</h3>
 <pre><code class="lang-http">Content-Type: application/json;charset=utf-8
 Content-Encoding:gzip
@@ -891,7 +888,7 @@ X-Rate-Limit-Remaining: 8532
 X-Rate-Limit-Reset: 1200</code></pre>
 </section>
   </div>
-  <div class="slide hidden" id="slide-23">
+  <div class="slide hidden" id="slide-24">
     <section class="slide-content"><h3 id="code-http">Code HTTP</h3>
 <table>
 <thead>
@@ -928,7 +925,7 @@ X-Rate-Limit-Reset: 1200</code></pre>
 <pre><code class="lang-http"><span class="attribute">Location</span>: <span class="string">https://api.domain.com/v2/items/1783</span></code></pre>
 </section>
   </div>
-  <div class="slide hidden" id="slide-24">
+  <div class="slide hidden" id="slide-25">
     <section class="slide-content"><h3 id="format-d-erreur">Format d&#39;erreur</h3>
 <pre><code class="lang-json">{
   "<span class="attribute">code</span>": <span class="value"><span class="string">"error_code"</span></span>,
@@ -937,7 +934,7 @@ X-Rate-Limit-Reset: 1200</code></pre>
 }</span></code></pre>
 </section>
   </div>
-  <div class="slide hidden" id="slide-25">
+  <div class="slide hidden" id="slide-26">
     <section class="slide-content"><h3 id="exemples-de-format-d-erreur">Exemples de format d&#39;erreur</h3>
 <pre><code class="lang-http"><span class="status">HTTP/1.1 <span class="number">400</span> Bad Request</span></code></pre>
 <pre><code class="lang-json">{
@@ -954,7 +951,7 @@ X-Rate-Limit-Reset: 1200</code></pre>
 }</span></code></pre>
 </section>
   </div>
-  <div class="slide hidden" id="slide-26">
+  <div class="slide hidden" id="slide-27">
     <section class="slide-content"><h3 id="validation-plus-fine">Validation plus fine</h3>
 <pre><code class="lang-http"><span class="status">HTTP/1.1 <span class="number">422</span> Unprocessable Entity</span></code></pre>
 <pre><code class="lang-json">[
@@ -971,7 +968,7 @@ X-Rate-Limit-Reset: 1200</code></pre>
 ]</code></pre>
 </section>
   </div>
-  <div class="slide hidden" id="slide-27">
+  <div class="slide hidden" id="slide-28">
     <section class="slide-content"><h3 id="code-http-erreurs">Code HTTP Erreurs</h3>
 <table>
 <thead>
@@ -1029,7 +1026,7 @@ X-Rate-Limit-Reset: 1200</code></pre>
 </table>
 </section>
   </div>
-  <div class="slide hidden" id="slide-28">
+  <div class="slide hidden" id="slide-29">
     <section class="slide-content"><h3 id="pagination-requ-te">Pagination: requête</h3>
 <pre><code class="lang-bash">$ curl -X POST https://api.domain.com/v2/item?page=2&amp;per_page=100 \
     -H <span class="string">"Content-Type: application/json"</span>
@@ -1040,7 +1037,7 @@ X-Rate-Limit-Reset: 1200</code></pre>
 </blockquote>
 </section>
   </div>
-  <div class="slide hidden" id="slide-29">
+  <div class="slide hidden" id="slide-30">
     <section class="slide-content"><h3 id="pagination-r-ponse">Pagination: réponse</h3>
 <ul>
 <li><code>206 Partial content</code> si on n&#39;a pas toutes les ressources, </li>
@@ -1054,7 +1051,7 @@ On peut aussi ajouter la première et la dernière page <code>rel=first</code> e
 </blockquote>
 </section>
   </div>
-  <div class="slide hidden" id="slide-30">
+  <div class="slide hidden" id="slide-31">
     <section class="slide-content"><h3 id="pagination-r-ponse">Pagination: réponse</h3>
 <p>Ajouter un header custom pour indiquer le nombre totale de ressources disponibles:</p>
 <pre><code class="lang-http"><span class="attribute">X-Total-Count</span>: <span class="string">456</span>
@@ -1062,7 +1059,7 @@ On peut aussi ajouter la première et la dernière page <code>rel=first</code> e
 <p>Le serveur doit retourner <code>400 Bad request</code> si on dépasse les capacités de l&#39;API.</p>
 </section>
   </div>
-  <div class="slide hidden" id="slide-31">
+  <div class="slide hidden" id="slide-32">
     <section class="slide-content"><h3 id="filtering-sort-search">Filtering, sort &amp; search</h3>
 <pre><code class="lang-bash">$ curl -X POST https://api.domain.com/v2/item?q=toto&amp;isGeek=<span class="literal">false</span>
 &amp;age=18,19&amp;sort=name,id \
@@ -1074,7 +1071,7 @@ On peut aussi ajouter la première et la dernière page <code>rel=first</code> e
 </blockquote>
 </section>
   </div>
-  <div class="slide hidden" id="slide-32">
+  <div class="slide hidden" id="slide-33">
     <section class="slide-content"><h1 id="cache">Cache</h1>
 <p>On envoie le header <code>If-Modified-Since</code> pour valider que la ressource n&#39;a pas été modifiée. Dans ce cas on retourne un <a href="http://httpstatus.es/304"><code>304 Not Modified</code></a>.
 Sinon on retourne la ressource avec le header <code>Last-Modified</code>.</p>
@@ -1083,11 +1080,11 @@ Sinon on retourne la ressource avec le header <code>Last-Modified</code>.</p>
 </blockquote>
 </section>
   </div>
-  <div class="slide hidden" id="slide-33">
+  <div class="slide hidden" id="slide-34">
     <section class="slide-content"><h1 id="authentification">Authentification</h1>
 </section>
   </div>
-  <div class="slide hidden" id="slide-34">
+  <div class="slide hidden" id="slide-35">
     <section class="slide-content"><h3 id="http-basic-authentification">HTTP basic authentification</h3>
 <pre><code class="lang-http"><span class="attribute">Authorization</span>: <span class="string">Basic cGhwOm1lZXR1cA==</span></code></pre>
 <ul>
@@ -1100,11 +1097,11 @@ Sinon on retourne la ressource avec le header <code>Last-Modified</code>.</p>
 </blockquote>
 </section>
   </div>
-  <div class="slide hidden" id="slide-35">
+  <div class="slide hidden" id="slide-36">
     <section class="slide-content"><h3 id="basique-api-key-">Basique API Key?</h3>
 </section>
   </div>
-  <div class="slide hidden" id="slide-36">
+  <div class="slide hidden" id="slide-37">
     <section class="slide-content"><h3 id="query-authentification">Query Authentification</h3>
 <pre><code class="lang-http">GET /items?param=X&amp;timestamp=1261496500&amp;apiKey=XYZ
 &amp;signature=3051d3c053e291b723f169</code></pre>
@@ -1121,16 +1118,16 @@ Sinon on retourne la ressource avec le header <code>Last-Modified</code>.</p>
 </blockquote>
 </section>
   </div>
-  <div class="slide hidden" id="slide-37">
+  <div class="slide hidden" id="slide-38">
     <section class="slide-content"><h3 id="oauth2">OAuth2</h3>
 <h1 id="rtfm">RTFM</h1>
 </section>
   </div>
-  <div class="slide hidden" id="slide-38">
+  <div class="slide hidden" id="slide-39">
     <section class="slide-content"><h1 id="must-have">Must have</h1>
 </section>
   </div>
-  <div class="slide hidden" id="slide-39">
+  <div class="slide hidden" id="slide-40">
     <section class="slide-content"><h3 id="rate-limiting">Rate limiting</h3>
 <ul>
 <li>Limitation des appels vers l&#39;API</li>
@@ -1162,7 +1159,7 @@ Sinon on retourne la ressource avec le header <code>Last-Modified</code>.</p>
 </table>
 </section>
   </div>
-  <div class="slide hidden" id="slide-40">
+  <div class="slide hidden" id="slide-41">
     <section class="slide-content"><h3 id="cors">CORS</h3>
 <ul>
 <li>Cross-Origin Resource Sharing</li>
@@ -1178,12 +1175,12 @@ Sinon on retourne la ressource avec le header <code>Last-Modified</code>.</p>
 </blockquote>
 </section>
   </div>
-  <div class="slide hidden" id="slide-41">
+  <div class="slide hidden" id="slide-42">
     <section class="slide-content"><h3 id="test">Test</h3>
 <p>?</p>
 </section>
   </div>
-  <div class="slide hidden" id="slide-42">
+  <div class="slide hidden" id="slide-43">
     <section class="slide-content"><h3 id="documentation">Documentation</h3>
 <ul>
 <li>Point clé pour que l&#39;API soit populaire si publique</li>
@@ -1198,7 +1195,7 @@ Sinon on retourne la ressource avec le header <code>Last-Modified</code>.</p>
 </ul>
 </section>
   </div>
-  <div class="slide hidden" id="slide-43">
+  <div class="slide hidden" id="slide-44">
     <section class="slide-content"><div class="author">
   <h1 class="name">Fabien Furet</h1>
     <h3 class="twitter">

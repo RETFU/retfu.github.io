@@ -9,7 +9,7 @@ style: assets/style.css
 
 --
 
-# REST in peacecac
+# REST in peace
 
 -- 
 
@@ -53,10 +53,6 @@ Modèle de maturité de Richardson
 --
 
 # RTFM
-
---
-
-# No RESTFull don't care
 
 --
 

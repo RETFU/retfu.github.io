@@ -9,7 +9,7 @@ style: assets/style.css
 
 --
 
-# REST in peace
+# REST in peacecac
 
 -- 
 
@@ -145,7 +145,6 @@ $ curl -X POST https://api.domain.com/v2/items \
     -H "Content-Type: application/json;charset=utf-8" \
     -H "Accept: application/json" \
     -H "Accept-Encoding: gzip" \
-    -H "X-Request-UUID: 454684315618613" \
     -d '{"name": "Jo", "age": 55, "isGeek": true}'
 
 {
@@ -277,6 +276,21 @@ X-Resource-Nested: true
 
 --
 
+### Headers
+
+```http
+Content-Type: application/json;charset=utf-8
+Content-Encoding:gzip
+Content-Length:126444
+Last-Modified: Wed, 08 Jul 2015 12:59:49 GMT
+X-Request-UUID: 454684315618613
+X-Rate-Limit-Limit: 10000
+X-Rate-Limit-Remaining: 8532
+X-Rate-Limit-Reset: 1200
+```
+
+--
+
 ### Code HTTP
 
 | HTTP status code | Information |
@@ -382,7 +396,6 @@ $ curl -X POST https://api.domain.com/v2/item?page=2&per_page=100 \
     -H "Content-Type: application/json"
     -H "Accept: application/json" \
     -H "Accept-Encoding: gzip" \
-    -H "X-Request-UUID: 454684315618778" \
 ```
 
 > On pourrait utiliser le header `Range` mais par affordance et pour le côté pratique il vaut mieux utiliser la querystring.
@@ -421,10 +434,18 @@ $ curl -X POST https://api.domain.com/v2/item?q=toto&isGeek=false
     -H "Content-Type: application/json"
     -H "Accept: application/json" \
     -H "Accept-Encoding: gzip" \
-    -H "X-Request-UUID: 454684315618778" \
 ```
 
 > q pour une recherche fulltext. On peut aussi se servir des filtres pour faire une recherche sur un champs particulier, exemple name=Marado*
+
+--
+
+# Cache
+
+On envoie le header ```If-Modified-Since``` pour valider que la ressource n'a pas été modifiée. Dans ce cas on retourne un [`304 Not Modified`](http://httpstatus.es/304).
+Sinon on retourne la ressource avec le header ```Last-Modified```.
+
+> On pourrait utiliser Etag, mais ça nécessite de maintenir un hash de la ressource alors qu'on aura toujours un timestamp de modification.
 
 --
 

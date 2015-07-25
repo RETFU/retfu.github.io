@@ -535,7 +535,7 @@ Slides
   </div>
 
   <div class="slide" id="slide-1">
-    <section class="slide-content"><h1 id="rest-in-peace">REST in peace</h1>
+    <section class="slide-content"><h1 id="rest-in-peacecac">REST in peacecac</h1>
 </section>
   </div>
   <div class="slide hidden  " id="slide-2">
@@ -760,7 +760,6 @@ Slides
     -H <span class="string">"Content-Type: application/json;charset=utf-8"</span> \
     -H <span class="string">"Accept: application/json"</span> \
     -H <span class="string">"Accept-Encoding: gzip"</span> \
-    -H <span class="string">"X-Request-UUID: 454684315618613"</span> \
     -d <span class="string">'{"name": "Jo", "age": 55, "isGeek": true}'</span>
 
 {
@@ -885,6 +884,18 @@ Donc <code>Accept: application/json; application/xml</code> mais on garde JSON e
 </section>
   </div>
   <div class="slide hidden" id="slide-23">
+    <section class="slide-content"><h3 id="headers">Headers</h3>
+<pre><code class="lang-http">Content-Type: application/json;charset=utf-8
+Content-Encoding:gzip
+Content-Length:126444
+Last-Modified: Wed, 08 Jul 2015 12:59:49 GMT
+X-Request-UUID: 454684315618613
+X-Rate-Limit-Limit: 10000
+X-Rate-Limit-Remaining: 8532
+X-Rate-Limit-Reset: 1200</code></pre>
+</section>
+  </div>
+  <div class="slide hidden" id="slide-24">
     <section class="slide-content"><h3 id="code-http">Code HTTP</h3>
 <table>
 <thead>
@@ -921,7 +932,7 @@ Donc <code>Accept: application/json; application/xml</code> mais on garde JSON e
 <pre><code class="lang-http"><span class="attribute">Location</span>: <span class="string">https://api.domain.com/v2/items/1783</span></code></pre>
 </section>
   </div>
-  <div class="slide hidden" id="slide-24">
+  <div class="slide hidden" id="slide-25">
     <section class="slide-content"><h3 id="format-d-erreur">Format d&#39;erreur</h3>
 <pre><code class="lang-json">{
   "<span class="attribute">code</span>": <span class="value"><span class="string">"error_code"</span></span>,
@@ -930,7 +941,7 @@ Donc <code>Accept: application/json; application/xml</code> mais on garde JSON e
 }</span></code></pre>
 </section>
   </div>
-  <div class="slide hidden" id="slide-25">
+  <div class="slide hidden" id="slide-26">
     <section class="slide-content"><h3 id="exemples-de-format-d-erreur">Exemples de format d&#39;erreur</h3>
 <pre><code class="lang-http"><span class="status">HTTP/1.1 <span class="number">400</span> Bad Request</span></code></pre>
 <pre><code class="lang-json">{
@@ -947,7 +958,7 @@ Donc <code>Accept: application/json; application/xml</code> mais on garde JSON e
 }</span></code></pre>
 </section>
   </div>
-  <div class="slide hidden" id="slide-26">
+  <div class="slide hidden" id="slide-27">
     <section class="slide-content"><h3 id="validation-plus-fine">Validation plus fine</h3>
 <pre><code class="lang-http"><span class="status">HTTP/1.1 <span class="number">422</span> Unprocessable Entity</span></code></pre>
 <pre><code class="lang-json">[
@@ -964,7 +975,7 @@ Donc <code>Accept: application/json; application/xml</code> mais on garde JSON e
 ]</code></pre>
 </section>
   </div>
-  <div class="slide hidden" id="slide-27">
+  <div class="slide hidden" id="slide-28">
     <section class="slide-content"><h3 id="code-http-erreurs">Code HTTP Erreurs</h3>
 <table>
 <thead>
@@ -1022,19 +1033,18 @@ Donc <code>Accept: application/json; application/xml</code> mais on garde JSON e
 </table>
 </section>
   </div>
-  <div class="slide hidden" id="slide-28">
+  <div class="slide hidden" id="slide-29">
     <section class="slide-content"><h3 id="pagination-requ-te">Pagination: requête</h3>
 <pre><code class="lang-bash">$ curl -X POST https://api.domain.com/v2/item?page=2&amp;per_page=100 \
     -H <span class="string">"Content-Type: application/json"</span>
     -H <span class="string">"Accept: application/json"</span> \
-    -H <span class="string">"Accept-Encoding: gzip"</span> \
-    -H <span class="string">"X-Request-UUID: 454684315618778"</span> \</code></pre>
+    -H <span class="string">"Accept-Encoding: gzip"</span> \</code></pre>
 <blockquote>
 <p>On pourrait utiliser le header <code>Range</code> mais par affordance et pour le côté pratique il vaut mieux utiliser la querystring.</p>
 </blockquote>
 </section>
   </div>
-  <div class="slide hidden" id="slide-29">
+  <div class="slide hidden" id="slide-30">
     <section class="slide-content"><h3 id="pagination-r-ponse">Pagination: réponse</h3>
 <ul>
 <li><code>206 Partial content</code> si on n&#39;a pas toutes les ressources, </li>
@@ -1048,7 +1058,7 @@ On peut aussi ajouter la première et la dernière page <code>rel=first</code> e
 </blockquote>
 </section>
   </div>
-  <div class="slide hidden" id="slide-30">
+  <div class="slide hidden" id="slide-31">
     <section class="slide-content"><h3 id="pagination-r-ponse">Pagination: réponse</h3>
 <p>Ajouter un header custom pour indiquer le nombre totale de ressources disponibles:</p>
 <pre><code class="lang-http"><span class="attribute">X-Total-Count</span>: <span class="string">456</span>
@@ -1056,24 +1066,32 @@ On peut aussi ajouter la première et la dernière page <code>rel=first</code> e
 <p>Le serveur doit retourner <code>400 Bad request</code> si on dépasse les capacités de l&#39;API.</p>
 </section>
   </div>
-  <div class="slide hidden" id="slide-31">
+  <div class="slide hidden" id="slide-32">
     <section class="slide-content"><h3 id="filtering-sort-search">Filtering, sort &amp; search</h3>
 <pre><code class="lang-bash">$ curl -X POST https://api.domain.com/v2/item?q=toto&amp;isGeek=<span class="literal">false</span>
 &amp;age=18,19&amp;sort=name,id \
     -H <span class="string">"Content-Type: application/json"</span>
     -H <span class="string">"Accept: application/json"</span> \
-    -H <span class="string">"Accept-Encoding: gzip"</span> \
-    -H <span class="string">"X-Request-UUID: 454684315618778"</span> \</code></pre>
+    -H <span class="string">"Accept-Encoding: gzip"</span> \</code></pre>
 <blockquote>
 <p>q pour une recherche fulltext. On peut aussi se servir des filtres pour faire une recherche sur un champs particulier, exemple name=Marado*</p>
 </blockquote>
 </section>
   </div>
-  <div class="slide hidden" id="slide-32">
+  <div class="slide hidden" id="slide-33">
+    <section class="slide-content"><h1 id="cache">Cache</h1>
+<p>On envoie le header <code>If-Modified-Since</code> pour valider que la ressource n&#39;a pas été modifiée. Dans ce cas on retourne un <a href="http://httpstatus.es/304"><code>304 Not Modified</code></a>.
+Sinon on retourne la ressource avec le header <code>Last-Modified</code>.</p>
+<blockquote>
+<p>On pourrait utiliser Etag, mais ça nécessite de maintenir un hash de la ressource alors qu&#39;on aura toujours un timestamp de modification.</p>
+</blockquote>
+</section>
+  </div>
+  <div class="slide hidden" id="slide-34">
     <section class="slide-content"><h1 id="authentification">Authentification</h1>
 </section>
   </div>
-  <div class="slide hidden" id="slide-33">
+  <div class="slide hidden" id="slide-35">
     <section class="slide-content"><h3 id="http-basic-authentification">HTTP basic authentification</h3>
 <pre><code class="lang-http"><span class="attribute">Authorization</span>: <span class="string">Basic cGhwOm1lZXR1cA==</span></code></pre>
 <ul>
@@ -1086,11 +1104,11 @@ On peut aussi ajouter la première et la dernière page <code>rel=first</code> e
 </blockquote>
 </section>
   </div>
-  <div class="slide hidden" id="slide-34">
+  <div class="slide hidden" id="slide-36">
     <section class="slide-content"><h3 id="basique-api-key-">Basique API Key?</h3>
 </section>
   </div>
-  <div class="slide hidden" id="slide-35">
+  <div class="slide hidden" id="slide-37">
     <section class="slide-content"><h3 id="query-authentification">Query Authentification</h3>
 <pre><code class="lang-http">GET /items?param=X&amp;timestamp=1261496500&amp;apiKey=XYZ
 &amp;signature=3051d3c053e291b723f169</code></pre>
@@ -1107,16 +1125,16 @@ On peut aussi ajouter la première et la dernière page <code>rel=first</code> e
 </blockquote>
 </section>
   </div>
-  <div class="slide hidden" id="slide-36">
+  <div class="slide hidden" id="slide-38">
     <section class="slide-content"><h3 id="oauth2">OAuth2</h3>
 <h1 id="rtfm">RTFM</h1>
 </section>
   </div>
-  <div class="slide hidden" id="slide-37">
+  <div class="slide hidden" id="slide-39">
     <section class="slide-content"><h1 id="must-have">Must have</h1>
 </section>
   </div>
-  <div class="slide hidden" id="slide-38">
+  <div class="slide hidden" id="slide-40">
     <section class="slide-content"><h3 id="rate-limiting">Rate limiting</h3>
 <ul>
 <li>Limitation des appels vers l&#39;API</li>
@@ -1148,7 +1166,7 @@ On peut aussi ajouter la première et la dernière page <code>rel=first</code> e
 </table>
 </section>
   </div>
-  <div class="slide hidden" id="slide-39">
+  <div class="slide hidden" id="slide-41">
     <section class="slide-content"><h3 id="cors">CORS</h3>
 <ul>
 <li>Cross-Origin Resource Sharing</li>
@@ -1164,12 +1182,12 @@ On peut aussi ajouter la première et la dernière page <code>rel=first</code> e
 </blockquote>
 </section>
   </div>
-  <div class="slide hidden" id="slide-40">
+  <div class="slide hidden" id="slide-42">
     <section class="slide-content"><h3 id="test">Test</h3>
 <p>?</p>
 </section>
   </div>
-  <div class="slide hidden" id="slide-41">
+  <div class="slide hidden" id="slide-43">
     <section class="slide-content"><h3 id="documentation">Documentation</h3>
 <ul>
 <li>Point clé pour que l&#39;API soit populaire si publique</li>
@@ -1184,7 +1202,7 @@ On peut aussi ajouter la première et la dernière page <code>rel=first</code> e
 </ul>
 </section>
   </div>
-  <div class="slide hidden" id="slide-42">
+  <div class="slide hidden" id="slide-44">
     <section class="slide-content"><div class="author">
   <h1 class="name">Fabien Furet</h1>
     <h3 class="twitter">

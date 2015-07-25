@@ -22,10 +22,6 @@ style: assets/style.css
 * Pas un standard mais un style d'architecture
 * Utilise des standards
 
---
-
-# RTFM
-
 -- 
 
 ### Qu'est-ce que REST?
@@ -56,6 +52,10 @@ Modèle de maturité de Richardson
 
 --
 
+# RTFM
+
+--
+
 # No RESTFull don't care
 
 --
@@ -67,12 +67,6 @@ Modèle de maturité de Richardson
 * Versionner via l'URL: https://api.domain.com/v2
 > Max 2 versions en prod sinon c'est ingérable
 > <br/>Via Header `Accept: application/json; version=2`
-
---
-
-### Les Bases
-
-
 
 --
 
@@ -96,7 +90,7 @@ Modèle de maturité de Richardson
 
 * Toujours au pluriel
 * Nommé avec des - ou des _
-* les ids sont des UUID
+* Les ids des représentations sont des UUID
 * Ne reflète pas forcément votre modèle de donnée
 
 --
@@ -137,50 +131,6 @@ On utilise toujours **POST**.
 | POST /items/1782/translate | Traduit l'item 1782 |
 | POST /items/1782/enable | Active l'item 1782 |
 | POST /items/1782/comments/56/star | Met en favori le commentaire 56 de l'item 1782 |
-
---
-
-# Authentification
-
---
-
-### HTTP basic authentification
-
-```http
-Authorization: Basic cGhwOm1lZXR1cA==
-```
-
-* username:password encodé en base64
-* toujours utilisé avec SSL
-* on doit maîtriser le client et le serveur
-
-> Rapide à mettre en place, mais pas très secure, on doit avoir les credentials sur le client
-
---
-
-### Basique API Key?
-
---
-
-### Query Authentification
-
-```http
-GET /items?param=X&timestamp=1261496500&apiKey=XYZ
-&signature=3051d3c053e291b723f169
-```
-
-* le client signe la requête <br/><span style="font-size:0.9em;">```SHA256(items?param=X&timestamp=1261496500&apiKey=XYZ)```</span>
-* le serveur 
-    * valide la signature
-    * vérifie si timestamp < X secondes (X étant définit sur le serveur)
-
-> Il faut que le client et le serveur soit configuré de la même façon niveau date pour avoir des timestamps comparables
-
---
-
-### OAuth2
-
-# RTFM
 
 --
 
@@ -342,7 +292,7 @@ Lors d'un `200 Ok` **on doit retourner la ressource**.
 Lors d'un `201 Ok`: retourner la ressource et indiquer l'URI de la nouvelle resource dans le header.  
 
 ```http
-Location: https://api.domain.com/v2/items/1783`
+Location: https://api.domain.com/v2/items/1783
 ```
 
 --
@@ -385,8 +335,11 @@ HTTP/1.1 422 Unprocessable Entity
 
 --
 
-### Et pour la validation?
+### Validation plus fine
 
+```http
+HTTP/1.1 422 Unprocessable Entity
+```  
 ```json
 [
     {
@@ -427,6 +380,9 @@ HTTP/1.1 422 Unprocessable Entity
 ```bash
 $ curl -X POST https://api.domain.com/v2/item?page=2&per_page=100 \
     -H "Content-Type: application/json"
+    -H "Accept: application/json" \
+    -H "Accept-Encoding: gzip" \
+    -H "X-Request-UUID: 454684315618778" \
 ```
 
 > On pourrait utiliser le header `Range` mais par affordance et pour le côté pratique il vaut mieux utiliser la querystring.
@@ -448,7 +404,7 @@ Link: <...?page=3&per_page=100>; rel="next",<...?page=1&per_page=100>; rel="prev
 
 ### Pagination: réponse
 
-Ajouter un header custom pour indiquer le nombre totale de ressource disponible:
+Ajouter un header custom pour indiquer le nombre totale de ressources disponibles:
 ```http
 X-Total-Count: 456
 X-Page-Max-Range: 100
@@ -463,9 +419,56 @@ Le serveur doit retourner `400 Bad request` si on dépasse les capacités de l'A
 $ curl -X POST https://api.domain.com/v2/item?q=toto&isGeek=false
 &age=18,19&sort=name,id \
     -H "Content-Type: application/json"
+    -H "Accept: application/json" \
+    -H "Accept-Encoding: gzip" \
+    -H "X-Request-UUID: 454684315618778" \
 ```
 
 > q pour une recherche fulltext. On peut aussi se servir des filtres pour faire une recherche sur un champs particulier, exemple name=Marado*
+
+--
+
+# Authentification
+
+--
+
+### HTTP basic authentification
+
+```http
+Authorization: Basic cGhwOm1lZXR1cA==
+```
+
+* username:password encodé en base64
+* toujours utilisé avec SSL
+* on doit maîtriser le client et le serveur
+
+> Rapide à mettre en place, mais pas très secure, on doit avoir les credentials sur le client
+
+--
+
+### Basique API Key?
+
+--
+
+### Query Authentification
+
+```http
+GET /items?param=X&timestamp=1261496500&apiKey=XYZ
+&signature=3051d3c053e291b723f169
+```
+
+* le client signe la requête <br/><span style="font-size:0.9em;">```SHA256(items?param=X&timestamp=1261496500&apiKey=XYZ)```</span>
+* le serveur 
+    * valide la signature
+    * vérifie si timestamp < X secondes (X étant définit sur le serveur)
+
+> Il faut que le client et le serveur soit configuré de la même façon niveau date pour avoir des timestamps comparables
+
+--
+
+### OAuth2
+
+# RTFM
 
 --
 
@@ -520,4 +523,4 @@ Access-Control-Allow-Headers: X-Rate-Limit-Limit, X-Rate-Limit-Remaining, X-Rate
 
 http://apidocjs.com 
 * Annotations dans le code
-* Générer la documentation complète de votre API
+* Génére la documentation complète de votre API

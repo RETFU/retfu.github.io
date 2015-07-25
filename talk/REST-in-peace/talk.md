@@ -231,9 +231,9 @@ X-Resource-Nested: true
 
 ```bash
 $ curl -X POST https://api.domain.com/v2/items \
-    -H "Content-Type: application/json;charset=utf-8" \
     -H "Accept: application/json" \
     -H "Accept-Encoding: gzip" \
+    -H "Content-Type: application/json;charset=utf-8" \
     -d '{"name": "Jo", "age": 55, "isGeek": true}'
 
 {

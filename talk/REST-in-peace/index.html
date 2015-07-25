@@ -822,9 +822,9 @@ Donc <code>Accept: application/json; application/xml</code> mais on garde JSON e
   <div class="slide hidden" id="slide-19">
     <section class="slide-content"><h3 id="headers">Headers</h3>
 <pre><code class="lang-bash">$ curl -X POST https://api.domain.com/v2/items \
-    -H <span class="string">"Content-Type: application/json;charset=utf-8"</span> \
     -H <span class="string">"Accept: application/json"</span> \
     -H <span class="string">"Accept-Encoding: gzip"</span> \
+    -H <span class="string">"Content-Type: application/json;charset=utf-8"</span> \
     -d <span class="string">'{"name": "Jo", "age": 55, "isGeek": true}'</span>
 
 {

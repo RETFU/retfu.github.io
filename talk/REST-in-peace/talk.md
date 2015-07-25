@@ -13,18 +13,9 @@ style: assets/style.css
 
 -- 
 
-### Qu'est-ce que REST? (1/x)
+### Qu'est-ce que REST?
 
-Representational State Transfer
-
---
-
-# RTFM
-
--- 
-
-### Qu'est-ce que REST? (1/x)
-
+* Representational State Transfer
 * CRUD HTTP
 * Sans état
 * Cachable
@@ -33,7 +24,11 @@ Representational State Transfer
 
 --
 
-### Qu'est-ce que REST? (1/x)
+# RTFM
+
+-- 
+
+### Qu'est-ce que REST?
 
 URI = https://api.domain.com/v2/items/5 
 
@@ -52,7 +47,7 @@ Représentation
 
 -- 
 
-### Qu'est-ce que REST? (1/x)
+### Qu'est-ce que REST?
 
 Modèle de maturité de Richardson
 * Level1: les ressources
@@ -65,7 +60,7 @@ Modèle de maturité de Richardson
 
 --
 
-### Les Bases (1/x)
+### Les Bases
 
 * SSL 
 * UTF-8 partout
@@ -75,15 +70,13 @@ Modèle de maturité de Richardson
 
 --
 
-### Les Bases (1/x)
+### Les Bases
 
 
 
 --
 
-### Les Bases (1/x)
-
-<br/>
+### Les Bases
 
 | Type | Description |
 | ------------ | ------------- |
@@ -91,7 +84,7 @@ Modèle de maturité de Richardson
 | Integer | Entier signé en 32-bit ou 64-bit |
 | Float | Nombre flottant signé en 32-bit ou 64-bit |
 | Boolean | true ou false |
-| Date | **UTC** et au format [ISO8601](https://en.wikipedia.org/wiki/ISO_8601)<br/>`2015-07-31T20:00:01Z` |
+| Date | **UTC** et au format **ISO8601**: 2015-07-31T20:00:01Z |
 
 --
 
@@ -153,15 +146,13 @@ On utilise toujours **POST**.
 
 ### HTTP basic authentification
 
-On envoie le header Authorization:
-
 ```http
 Authorization: Basic cGhwOm1lZXR1cA==
 ```
 
 * username:password encodé en base64
 * toujours utilisé avec SSL
-* on doit maîtrise le client et le serveur
+* on doit maîtriser le client et le serveur
 
 > Rapide à mettre en place, mais pas très secure, on doit avoir les credentials sur le client
 
@@ -174,10 +165,11 @@ Authorization: Basic cGhwOm1lZXR1cA==
 ### Query Authentification
 
 ```http
-GET /items?param=X&timestamp=1261496500&apiKey=XYZ&signature=3051d3c053e291b723f169
+GET /items?param=X&timestamp=1261496500&apiKey=XYZ
+&signature=3051d3c053e291b723f169
 ```
 
-* le client signe la requête <br/>```SHA256( items?param=X&timestamp=1261496500&apiKey=XYZ )```
+* le client signe la requête <br/><span style="font-size:0.9em;">```SHA256(items?param=X&timestamp=1261496500&apiKey=XYZ)```</span>
 * le serveur 
     * valide la signature
     * vérifie si timestamp < X secondes (X étant définit sur le serveur)
@@ -188,7 +180,7 @@ GET /items?param=X&timestamp=1261496500&apiKey=XYZ&signature=3051d3c053e291b723f
 
 ### OAuth2
 
-RTFM
+# RTFM
 
 --
 
@@ -334,3 +326,198 @@ X-Resource-Nested: true
 ```
 
 --
+
+### Code HTTP
+
+| HTTP status code | Information |
+| ------------ | ------------- |
+| 200 Ok | GET, PUT, PATCH et DELETE ainsi que pour POST lors d'une "action" |
+| 201 Created | POST |
+| 202 Accepted | La requête est ok, mais on la traitera plus tard |
+| 204 No Content | DELETE sans body |
+| 206 Partial content | Si la réponse ne renvoie pas l'ensemble de la resource (une liste par ex) |
+
+Lors d'un `200 Ok` **on doit retourner la ressource**.
+
+Lors d'un `201 Ok`: retourner la ressource et indiquer l'URI de la nouvelle resource dans le header.  
+
+```http
+Location: https://api.domain.com/v2/items/1783`
+```
+
+--
+
+### Format d'erreur
+
+```json
+{
+  "code": "error_code",
+  "description": "More details about the error here",
+  "url": "https://doc.domain.com/error/error_code"
+}
+```
+
+--
+
+### Exemples de format d'erreur
+
+```http
+HTTP/1.1 400 Bad Request
+```  
+```json
+{
+  "code": "invalid_request",
+  "message": "Can't parse the request body, JSON not valid.",
+  "url": "https://doc.domain.com/error/invalid_request"
+}
+```
+<br/>
+```http
+HTTP/1.1 422 Unprocessable Entity
+```  
+```json
+{
+  "code": "invalid_item",
+  "message": "Name is required, isGeek must be a boolean.",
+  "url": "https://doc.domain.com/error/invalid_item"
+}
+```
+
+--
+
+### Et pour la validation?
+
+```json
+[
+    {
+        "code": "invalid_item_name",
+        "message": "Name is required",
+        "url": "https://doc.domain.com/error/invalid_item_name"
+    },
+    {
+        "code": "invalid_item_geek",
+        "message": "isGeek must be a boolean.",
+        "url": "https://doc.domain.com/error/invalid_item_geek"
+    }
+]
+```
+
+--
+
+### Code HTTP Erreurs
+
+| HTTP status code | Information |
+| ------------ | ------------- |
+| 400 Bad Request| Requête mal formée (body non parsable etc...) |
+| 401 Unauthorized | Authentification invalide |
+| 403 Forbidden | Authentication ok, mais on a pas les droits |
+| 404 Not Found | Resource pas trouvée (inexistante ou suite à un `DELETE`) |
+| 405 Method Not Allowed | Méthode HTTP non autorisée (utilisation d'un `POST` vs `DELETE`) |
+| 406 Not acceptable | Format de retour non disponible (requête du XML vs JSON) |
+| 415 Unsupported Media Type | Content type pas supporté (on envoie du XML vs JSON) |
+| 422 Unprocessable Entity | Tout ce qui touche à la validation |
+| 429 Too Many Requests | Trop de requêtes (on a dépassé le rate limit) |
+| 500 Internal Server Error | Certainement une coquille dans le code ^^ |
+| 503 Service Unvailable | Lors d'une maintenance ou si l'on veut couper l'API |
+
+--
+
+### Pagination: requête
+
+```bash
+$ curl -X POST https://api.domain.com/v2/item?page=2&per_page=100 \
+    -H "Content-Type: application/json"
+```
+
+> On pourrait utiliser le header `Range` mais par affordance et pour le côté pratique il vaut mieux utiliser la querystring.
+
+--
+
+### Pagination: réponse
+
+* `206 Partial content` si on n'a pas toutes les ressources, 
+* `201 OK` si elles sont toutes retournées
+
+Utiliser le header `Link` pour transmettre la pagination:
+```http
+Link: <...?page=3&per_page=100>; rel="next",<...?page=1&per_page=100>; rel="prev"
+```
+> Le client n'aura pas à construire la pagination.
+> On peut aussi ajouter la première et la dernière page `rel=first` et `rel=last`.
+--
+
+### Pagination: réponse
+
+Ajouter un header custom pour indiquer le nombre totale de ressource disponible:
+```http
+X-Total-Count: 456
+X-Page-Max-Range: 100
+```
+Le serveur doit retourner `400 Bad request` si on dépasse les capacités de l'API.
+
+--
+
+### Filtering, sort & search
+
+```bash
+$ curl -X POST https://api.domain.com/v2/item?q=toto&isGeek=false
+&age=18,19&sort=name,id \
+    -H "Content-Type: application/json"
+```
+
+> q pour une recherche fulltext. On peut aussi se servir des filtres pour faire une recherche sur un champs particulier, exemple name=Marado*
+
+--
+
+# Must have
+
+--
+
+### Rate limiting
+
+* Limitation des appels vers l'API
+* Garder un niveau de qualité/performance
+* Eviter les abus
+* `429 Too many requests` si on dépasse la limite
+
+| Header | Description |
+| ------------ | ------------- |
+| X-Rate-Limit-Limit | Le nomber de requête possible pendant la période | 
+| X-Rate-Limit-Remaining | Le nombre de requête qu'il reste pour la période |
+| X-Rate-Limit-Reset | Le nombre de seconde qu'il reste avant de remettre les compteurs à 0 |
+
+--
+
+### CORS
+
+* Cross-Origin Resource Sharing
+* Api et Webapp sur des domaines différents
+* Requête `OPTION` (preflighted request)
+
+```http
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: GET, POST, PUT, PATCH, DELETE
+Access-Control-Allow-Credentials: true
+Access-Control-Allow-Headers: X-Rate-Limit-Limit, X-Rate-Limit-Remaining, X-Rate-Limit-Reset
+```
+
+> IE<10 ne supporte pas correctement CORS, dans ce cas il faudra se trourner vers JSONP
+
+--
+
+### Test
+
+?
+
+--
+
+### Documentation
+
+* Point clé pour que l'API soit populaire si publique
+* Il faut qu'elle soit maintenue et **facile à maintenir**!
+* Le mieux c'est que la documentation parte du code.
+* Mettre des exemples cURL
+
+http://apidocjs.com 
+* Annotations dans le code
+* Générer la documentation complète de votre API

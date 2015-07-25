@@ -416,12 +416,18 @@ h2 {
 
 h3 {
 	font-size: 1.2em;
+	margin-bottom: 80px;
+}
 
-
+h4 {
+	font-size: 1.0em;
+	margin-bottom: 0px;
 }
 
 ul {
 	line-height: 1.8em;
+	padding-top:0px;
+	margin:0px;
 }
 
 blockquote {
@@ -481,6 +487,16 @@ pre {
 /*
 Slides
  */
+#slide-9 table {
+	margin-top:30px;
+	font-size: 0.6em;
+}
+
+#slide-12 table {
+	margin-top:30px;
+	font-size: 0.6em;
+}
+
 #slide-13 table {
 	margin-top:30px;
 	font-size: 0.6em;
@@ -491,12 +507,22 @@ Slides
 	font-size: 0.6em;
 }
 
-#slide-15 table {
+#slide-23 table {
 	margin-top:30px;
 	font-size: 0.6em;
 }
 
-#slide-24 table {
+#slide-29 table {
+	margin-top:30px;
+	font-size: 0.6em;
+}
+
+#slide-33 table {
+	margin-top:30px;
+	font-size: 0.6em;
+}
+
+#slide-39 table {
 	margin-top:30px;
 	font-size: 0.6em;
 }
@@ -513,17 +539,9 @@ Slides
 </section>
   </div>
   <div class="slide hidden  " id="slide-2">
-    <section class="slide-content"><h3 id="qu-est-ce-que-rest-1-x-">Qu&#39;est-ce que REST? (1/x)</h3>
-<p>Representational State Transfer</p>
-</section>
-  </div>
-  <div class="slide hidden" id="slide-3">
-    <section class="slide-content"><h1 id="rtfm">RTFM</h1>
-</section>
-  </div>
-  <div class="slide hidden  " id="slide-4">
-    <section class="slide-content"><h3 id="qu-est-ce-que-rest-1-x-">Qu&#39;est-ce que REST? (1/x)</h3>
+    <section class="slide-content"><h3 id="qu-est-ce-que-rest-">Qu&#39;est-ce que REST?</h3>
 <ul>
+<li>Representational State Transfer</li>
 <li>CRUD HTTP</li>
 <li>Sans état</li>
 <li>Cachable</li>
@@ -532,8 +550,12 @@ Slides
 </ul>
 </section>
   </div>
-  <div class="slide hidden" id="slide-5">
-    <section class="slide-content"><h3 id="qu-est-ce-que-rest-1-x-">Qu&#39;est-ce que REST? (1/x)</h3>
+  <div class="slide hidden" id="slide-3">
+    <section class="slide-content"><h1 id="rtfm">RTFM</h1>
+</section>
+  </div>
+  <div class="slide hidden  " id="slide-4">
+    <section class="slide-content"><h3 id="qu-est-ce-que-rest-">Qu&#39;est-ce que REST?</h3>
 <p>URI = <a href="https://api.domain.com/v2/items/5">https://api.domain.com/v2/items/5</a> </p>
 <p>Ressource = <a href="https://api.domain.com/v2/">https://api.domain.com/v2/</a> <strong>items/5</strong></p>
 <p>Représentation</p>
@@ -546,8 +568,8 @@ Slides
 }</span></code></pre>
 </section>
   </div>
-  <div class="slide hidden  " id="slide-6">
-    <section class="slide-content"><h3 id="qu-est-ce-que-rest-1-x-">Qu&#39;est-ce que REST? (1/x)</h3>
+  <div class="slide hidden  " id="slide-5">
+    <section class="slide-content"><h3 id="qu-est-ce-que-rest-">Qu&#39;est-ce que REST?</h3>
 <p>Modèle de maturité de Richardson</p>
 <ul>
 <li>Level1: les ressources</li>
@@ -556,12 +578,12 @@ Slides
 </ul>
 </section>
   </div>
-  <div class="slide hidden" id="slide-7">
+  <div class="slide hidden" id="slide-6">
     <section class="slide-content"><h1 id="no-restfull-don-t-care">No RESTFull don&#39;t care</h1>
 </section>
   </div>
-  <div class="slide hidden" id="slide-8">
-    <section class="slide-content"><h3 id="les-bases-1-x-">Les Bases (1/x)</h3>
+  <div class="slide hidden" id="slide-7">
+    <section class="slide-content"><h3 id="les-bases">Les Bases</h3>
 <ul>
 <li>SSL </li>
 <li>UTF-8 partout</li>
@@ -573,13 +595,12 @@ Slides
 </ul>
 </section>
   </div>
-  <div class="slide hidden" id="slide-9">
-    <section class="slide-content"><h3 id="les-bases-1-x-">Les Bases (1/x)</h3>
+  <div class="slide hidden" id="slide-8">
+    <section class="slide-content"><h3 id="les-bases">Les Bases</h3>
 </section>
   </div>
-  <div class="slide hidden" id="slide-10">
-    <section class="slide-content"><h3 id="les-bases-1-x-">Les Bases (1/x)</h3>
-<p><br/></p>
+  <div class="slide hidden" id="slide-9">
+    <section class="slide-content"><h3 id="les-bases">Les Bases</h3>
 <table>
 <thead>
 <tr>
@@ -606,17 +627,17 @@ Slides
 </tr>
 <tr>
 <td>Date</td>
-<td><strong>UTC</strong> et au format <a href="https://en.wikipedia.org/wiki/ISO_8601">ISO8601</a><br/><code>2015-07-31T20:00:01Z</code></td>
+<td><strong>UTC</strong> et au format <strong>ISO8601</strong>: 2015-07-31T20:00:01Z</td>
 </tr>
 </tbody>
 </table>
 </section>
   </div>
-  <div class="slide hidden" id="slide-11">
+  <div class="slide hidden" id="slide-10">
     <section class="slide-content"><h1 id="ressources">Ressources</h1>
 </section>
   </div>
-  <div class="slide hidden" id="slide-12">
+  <div class="slide hidden" id="slide-11">
     <section class="slide-content"><h3 id="convention-formalisme">Convention / Formalisme</h3>
 <ul>
 <li>Toujours au pluriel</li>
@@ -626,7 +647,7 @@ Slides
 </ul>
 </section>
   </div>
-  <div class="slide hidden" id="slide-13">
+  <div class="slide hidden" id="slide-12">
     <section class="slide-content"><h3 id="interactions">Interactions</h3>
 <table>
 <thead>
@@ -668,7 +689,7 @@ Slides
 </table>
 </section>
   </div>
-  <div class="slide hidden" id="slide-14">
+  <div class="slide hidden" id="slide-13">
     <section class="slide-content"><h3 id="relations">Relations</h3>
 <table>
 <thead>
@@ -706,7 +727,7 @@ Slides
 </table>
 </section>
   </div>
-  <div class="slide hidden" id="slide-15">
+  <div class="slide hidden" id="slide-14">
     <section class="slide-content"><h3 id="actions">Actions</h3>
 <p>On utilise toujours <strong>POST</strong>.</p>
 <table>
@@ -733,33 +754,33 @@ Slides
 </table>
 </section>
   </div>
-  <div class="slide hidden" id="slide-16">
+  <div class="slide hidden" id="slide-15">
     <section class="slide-content"><h1 id="authentification">Authentification</h1>
 </section>
   </div>
-  <div class="slide hidden" id="slide-17">
+  <div class="slide hidden" id="slide-16">
     <section class="slide-content"><h3 id="http-basic-authentification">HTTP basic authentification</h3>
-<p>On envoie le header Authorization:</p>
 <pre><code class="lang-http"><span class="attribute">Authorization</span>: <span class="string">Basic cGhwOm1lZXR1cA==</span></code></pre>
 <ul>
 <li>username:password encodé en base64</li>
 <li>toujours utilisé avec SSL</li>
-<li>on doit maîtrise le client et le serveur</li>
+<li>on doit maîtriser le client et le serveur</li>
 </ul>
 <blockquote>
 <p>Rapide à mettre en place, mais pas très secure, on doit avoir les credentials sur le client</p>
 </blockquote>
 </section>
   </div>
-  <div class="slide hidden" id="slide-18">
+  <div class="slide hidden" id="slide-17">
     <section class="slide-content"><h3 id="basique-api-key-">Basique API Key?</h3>
 </section>
   </div>
-  <div class="slide hidden" id="slide-19">
+  <div class="slide hidden" id="slide-18">
     <section class="slide-content"><h3 id="query-authentification">Query Authentification</h3>
-<pre><code class="lang-http">GET /items?param=X&amp;timestamp=1261496500&amp;apiKey=XYZ&amp;signature=3051d3c053e291b723f169</code></pre>
+<pre><code class="lang-http">GET /items?param=X&amp;timestamp=1261496500&amp;apiKey=XYZ
+&amp;signature=3051d3c053e291b723f169</code></pre>
 <ul>
-<li>le client signe la requête <br/><code>SHA256( items?param=X&amp;timestamp=1261496500&amp;apiKey=XYZ )</code></li>
+<li>le client signe la requête <br/><span style="font-size:0.9em;"><code>SHA256(items?param=X&amp;timestamp=1261496500&amp;apiKey=XYZ)</code></span></li>
 <li>le serveur <ul>
 <li>valide la signature</li>
 <li>vérifie si timestamp &lt; X secondes (X étant définit sur le serveur)</li>
@@ -771,16 +792,16 @@ Slides
 </blockquote>
 </section>
   </div>
-  <div class="slide hidden" id="slide-20">
+  <div class="slide hidden" id="slide-19">
     <section class="slide-content"><h3 id="oauth2">OAuth2</h3>
-<p>RTFM</p>
+<h1 id="rtfm">RTFM</h1>
 </section>
   </div>
-  <div class="slide hidden" id="slide-21">
+  <div class="slide hidden" id="slide-20">
     <section class="slide-content"><h1 id="requ-te">Requête</h1>
 </section>
   </div>
-  <div class="slide hidden" id="slide-22">
+  <div class="slide hidden" id="slide-21">
     <section class="slide-content"><h3 id="headers">Headers</h3>
 <pre><code class="lang-bash">$ curl -X POST https://api.domain.com/v2/items \
     -H <span class="string">"Content-Type: application/json;charset=utf-8"</span> \
@@ -798,7 +819,7 @@ Slides
 }</code></pre>
 </section>
   </div>
-  <div class="slide hidden" id="slide-23">
+  <div class="slide hidden" id="slide-22">
     <section class="slide-content"><h3 id="body">Body</h3>
 <ul>
 <li>JSON pour POST, PUT ou PATCH</li>
@@ -812,7 +833,7 @@ Obligera côter serveur à typer les valeurs manuelement et on n&#39;aura pas de
 </blockquote>
 </section>
   </div>
-  <div class="slide hidden" id="slide-24">
+  <div class="slide hidden" id="slide-23">
     <section class="slide-content"><h3 id="erreurs">Erreurs</h3>
 <table>
 <thead>
@@ -834,11 +855,11 @@ Obligera côter serveur à typer les valeurs manuelement et on n&#39;aura pas de
 </table>
 </section>
   </div>
-  <div class="slide hidden" id="slide-25">
+  <div class="slide hidden" id="slide-24">
     <section class="slide-content"><h1 id="r-ponse">Réponse</h1>
 </section>
   </div>
-  <div class="slide hidden" id="slide-26">
+  <div class="slide hidden" id="slide-25">
     <section class="slide-content"><h3 id="formats">Formats</h3>
 <ul>
 <li>JSON uniquement</li>
@@ -851,7 +872,7 @@ Donc <code>Accept: application/json; application/xml</code> mais on garde JSON e
 </blockquote>
 </section>
   </div>
-  <div class="slide hidden" id="slide-27">
+  <div class="slide hidden" id="slide-26">
     <section class="slide-content"><h3 id="formats">Formats</h3>
 <p>Pas d&#39;enveloppe</p>
 <pre><code class="lang-json">{
@@ -872,7 +893,7 @@ Donc <code>Accept: application/json; application/xml</code> mais on garde JSON e
 }</span></code></pre>
 </section>
   </div>
-  <div class="slide hidden" id="slide-28">
+  <div class="slide hidden" id="slide-27">
     <section class="slide-content"><h3 id="formats">Formats</h3>
 <p>Si on a des ressources imbriquées</p>
 <pre><code class="lang-json">{
@@ -894,7 +915,7 @@ Donc <code>Accept: application/json; application/xml</code> mais on garde JSON e
 }</span></code></pre>
 </section>
   </div>
-  <div class="slide hidden" id="slide-29">
+  <div class="slide hidden" id="slide-28">
     <section class="slide-content"><h3 id="formats">Formats</h3>
 <pre><code class="lang-http"><span class="attribute">X-Resource-Nested</span>: <span class="string">true</span></code></pre>
 <pre><code class="lang-json">{
@@ -910,10 +931,257 @@ Donc <code>Accept: application/json; application/xml</code> mais on garde JSON e
 }</span></code></pre>
 </section>
   </div>
+  <div class="slide hidden" id="slide-29">
+    <section class="slide-content"><h3 id="code-http">Code HTTP</h3>
+<table>
+<thead>
+<tr>
+<th>HTTP status code</th>
+<th>Information</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>200 Ok</td>
+<td>GET, PUT, PATCH et DELETE ainsi que pour POST lors d&#39;une &quot;action&quot;</td>
+</tr>
+<tr>
+<td>201 Created</td>
+<td>POST</td>
+</tr>
+<tr>
+<td>202 Accepted</td>
+<td>La requête est ok, mais on la traitera plus tard</td>
+</tr>
+<tr>
+<td>204 No Content</td>
+<td>DELETE sans body</td>
+</tr>
+<tr>
+<td>206 Partial content</td>
+<td>Si la réponse ne renvoie pas l&#39;ensemble de la resource (une liste par ex)</td>
+</tr>
+</tbody>
+</table>
+<p>Lors d&#39;un <code>200 Ok</code> <strong>on doit retourner la ressource</strong>.</p>
+<p>Lors d&#39;un <code>201 Ok</code>: retourner la ressource et indiquer l&#39;URI de la nouvelle resource dans le header.  </p>
+<pre><code class="lang-http"><span class="attribute">Location</span>: <span class="string">https://api.domain.com/v2/items/1783`</span></code></pre>
+</section>
+  </div>
   <div class="slide hidden" id="slide-30">
-    <section class="slide-content"></section>
+    <section class="slide-content"><h3 id="format-d-erreur">Format d&#39;erreur</h3>
+<pre><code class="lang-json">{
+  "<span class="attribute">code</span>": <span class="value"><span class="string">"error_code"</span></span>,
+  "<span class="attribute">description</span>": <span class="value"><span class="string">"More details about the error here"</span></span>,
+  "<span class="attribute">url</span>": <span class="value"><span class="string">"https://doc.domain.com/error/error_code"</span>
+}</span></code></pre>
+</section>
   </div>
   <div class="slide hidden" id="slide-31">
+    <section class="slide-content"><h3 id="exemples-de-format-d-erreur">Exemples de format d&#39;erreur</h3>
+<pre><code class="lang-http"><span class="status">HTTP/1.1 <span class="number">400</span> Bad Request</span></code></pre>
+<pre><code class="lang-json">{
+  "<span class="attribute">code</span>": <span class="value"><span class="string">"invalid_request"</span></span>,
+  "<span class="attribute">message</span>": <span class="value"><span class="string">"Can't parse the request body, JSON not valid."</span></span>,
+  "<span class="attribute">url</span>": <span class="value"><span class="string">"https://doc.domain.com/error/invalid_request"</span>
+}</span></code></pre>
+<p><br/></p>
+<pre><code class="lang-http"><span class="status">HTTP/1.1 <span class="number">422</span> Unprocessable Entity</span></code></pre>
+<pre><code class="lang-json">{
+  "<span class="attribute">code</span>": <span class="value"><span class="string">"invalid_item"</span></span>,
+  "<span class="attribute">message</span>": <span class="value"><span class="string">"Name is required, isGeek must be a boolean."</span></span>,
+  "<span class="attribute">url</span>": <span class="value"><span class="string">"https://doc.domain.com/error/invalid_item"</span>
+}</span></code></pre>
+</section>
+  </div>
+  <div class="slide hidden" id="slide-32">
+    <section class="slide-content"><h3 id="et-pour-la-validation-">Et pour la validation?</h3>
+<pre><code class="lang-json">[
+    {
+        "<span class="attribute">code</span>": <span class="value"><span class="string">"invalid_item_name"</span></span>,
+        "<span class="attribute">message</span>": <span class="value"><span class="string">"Name is required"</span></span>,
+        "<span class="attribute">url</span>": <span class="value"><span class="string">"https://doc.domain.com/error/invalid_item_name"</span>
+    }</span>,
+    {
+        "<span class="attribute">code</span>": <span class="value"><span class="string">"invalid_item_geek"</span></span>,
+        "<span class="attribute">message</span>": <span class="value"><span class="string">"isGeek must be a boolean."</span></span>,
+        "<span class="attribute">url</span>": <span class="value"><span class="string">"https://doc.domain.com/error/invalid_item_geek"</span>
+    }</span>
+]</code></pre>
+</section>
+  </div>
+  <div class="slide hidden" id="slide-33">
+    <section class="slide-content"><h3 id="code-http-erreurs">Code HTTP Erreurs</h3>
+<table>
+<thead>
+<tr>
+<th>HTTP status code</th>
+<th>Information</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>400 Bad Request</td>
+<td>Requête mal formée (body non parsable etc...)</td>
+</tr>
+<tr>
+<td>401 Unauthorized</td>
+<td>Authentification invalide</td>
+</tr>
+<tr>
+<td>403 Forbidden</td>
+<td>Authentication ok, mais on a pas les droits</td>
+</tr>
+<tr>
+<td>404 Not Found</td>
+<td>Resource pas trouvée (inexistante ou suite à un <code>DELETE</code>)</td>
+</tr>
+<tr>
+<td>405 Method Not Allowed</td>
+<td>Méthode HTTP non autorisée (utilisation d&#39;un <code>POST</code> vs <code>DELETE</code>)</td>
+</tr>
+<tr>
+<td>406 Not acceptable</td>
+<td>Format de retour non disponible (requête du XML vs JSON)</td>
+</tr>
+<tr>
+<td>415 Unsupported Media Type</td>
+<td>Content type pas supporté (on envoie du XML vs JSON)</td>
+</tr>
+<tr>
+<td>422 Unprocessable Entity</td>
+<td>Tout ce qui touche à la validation</td>
+</tr>
+<tr>
+<td>429 Too Many Requests</td>
+<td>Trop de requêtes (on a dépassé le rate limit)</td>
+</tr>
+<tr>
+<td>500 Internal Server Error</td>
+<td>Certainement une coquille dans le code ^^</td>
+</tr>
+<tr>
+<td>503 Service Unvailable</td>
+<td>Lors d&#39;une maintenance ou si l&#39;on veut couper l&#39;API</td>
+</tr>
+</tbody>
+</table>
+</section>
+  </div>
+  <div class="slide hidden" id="slide-34">
+    <section class="slide-content"><h3 id="pagination-requ-te">Pagination: requête</h3>
+<pre><code class="lang-bash">$ curl -X POST https://api.domain.com/v2/item?page=2&amp;per_page=100 \
+    -H <span class="string">"Content-Type: application/json"</span></code></pre>
+<blockquote>
+<p>On pourrait utiliser le header <code>Range</code> mais par affordance et pour le côté pratique il vaut mieux utiliser la querystring.</p>
+</blockquote>
+</section>
+  </div>
+  <div class="slide hidden" id="slide-35">
+    <section class="slide-content"><h3 id="pagination-r-ponse">Pagination: réponse</h3>
+<ul>
+<li><code>206 Partial content</code> si on n&#39;a pas toutes les ressources, </li>
+<li><code>201 OK</code> si elles sont toutes retournées</li>
+</ul>
+<p>Utiliser le header <code>Link</code> pour transmettre la pagination:</p>
+<pre><code class="lang-http"><span class="attribute">Link</span>: <span class="string">&lt;...?page=3&amp;per_page=100&gt;; rel="next",&lt;...?page=1&amp;per_page=100&gt;; rel="prev"</span></code></pre>
+<blockquote>
+<p>Le client n&#39;aura pas à construire la pagination.
+On peut aussi ajouter la première et la dernière page <code>rel=first</code> et <code>rel=last</code>.</p>
+</blockquote>
+</section>
+  </div>
+  <div class="slide hidden" id="slide-36">
+    <section class="slide-content"><h3 id="pagination-r-ponse">Pagination: réponse</h3>
+<p>Ajouter un header custom pour indiquer le nombre totale de ressource disponible:</p>
+<pre><code class="lang-http"><span class="attribute">X-Total-Count</span>: <span class="string">456</span>
+<span class="attribute">X-Page-Max-Range</span>: <span class="string">100</span></code></pre>
+<p>Le serveur doit retourner <code>400 Bad request</code> si on dépasse les capacités de l&#39;API.</p>
+</section>
+  </div>
+  <div class="slide hidden" id="slide-37">
+    <section class="slide-content"><h3 id="filtering-sort-search">Filtering, sort &amp; search</h3>
+<pre><code class="lang-bash">$ curl -X POST https://api.domain.com/v2/item?q=toto&amp;isGeek=<span class="literal">false</span>
+&amp;age=18,19&amp;sort=name,id \
+    -H <span class="string">"Content-Type: application/json"</span></code></pre>
+<blockquote>
+<p>q pour une recherche fulltext. On peut aussi se servir des filtres pour faire une recherche sur un champs particulier, exemple name=Marado*</p>
+</blockquote>
+</section>
+  </div>
+  <div class="slide hidden" id="slide-38">
+    <section class="slide-content"><h1 id="must-have">Must have</h1>
+</section>
+  </div>
+  <div class="slide hidden" id="slide-39">
+    <section class="slide-content"><h3 id="rate-limiting">Rate limiting</h3>
+<ul>
+<li>Limitation des appels vers l&#39;API</li>
+<li>Garder un niveau de qualité/performance</li>
+<li>Eviter les abus</li>
+<li><code>429 Too many requests</code> si on dépasse la limite</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Header</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>X-Rate-Limit-Limit</td>
+<td>Le nomber de requête possible pendant la période</td>
+</tr>
+<tr>
+<td>X-Rate-Limit-Remaining</td>
+<td>Le nombre de requête qu&#39;il reste pour la période</td>
+</tr>
+<tr>
+<td>X-Rate-Limit-Reset</td>
+<td>Le nombre de seconde qu&#39;il reste avant de remettre les compteurs à 0</td>
+</tr>
+</tbody>
+</table>
+</section>
+  </div>
+  <div class="slide hidden" id="slide-40">
+    <section class="slide-content"><h3 id="cors">CORS</h3>
+<ul>
+<li>Cross-Origin Resource Sharing</li>
+<li>Api et Webapp sur des domaines différents</li>
+<li>Requête <code>OPTION</code> (preflighted request)</li>
+</ul>
+<pre><code class="lang-http"><span class="attribute">Access-Control-Allow-Origin</span>: <span class="string">*</span>
+<span class="attribute">Access-Control-Allow-Methods</span>: <span class="string">GET, POST, PUT, PATCH, DELETE</span>
+<span class="attribute">Access-Control-Allow-Credentials</span>: <span class="string">true</span>
+<span class="attribute">Access-Control-Allow-Headers</span>: <span class="string">X-Rate-Limit-Limit, X-Rate-Limit-Remaining, X-Rate-Limit-Reset</span></code></pre>
+<blockquote>
+<p>IE&lt;10 ne supporte pas correctement CORS, dans ce cas il faudra se trourner vers JSONP</p>
+</blockquote>
+</section>
+  </div>
+  <div class="slide hidden" id="slide-41">
+    <section class="slide-content"><h3 id="test">Test</h3>
+<p>?</p>
+</section>
+  </div>
+  <div class="slide hidden" id="slide-42">
+    <section class="slide-content"><h3 id="documentation">Documentation</h3>
+<ul>
+<li>Point clé pour que l&#39;API soit populaire si publique</li>
+<li>Il faut qu&#39;elle soit maintenue et <strong>facile à maintenir</strong>!</li>
+<li>Le mieux c&#39;est que la documentation parte du code.</li>
+<li>Mettre des exemples cURL</li>
+</ul>
+<p><a href="http://apidocjs.com">http://apidocjs.com</a> </p>
+<ul>
+<li>Annotations dans le code</li>
+<li>Générer la documentation complète de votre API</li>
+</ul>
+</section>
+  </div>
+  <div class="slide hidden" id="slide-43">
     <section class="slide-content"><div class="author">
   <h1 class="name">Fabien Furet</h1>
     <h3 class="twitter">

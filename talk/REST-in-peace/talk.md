@@ -254,7 +254,7 @@ $ curl -X POST https://api.domain.com/v2/items \
 * Passer des représentations complètes ou partielles
 * Bénéficier du typage JSON: `Array` `String` `Number` `Object` `Boolean` `Null`
 
-> On peut supporter `x-www-form-urlencoded` en parallèle
+> On peut supporter `x-www-form-urlencoded` en parallèle.
 > Obligera côter serveur à typer les valeurs manuelement et on n'aura pas de structure de ressource out of box.
 
 --
@@ -436,56 +436,12 @@ $ curl -X POST https://api.domain.com/v2/item?q=toto&isGeek=false
 
 --
 
-# Cache
+### Cache
 
 On envoie le header ```If-Modified-Since``` pour valider que la ressource n'a pas été modifiée. Dans ce cas on retourne un [`304 Not Modified`](http://httpstatus.es/304).
 Sinon on retourne la ressource avec le header ```Last-Modified```.
 
 > On pourrait utiliser Etag, mais ça nécessite de maintenir un hash de la ressource alors qu'on aura toujours un timestamp de modification.
-
---
-
-# Authentification
-
---
-
-### HTTP basic authentification
-
-```http
-Authorization: Basic cGhwOm1lZXR1cA==
-```
-
-* username:password encodé en base64
-* toujours utilisé avec SSL
-* on doit maîtriser le client et le serveur
-
-> Rapide à mettre en place, mais pas très secure, on doit avoir les credentials sur le client
-
---
-
-### Basique API Key?
-
---
-
-### Query Authentification
-
-```http
-GET /items?param=X&timestamp=1261496500&apiKey=XYZ
-&signature=3051d3c053e291b723f169
-```
-
-* le client signe la requête <br/><span style="font-size:0.9em;">```SHA256(items?param=X&timestamp=1261496500&apiKey=XYZ)```</span>
-* le serveur 
-    * valide la signature
-    * vérifie si timestamp < X secondes (X étant définit sur le serveur)
-
-> Il faut que le client et le serveur soit configuré de la même façon niveau date pour avoir des timestamps comparables
-
---
-
-### OAuth2
-
-# RTFM
 
 --
 
@@ -525,12 +481,6 @@ Access-Control-Allow-Headers: X-Rate-Limit-Limit, X-Rate-Limit-Remaining, X-Rate
 
 --
 
-### Test
-
-?
-
---
-
 ### Documentation
 
 * Point clé pour que l'API soit populaire si publique
@@ -541,3 +491,15 @@ Access-Control-Allow-Headers: X-Rate-Limit-Limit, X-Rate-Limit-Remaining, X-Rate
 http://apidocjs.com 
 * Annotations dans le code
 * Génére la documentation complète de votre API
+
+--
+
+### Plus loin
+
+* Authentification
+* Test
+* Spécification
+
+-- 
+
+# Questions?

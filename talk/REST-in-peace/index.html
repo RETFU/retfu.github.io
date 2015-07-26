@@ -522,7 +522,7 @@ Slides
 	font-size: 0.6em;
 }
 
-#slide-40 table {
+#slide-35 table {
 	margin-top:30px;
 	font-size: 0.6em;
 }
@@ -845,7 +845,7 @@ Donc <code>Accept: application/json; application/xml</code> mais on garde JSON e
 <li>Bénéficier du typage JSON: <code>Array</code> <code>String</code> <code>Number</code> <code>Object</code> <code>Boolean</code> <code>Null</code></li>
 </ul>
 <blockquote>
-<p>On peut supporter <code>x-www-form-urlencoded</code> en parallèle
+<p>On peut supporter <code>x-www-form-urlencoded</code> en parallèle.
 Obligera côter serveur à typer les valeurs manuelement et on n&#39;aura pas de structure de ressource out of box.</p>
 </blockquote>
 </section>
@@ -1072,7 +1072,7 @@ On peut aussi ajouter la première et la dernière page <code>rel=first</code> e
 </section>
   </div>
   <div class="slide hidden" id="slide-33">
-    <section class="slide-content"><h1 id="cache">Cache</h1>
+    <section class="slide-content"><h3 id="cache">Cache</h3>
 <p>On envoie le header <code>If-Modified-Since</code> pour valider que la ressource n&#39;a pas été modifiée. Dans ce cas on retourne un <a href="http://httpstatus.es/304"><code>304 Not Modified</code></a>.
 Sinon on retourne la ressource avec le header <code>Last-Modified</code>.</p>
 <blockquote>
@@ -1081,53 +1081,10 @@ Sinon on retourne la ressource avec le header <code>Last-Modified</code>.</p>
 </section>
   </div>
   <div class="slide hidden" id="slide-34">
-    <section class="slide-content"><h1 id="authentification">Authentification</h1>
-</section>
-  </div>
-  <div class="slide hidden" id="slide-35">
-    <section class="slide-content"><h3 id="http-basic-authentification">HTTP basic authentification</h3>
-<pre><code class="lang-http"><span class="attribute">Authorization</span>: <span class="string">Basic cGhwOm1lZXR1cA==</span></code></pre>
-<ul>
-<li>username:password encodé en base64</li>
-<li>toujours utilisé avec SSL</li>
-<li>on doit maîtriser le client et le serveur</li>
-</ul>
-<blockquote>
-<p>Rapide à mettre en place, mais pas très secure, on doit avoir les credentials sur le client</p>
-</blockquote>
-</section>
-  </div>
-  <div class="slide hidden" id="slide-36">
-    <section class="slide-content"><h3 id="basique-api-key-">Basique API Key?</h3>
-</section>
-  </div>
-  <div class="slide hidden" id="slide-37">
-    <section class="slide-content"><h3 id="query-authentification">Query Authentification</h3>
-<pre><code class="lang-http">GET /items?param=X&amp;timestamp=1261496500&amp;apiKey=XYZ
-&amp;signature=3051d3c053e291b723f169</code></pre>
-<ul>
-<li>le client signe la requête <br/><span style="font-size:0.9em;"><code>SHA256(items?param=X&amp;timestamp=1261496500&amp;apiKey=XYZ)</code></span></li>
-<li>le serveur <ul>
-<li>valide la signature</li>
-<li>vérifie si timestamp &lt; X secondes (X étant définit sur le serveur)</li>
-</ul>
-</li>
-</ul>
-<blockquote>
-<p>Il faut que le client et le serveur soit configuré de la même façon niveau date pour avoir des timestamps comparables</p>
-</blockquote>
-</section>
-  </div>
-  <div class="slide hidden" id="slide-38">
-    <section class="slide-content"><h3 id="oauth2">OAuth2</h3>
-<h1 id="rtfm">RTFM</h1>
-</section>
-  </div>
-  <div class="slide hidden" id="slide-39">
     <section class="slide-content"><h1 id="must-have">Must have</h1>
 </section>
   </div>
-  <div class="slide hidden" id="slide-40">
+  <div class="slide hidden" id="slide-35">
     <section class="slide-content"><h3 id="rate-limiting">Rate limiting</h3>
 <ul>
 <li>Limitation des appels vers l&#39;API</li>
@@ -1159,7 +1116,7 @@ Sinon on retourne la ressource avec le header <code>Last-Modified</code>.</p>
 </table>
 </section>
   </div>
-  <div class="slide hidden" id="slide-41">
+  <div class="slide hidden" id="slide-36">
     <section class="slide-content"><h3 id="cors">CORS</h3>
 <ul>
 <li>Cross-Origin Resource Sharing</li>
@@ -1175,12 +1132,7 @@ Sinon on retourne la ressource avec le header <code>Last-Modified</code>.</p>
 </blockquote>
 </section>
   </div>
-  <div class="slide hidden" id="slide-42">
-    <section class="slide-content"><h3 id="test">Test</h3>
-<p>?</p>
-</section>
-  </div>
-  <div class="slide hidden" id="slide-43">
+  <div class="slide hidden" id="slide-37">
     <section class="slide-content"><h3 id="documentation">Documentation</h3>
 <ul>
 <li>Point clé pour que l&#39;API soit populaire si publique</li>
@@ -1195,7 +1147,20 @@ Sinon on retourne la ressource avec le header <code>Last-Modified</code>.</p>
 </ul>
 </section>
   </div>
-  <div class="slide hidden" id="slide-44">
+  <div class="slide hidden" id="slide-38">
+    <section class="slide-content"><h3 id="plus-loin">Plus loin</h3>
+<ul>
+<li>Authentification</li>
+<li>Test</li>
+<li>Spécification</li>
+</ul>
+</section>
+  </div>
+  <div class="slide hidden  " id="slide-39">
+    <section class="slide-content"><h1 id="questions-">Questions?</h1>
+</section>
+  </div>
+  <div class="slide hidden" id="slide-40">
     <section class="slide-content"><div class="author">
   <h1 class="name">Fabien Furet</h1>
     <h3 class="twitter">

@@ -502,11 +502,18 @@ http://apidocjs.com
 
 --
 
-### Plus loin
+### Aller plus loin
 
 * Authentification
 * Test
+    * Codeception
+    * behat-rest-testing
+    * RAML + PHPUnit
+    * CasperJS
 * Spécification
+    * json:api
+    * JSON Schema
+    * RAML
 
 -- 
 

@@ -405,7 +405,7 @@ $ curl -X POST https://api.domain.com/v2/items?page=2&per_page=100 \
 ### Pagination: réponse
 
 * `206 Partial content` si on n'a pas toutes les ressources, 
-* `201 OK` si elles sont toutes retournées
+* `200 OK` si elles sont toutes retournées
 
 Utiliser le header `Link` pour transmettre la pagination:
 ```http

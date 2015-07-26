@@ -1046,7 +1046,7 @@ X-Rate-Limit-Reset: 1200</code></pre>
     <section class="slide-content"><h3 id="pagination-r-ponse">Pagination: réponse</h3>
 <ul>
 <li><code>206 Partial content</code> si on n&#39;a pas toutes les ressources, </li>
-<li><code>201 OK</code> si elles sont toutes retournées</li>
+<li><code>200 OK</code> si elles sont toutes retournées</li>
 </ul>
 <p>Utiliser le header <code>Link</code> pour transmettre la pagination:</p>
 <pre><code class="lang-http"><span class="attribute">Link</span>: <span class="string">&lt;...?page=3&amp;per_page=100&gt;; rel="next",&lt;...?page=1&amp;per_page=100&gt;; rel="prev"</span></code></pre>

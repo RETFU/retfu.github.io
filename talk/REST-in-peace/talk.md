@@ -472,16 +472,27 @@ Sinon on retourne la ressource avec le header ```Last-Modified```.
 
 --
 
-### CORS
+### Cross-Origin Resource Sharing (CORS) 
 
-* Cross-Origin Resource Sharing
 * Api et Webapp sur des domaines différents
-* Requête `OPTION` (preflighted request)
+* Requête `OPTIONS` (preflighted request)
+
+```bash
+$ curl -X OPTIONS https://api.domain.com/v2/items?q=toto&isGeek=false
+&age=18,19&sort=name,id \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json" \
+    -H "Accept-Encoding: gzip" \
+    -H "If-Modified-Since: Fri, 31 Jul 2015 20:41:30 GMT" \
+    -H "Access-Control-Allow-Methods: GET" \
+    -H "Access-Control-Allow-Headers: X-Rate-Limit-Limit, X-Rate-Limit-
+    Remaining, X-Rate-Limit-Reset, X-Total-Count, X-Page-Max-Range, X-Request-UUID, X-Resource-Nested" \
+    -H "Origin: http://superappjs.com"
+```
 
 ```http
-Access-Control-Allow-Origin: *
-Access-Control-Allow-Methods: GET, POST, PUT, DELETE
-Access-Control-Allow-Credentials: true
+Access-Control-Allow-Origin: http://superappjs.com
+Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS
 Access-Control-Allow-Headers: X-Rate-Limit-Limit, X-Rate-Limit-Remaining, X-Rate-Limit-Reset, X-Total-Count, X-Page-Max-Range, X-Request-UUID, X-Resource-Nested
 ```
 

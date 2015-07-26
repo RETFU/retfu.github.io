@@ -527,6 +527,11 @@ Slides
 	font-size: 0.6em;
 }
 
+
+#slide-36 pre {
+	font-size: 0.6em;
+}
+
   </style>
 </head>
 <body>
@@ -1124,15 +1129,23 @@ On peut aussi ajouter la première et la dernière page <code>rel=first</code> e
 </section>
   </div>
   <div class="slide hidden" id="slide-36">
-    <section class="slide-content"><h3 id="cors">CORS</h3>
+    <section class="slide-content"><h3 id="cross-origin-resource-sharing-cors-">Cross-Origin Resource Sharing (CORS)</h3>
 <ul>
-<li>Cross-Origin Resource Sharing</li>
 <li>Api et Webapp sur des domaines différents</li>
-<li>Requête <code>OPTION</code> (preflighted request)</li>
+<li>Requête <code>OPTIONS</code> (preflighted request)</li>
 </ul>
-<pre><code class="lang-http"><span class="attribute">Access-Control-Allow-Origin</span>: <span class="string">*</span>
-<span class="attribute">Access-Control-Allow-Methods</span>: <span class="string">GET, POST, PUT, DELETE</span>
-<span class="attribute">Access-Control-Allow-Credentials</span>: <span class="string">true</span>
+<pre><code class="lang-bash">$ curl -X OPTIONS https://api.domain.com/v2/items?q=toto&amp;isGeek=false
+&amp;age=18,19&amp;sort=name,id \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json" \
+    -H "Accept-Encoding: gzip" \
+    -H "If-Modified-Since: Fri, 31 Jul 2015 20:41:30 GMT" \
+    -H "Access-Control-Allow-Methods: GET" \
+    -H "Access-Control-Allow-Headers: X-Rate-Limit-Limit, X-Rate-Limit-
+    Remaining, X-Rate-Limit-Reset, X-Total-Count, X-Page-Max-Range, X-Request-UUID, X-Resource-Nested" \
+    -H "Origin: http://superappjs.com"</code></pre>
+<pre><code class="lang-http"><span class="attribute">Access-Control-Allow-Origin</span>: <span class="string">http://superappjs.com</span>
+<span class="attribute">Access-Control-Allow-Methods</span>: <span class="string">GET, POST, PUT, DELETE, OPTIONS</span>
 <span class="attribute">Access-Control-Allow-Headers</span>: <span class="string">X-Rate-Limit-Limit, X-Rate-Limit-Remaining, X-Rate-Limit-Reset, X-Total-Count, X-Page-Max-Range, X-Request-UUID, X-Resource-Nested</span></code></pre>
 <blockquote>
 <p>IE&lt;10 ne supporte pas correctement CORS, dans ce cas il faudra se tourner vers JSONP</p>

@@ -6,6 +6,7 @@ author:
 output: index.html
 controls: true
 style: assets/style.css
+theme: sjaakvandenberg/cleaver-light
 
 --
 

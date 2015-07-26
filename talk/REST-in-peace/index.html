@@ -570,7 +570,7 @@ Slides
 <ul>
 <li>Level1: les ressources</li>
 <li>Level2: verbes et code erreurs HTTP</li>
-<li>Level3: <strong>hypermédia</strong></li>
+<li>Level3: hypermédia (HATEOAS)</li>
 </ul>
 </section>
   </div>
@@ -676,6 +676,9 @@ Slides
 </tr>
 </tbody>
 </table>
+<blockquote>
+<p>PATCH devrait être utiliser pour faire des updates partielles à la place de PUT pour être RESTfull.</p>
+</blockquote>
 </section>
   </div>
   <div class="slide hidden" id="slide-11">
@@ -769,7 +772,7 @@ Donc <code>Accept: application/json; application/xml</code> mais on garde JSON e
 }</span></code></pre>
 <p>Plutôt que</p>
 <pre><code class="lang-json">{
-  "<span class="attribute">item</span>": <span class="value">{
+  "<span class="attribute">data</span>": <span class="value">{
     "<span class="attribute">id</span>": <span class="value"><span class="number">7856</span></span>,
     "<span class="attribute">name</span>": <span class="value"><span class="string">"Jo"</span></span>,
     "<span class="attribute">age</span>": <span class="value"><span class="number">18</span></span>,
@@ -825,6 +828,7 @@ Donc <code>Accept: application/json; application/xml</code> mais on garde JSON e
     -H <span class="string">"Accept: application/json"</span> \
     -H <span class="string">"Accept-Encoding: gzip"</span> \
     -H <span class="string">"Content-Type: application/json;charset=utf-8"</span> \
+    -H <span class="string">"If-Modified-Since: Fri, 31 Jul 2015 20:41:30 GMT"</span>
     -d <span class="string">'{"name": "Jo", "age": 55, "isGeek": true}'</span>
 
 {
@@ -845,8 +849,8 @@ Donc <code>Accept: application/json; application/xml</code> mais on garde JSON e
 <li>Bénéficier du typage JSON: <code>Array</code> <code>String</code> <code>Number</code> <code>Object</code> <code>Boolean</code> <code>Null</code></li>
 </ul>
 <blockquote>
-<p>On peut supporter <code>x-www-form-urlencoded</code> en parallèle.
-Obligera côter serveur à typer les valeurs manuelement et on n&#39;aura pas de structure de ressource out of box.</p>
+<p>On peut supporter <code>Content-Type: application/x-www-form-urlencoded</code> en parallèle.
+Obligera côter serveur à typer les valeurs manuellement et on n&#39;aura pas de structure de ressource out of box.</p>
 </blockquote>
 </section>
   </div>
@@ -904,7 +908,7 @@ X-Rate-Limit-Reset: 1200</code></pre>
 </tr>
 <tr>
 <td>201 Created</td>
-<td>POST</td>
+<td>POST lors de la création d&#39;un item</td>
 </tr>
 <tr>
 <td>202 Accepted</td>
@@ -930,7 +934,7 @@ X-Rate-Limit-Reset: 1200</code></pre>
 <pre><code class="lang-json">{
   "<span class="attribute">code</span>": <span class="value"><span class="string">"error_code"</span></span>,
   "<span class="attribute">description</span>": <span class="value"><span class="string">"More details about the error here"</span></span>,
-  "<span class="attribute">url</span>": <span class="value"><span class="string">"https://doc.domain.com/error/error_code"</span>
+  "<span class="attribute">url</span>": <span class="value"><span class="string">"https://doc.domain.com/api/error/error_code"</span>
 }</span></code></pre>
 </section>
   </div>
@@ -940,14 +944,14 @@ X-Rate-Limit-Reset: 1200</code></pre>
 <pre><code class="lang-json">{
   "<span class="attribute">code</span>": <span class="value"><span class="string">"invalid_request"</span></span>,
   "<span class="attribute">message</span>": <span class="value"><span class="string">"Can't parse the request body, JSON not valid."</span></span>,
-  "<span class="attribute">url</span>": <span class="value"><span class="string">"https://doc.domain.com/error/invalid_request"</span>
+  "<span class="attribute">url</span>": <span class="value"><span class="string">"https://doc.domain.com/api/error/invalid_request"</span>
 }</span></code></pre>
 <p><br/></p>
 <pre><code class="lang-http"><span class="status">HTTP/1.1 <span class="number">422</span> Unprocessable Entity</span></code></pre>
 <pre><code class="lang-json">{
   "<span class="attribute">code</span>": <span class="value"><span class="string">"invalid_item"</span></span>,
   "<span class="attribute">message</span>": <span class="value"><span class="string">"Name is required, isGeek must be a boolean."</span></span>,
-  "<span class="attribute">url</span>": <span class="value"><span class="string">"https://doc.domain.com/error/invalid_item"</span>
+  "<span class="attribute">url</span>": <span class="value"><span class="string">"https://doc.domain.com/api/error/invalid_item"</span>
 }</span></code></pre>
 </section>
   </div>
@@ -958,12 +962,12 @@ X-Rate-Limit-Reset: 1200</code></pre>
     {
         "<span class="attribute">code</span>": <span class="value"><span class="string">"invalid_item_name"</span></span>,
         "<span class="attribute">message</span>": <span class="value"><span class="string">"Name is required"</span></span>,
-        "<span class="attribute">url</span>": <span class="value"><span class="string">"https://doc.domain.com/error/invalid_item_name"</span>
+        "<span class="attribute">url</span>": <span class="value"><span class="string">"https://doc.domain.com/api/error/invalid_item_name"</span>
     }</span>,
     {
         "<span class="attribute">code</span>": <span class="value"><span class="string">"invalid_item_geek"</span></span>,
         "<span class="attribute">message</span>": <span class="value"><span class="string">"isGeek must be a boolean."</span></span>,
-        "<span class="attribute">url</span>": <span class="value"><span class="string">"https://doc.domain.com/error/invalid_item_geek"</span>
+        "<span class="attribute">url</span>": <span class="value"><span class="string">"https://doc.domain.com/api/error/invalid_item_geek"</span>
     }</span>
 ]</code></pre>
 </section>
@@ -1028,10 +1032,11 @@ X-Rate-Limit-Reset: 1200</code></pre>
   </div>
   <div class="slide hidden" id="slide-29">
     <section class="slide-content"><h3 id="pagination-requ-te">Pagination: requête</h3>
-<pre><code class="lang-bash">$ curl -X POST https://api.domain.com/v2/item?page=2&amp;per_page=100 \
+<pre><code class="lang-bash">$ curl -X POST https://api.domain.com/v2/items?page=2&amp;per_page=100 \
     -H <span class="string">"Content-Type: application/json"</span>
     -H <span class="string">"Accept: application/json"</span> \
-    -H <span class="string">"Accept-Encoding: gzip"</span> \</code></pre>
+    -H <span class="string">"Accept-Encoding: gzip"</span> \
+    -H <span class="string">"If-Modified-Since: Fri, 31 Jul 2015 20:41:30 GMT"</span></code></pre>
 <blockquote>
 <p>On pourrait utiliser le header <code>Range</code> mais par affordance et pour le côté pratique il vaut mieux utiliser la querystring.</p>
 </blockquote>
@@ -1061,11 +1066,12 @@ On peut aussi ajouter la première et la dernière page <code>rel=first</code> e
   </div>
   <div class="slide hidden" id="slide-32">
     <section class="slide-content"><h3 id="filtering-sort-search">Filtering, sort &amp; search</h3>
-<pre><code class="lang-bash">$ curl -X POST https://api.domain.com/v2/item?q=toto&amp;isGeek=<span class="literal">false</span>
+<pre><code class="lang-bash">$ curl -X POST https://api.domain.com/v2/items?q=toto&amp;isGeek=<span class="literal">false</span>
 &amp;age=18,19&amp;sort=name,id \
     -H <span class="string">"Content-Type: application/json"</span>
     -H <span class="string">"Accept: application/json"</span> \
-    -H <span class="string">"Accept-Encoding: gzip"</span> \</code></pre>
+    -H <span class="string">"Accept-Encoding: gzip"</span> \
+    -H <span class="string">"If-Modified-Since: Fri, 31 Jul 2015 20:41:30 GMT"</span></code></pre>
 <blockquote>
 <p>q pour une recherche fulltext. On peut aussi se servir des filtres pour faire une recherche sur un champs particulier, exemple name=Marado*</p>
 </blockquote>
@@ -1073,8 +1079,9 @@ On peut aussi ajouter la première et la dernière page <code>rel=first</code> e
   </div>
   <div class="slide hidden" id="slide-33">
     <section class="slide-content"><h3 id="cache">Cache</h3>
-<p>On envoie le header <code>If-Modified-Since</code> pour valider que la ressource n&#39;a pas été modifiée. Dans ce cas on retourne un <a href="http://httpstatus.es/304"><code>304 Not Modified</code></a>.
-Sinon on retourne la ressource avec le header <code>Last-Modified</code>.</p>
+<p>On envoie le header <code>If-Modified-Since</code> pour valider que la ressource n&#39;a pas été modifiée. </p>
+<p>Dans ce cas on retourne un <a href="http://httpstatus.es/304"><code>304 Not Modified</code></a>.</p>
+<p>Sinon on retourne la ressource avec le header <code>Last-Modified</code>.</p>
 <blockquote>
 <p>On pourrait utiliser Etag, mais ça nécessite de maintenir un hash de la ressource alors qu&#39;on aura toujours un timestamp de modification.</p>
 </blockquote>
@@ -1102,7 +1109,7 @@ Sinon on retourne la ressource avec le header <code>Last-Modified</code>.</p>
 <tbody>
 <tr>
 <td>X-Rate-Limit-Limit</td>
-<td>Le nomber de requête possible pendant la période</td>
+<td>Le nombre de requête possible pendant la période</td>
 </tr>
 <tr>
 <td>X-Rate-Limit-Remaining</td>
@@ -1124,11 +1131,11 @@ Sinon on retourne la ressource avec le header <code>Last-Modified</code>.</p>
 <li>Requête <code>OPTION</code> (preflighted request)</li>
 </ul>
 <pre><code class="lang-http"><span class="attribute">Access-Control-Allow-Origin</span>: <span class="string">*</span>
-<span class="attribute">Access-Control-Allow-Methods</span>: <span class="string">GET, POST, PUT, PATCH, DELETE</span>
+<span class="attribute">Access-Control-Allow-Methods</span>: <span class="string">GET, POST, PUT, DELETE</span>
 <span class="attribute">Access-Control-Allow-Credentials</span>: <span class="string">true</span>
-<span class="attribute">Access-Control-Allow-Headers</span>: <span class="string">X-Rate-Limit-Limit, X-Rate-Limit-Remaining, X-Rate-Limit-Reset</span></code></pre>
+<span class="attribute">Access-Control-Allow-Headers</span>: <span class="string">X-Rate-Limit-Limit, X-Rate-Limit-Remaining, X-Rate-Limit-Reset, X-Total-Count, X-Page-Max-Range, X-Request-UUID, X-Resource-Nested</span></code></pre>
 <blockquote>
-<p>IE&lt;10 ne supporte pas correctement CORS, dans ce cas il faudra se trourner vers JSONP</p>
+<p>IE&lt;10 ne supporte pas correctement CORS, dans ce cas il faudra se tourner vers JSONP</p>
 </blockquote>
 </section>
   </div>
@@ -1137,7 +1144,7 @@ Sinon on retourne la ressource avec le header <code>Last-Modified</code>.</p>
 <ul>
 <li>Point clé pour que l&#39;API soit populaire si publique</li>
 <li>Il faut qu&#39;elle soit maintenue et <strong>facile à maintenir</strong>!</li>
-<li>Le mieux c&#39;est que la documentation parte du code.</li>
+<li>Le mieux c&#39;est que la documentation soit dans le code.</li>
 <li>Mettre des exemples cURL</li>
 </ul>
 <p><a href="http://apidocjs.com">http://apidocjs.com</a> </p>

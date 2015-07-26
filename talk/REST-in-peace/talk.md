@@ -48,7 +48,7 @@ Représentation
 Modèle de maturité de Richardson
 * Level1: les ressources
 * Level2: verbes et code erreurs HTTP
-* Level3: **hypermédia**
+* Level3: hypermédia (HATEOAS)
 
 --
 
@@ -102,6 +102,8 @@ Modèle de maturité de Richardson
 | PUT /items | Mise à jour de plusieurs items |
 | PUT /items/1782 | Mise à jour de l'item 1782 |
 | DELETE /items/1782 | Suppression de l'item 1782 |
+
+> PATCH devrait être utiliser pour faire des updates partielles à la place de PUT pour être RESTfull.   
 
 --
 
@@ -162,7 +164,7 @@ Plutôt que
 
 ```json
 {
-  "item": {
+  "data": {
     "id": 7856,
     "name": "Jo",
     "age": 18,
@@ -234,6 +236,7 @@ $ curl -X POST https://api.domain.com/v2/items \
     -H "Accept: application/json" \
     -H "Accept-Encoding: gzip" \
     -H "Content-Type: application/json;charset=utf-8" \
+    -H "If-Modified-Since: Fri, 31 Jul 2015 20:41:30 GMT"
     -d '{"name": "Jo", "age": 55, "isGeek": true}'
 
 {
@@ -254,8 +257,8 @@ $ curl -X POST https://api.domain.com/v2/items \
 * Passer des représentations complètes ou partielles
 * Bénéficier du typage JSON: `Array` `String` `Number` `Object` `Boolean` `Null`
 
-> On peut supporter `x-www-form-urlencoded` en parallèle.
-> Obligera côter serveur à typer les valeurs manuelement et on n'aura pas de structure de ressource out of box.
+> On peut supporter `Content-Type: application/x-www-form-urlencoded` en parallèle.
+> Obligera côter serveur à typer les valeurs manuellement et on n'aura pas de structure de ressource out of box.
 
 --
 
@@ -292,7 +295,7 @@ X-Rate-Limit-Reset: 1200
 | HTTP status code | Information |
 | ------------ | ------------- |
 | 200 Ok | GET, PUT, PATCH et DELETE ainsi que pour POST lors d'une "action" |
-| 201 Created | POST |
+| 201 Created | POST lors de la création d'un item |
 | 202 Accepted | La requête est ok, mais on la traitera plus tard |
 | 204 No Content | DELETE sans body |
 | 206 Partial content | Si la réponse ne renvoie pas l'ensemble de la resource (une liste par ex) |
@@ -313,7 +316,7 @@ Location: https://api.domain.com/v2/items/1783
 {
   "code": "error_code",
   "description": "More details about the error here",
-  "url": "https://doc.domain.com/error/error_code"
+  "url": "https://doc.domain.com/api/error/error_code"
 }
 ```
 
@@ -328,7 +331,7 @@ HTTP/1.1 400 Bad Request
 {
   "code": "invalid_request",
   "message": "Can't parse the request body, JSON not valid.",
-  "url": "https://doc.domain.com/error/invalid_request"
+  "url": "https://doc.domain.com/api/error/invalid_request"
 }
 ```
 <br/>
@@ -339,7 +342,7 @@ HTTP/1.1 422 Unprocessable Entity
 {
   "code": "invalid_item",
   "message": "Name is required, isGeek must be a boolean.",
-  "url": "https://doc.domain.com/error/invalid_item"
+  "url": "https://doc.domain.com/api/error/invalid_item"
 }
 ```
 
@@ -355,12 +358,12 @@ HTTP/1.1 422 Unprocessable Entity
     {
         "code": "invalid_item_name",
         "message": "Name is required",
-        "url": "https://doc.domain.com/error/invalid_item_name"
+        "url": "https://doc.domain.com/api/error/invalid_item_name"
     },
     {
         "code": "invalid_item_geek",
         "message": "isGeek must be a boolean.",
-        "url": "https://doc.domain.com/error/invalid_item_geek"
+        "url": "https://doc.domain.com/api/error/invalid_item_geek"
     }
 ]
 ```
@@ -388,10 +391,11 @@ HTTP/1.1 422 Unprocessable Entity
 ### Pagination: requête
 
 ```bash
-$ curl -X POST https://api.domain.com/v2/item?page=2&per_page=100 \
+$ curl -X POST https://api.domain.com/v2/items?page=2&per_page=100 \
     -H "Content-Type: application/json"
     -H "Accept: application/json" \
     -H "Accept-Encoding: gzip" \
+    -H "If-Modified-Since: Fri, 31 Jul 2015 20:41:30 GMT"
 ```
 
 > On pourrait utiliser le header `Range` mais par affordance et pour le côté pratique il vaut mieux utiliser la querystring.
@@ -425,11 +429,12 @@ Le serveur doit retourner `400 Bad request` si on dépasse les capacités de l'A
 ### Filtering, sort & search
 
 ```bash
-$ curl -X POST https://api.domain.com/v2/item?q=toto&isGeek=false
+$ curl -X POST https://api.domain.com/v2/items?q=toto&isGeek=false
 &age=18,19&sort=name,id \
     -H "Content-Type: application/json"
     -H "Accept: application/json" \
     -H "Accept-Encoding: gzip" \
+    -H "If-Modified-Since: Fri, 31 Jul 2015 20:41:30 GMT"
 ```
 
 > q pour une recherche fulltext. On peut aussi se servir des filtres pour faire une recherche sur un champs particulier, exemple name=Marado*
@@ -438,7 +443,10 @@ $ curl -X POST https://api.domain.com/v2/item?q=toto&isGeek=false
 
 ### Cache
 
-On envoie le header ```If-Modified-Since``` pour valider que la ressource n'a pas été modifiée. Dans ce cas on retourne un [`304 Not Modified`](http://httpstatus.es/304).
+On envoie le header ```If-Modified-Since``` pour valider que la ressource n'a pas été modifiée. 
+
+Dans ce cas on retourne un [`304 Not Modified`](http://httpstatus.es/304).
+
 Sinon on retourne la ressource avec le header ```Last-Modified```.
 
 > On pourrait utiliser Etag, mais ça nécessite de maintenir un hash de la ressource alors qu'on aura toujours un timestamp de modification.
@@ -458,7 +466,7 @@ Sinon on retourne la ressource avec le header ```Last-Modified```.
 
 | Header | Description |
 | ------------ | ------------- |
-| X-Rate-Limit-Limit | Le nomber de requête possible pendant la période | 
+| X-Rate-Limit-Limit | Le nombre de requête possible pendant la période | 
 | X-Rate-Limit-Remaining | Le nombre de requête qu'il reste pour la période |
 | X-Rate-Limit-Reset | Le nombre de seconde qu'il reste avant de remettre les compteurs à 0 |
 
@@ -472,12 +480,12 @@ Sinon on retourne la ressource avec le header ```Last-Modified```.
 
 ```http
 Access-Control-Allow-Origin: *
-Access-Control-Allow-Methods: GET, POST, PUT, PATCH, DELETE
+Access-Control-Allow-Methods: GET, POST, PUT, DELETE
 Access-Control-Allow-Credentials: true
-Access-Control-Allow-Headers: X-Rate-Limit-Limit, X-Rate-Limit-Remaining, X-Rate-Limit-Reset
+Access-Control-Allow-Headers: X-Rate-Limit-Limit, X-Rate-Limit-Remaining, X-Rate-Limit-Reset, X-Total-Count, X-Page-Max-Range, X-Request-UUID, X-Resource-Nested
 ```
 
-> IE<10 ne supporte pas correctement CORS, dans ce cas il faudra se trourner vers JSONP
+> IE<10 ne supporte pas correctement CORS, dans ce cas il faudra se tourner vers JSONP
 
 --
 
@@ -485,7 +493,7 @@ Access-Control-Allow-Headers: X-Rate-Limit-Limit, X-Rate-Limit-Remaining, X-Rate
 
 * Point clé pour que l'API soit populaire si publique
 * Il faut qu'elle soit maintenue et **facile à maintenir**!
-* Le mieux c'est que la documentation parte du code.
+* Le mieux c'est que la documentation soit dans le code.
 * Mettre des exemples cURL
 
 http://apidocjs.com 

@@ -1066,7 +1066,7 @@ On peut aussi ajouter la première et la dernière page <code>rel=first</code> e
   </div>
   <div class="slide hidden" id="slide-32">
     <section class="slide-content"><h3 id="filtering-sort-search">Filtering, sort &amp; search</h3>
-<pre><code class="lang-bash">$ curl -X POST https://api.domain.com/v2/items?q=toto&amp;isGeek=<span class="literal">false</span>
+<pre><code class="lang-bash">$ curl -X GET https://api.domain.com/v2/items?q=toto&amp;isGeek=<span class="literal">false</span>
 &amp;age=18,19&amp;sort=name,id \
     -H <span class="string">"Content-Type: application/json"</span>
     -H <span class="string">"Accept: application/json"</span> \

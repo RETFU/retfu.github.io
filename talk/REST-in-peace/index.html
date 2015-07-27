@@ -495,7 +495,7 @@ body {
 .slide-content {
 	font-size: 0.9em;
 	font-family: 'Helvetica Neue', Helvetica;
-	width: 70%;
+	width: 80%;
 	/*height:780px;*/
 	margin-top:40px;
 }
@@ -505,7 +505,8 @@ body {
 }
 
 h1 {
-	font-size: 2em;
+	font-size: 2.5em;
+	text-shadow: 1px 2px 4px #191919;
 }
 
 h2 {
@@ -597,9 +598,30 @@ pre {
 /*
 Slides
  */
+#slide-1 {
+	background: url('assets/restinpeace.jpg');
+  	background-size: cover;
+}
+
+#slide-1 h1 {
+	font-size: 3em;
+}
+
+#slide-5 {
+	background: url('assets/rtfm.jpg');
+  	background-size: cover;
+  	color: #FFF;
+}
+
 #slide-7 table {
 	margin-top:30px;
 	font-size: 0.7em;
+}
+
+#slide-8 {
+	background: url('assets/resource.jpg');
+  	background-size: cover;
+  	color: #FFF;
 }
 
 #slide-10 table {
@@ -617,9 +639,27 @@ Slides
 	font-size: 0.7em;
 }
 
+#slide-13 {
+	background: url('assets/representation.jpg');
+  	background-size: cover;
+  	color: #FFF;
+}
+
+#slide-18 {
+	background: url('assets/request.jpg');
+  	background-size: cover;
+  	color: #FFF;
+}
+
 #slide-21 table {
 	margin-top:30px;
 	font-size: 0.7em;
+}
+
+#slide-22 {
+	background: url('assets/answers.jpg');
+  	background-size: cover;
+  	color: #FFF;
 }
 
 #slide-24 table {
@@ -632,6 +672,12 @@ Slides
 	font-size: 0.7em;
 }
 
+#slide-34 {
+	background: url('assets/musthave.jpg');
+  	background-size: cover;
+  	color: #FFF;
+}
+
 #slide-35 table {
 	margin-top:30px;
 	font-size: 0.7em;
@@ -642,9 +688,24 @@ Slides
 	font-size: 0.6em;
 }
 
+#slide-39 {
+	background: url('assets/tv-quotes-bb-saul.jpg');
+  	background-size: cover;
+  	color: #FFF;
+}
 
 #slide-39 p {
 	text-align: center;
+}
+
+#slide-40 {
+	background: url('assets/o-BREAKING-BAD-WALTER-WHITE-facebook.jpg');
+  	background-size: cover;
+  	color: #FFF;
+}
+
+#slide-41 h1 {
+	text-shadow: none;
 }
 
   </style>
@@ -680,7 +741,6 @@ Slides
   "<span class="attribute">name</span>": <span class="value"><span class="string">"Jo"</span></span>,
   "<span class="attribute">age</span>": <span class="value"><span class="number">18</span></span>,
   "<span class="attribute">isGeek</span>": <span class="value"><span class="literal">true</span>
-  ...
 }</span></code></pre>
 </section>
   </div>
@@ -797,7 +857,7 @@ Slides
 </tbody>
 </table>
 <blockquote>
-<p>PATCH devrait être utiliser pour faire des updates partielles à la place de PUT pour être RESTfull.</p>
+<p>PATCH devrait être utiliser pour faire des updates partielles à la place de PUT pour être RESTful.</p>
 </blockquote>
 </section>
   </div>
@@ -956,17 +1016,16 @@ Donc <code>Accept: application/json; application/xml</code> mais on garde JSON e
   <span class="string">"name"</span>: <span class="string">"Jo"</span>,
   <span class="string">"age"</span>: 18,
   <span class="string">"isGeek"</span>: <span class="literal">true</span>
-  ...
 }</code></pre>
 </section>
   </div>
   <div class="slide hidden" id="slide-20">
     <section class="slide-content"><h3 id="body">Body</h3>
 <ul>
-<li>JSON pour POST, PUT ou PATCH</li>
+<li>JSON pour <code>POST</code>, <code>PUT</code> ou <code>PATCH</code></li>
 <li>Sérialisation identique entre le body requète et réponse</li>
 <li>Passer des représentations complètes ou partielles</li>
-<li>Bénéficier du typage JSON: <code>Array</code> <code>String</code> <code>Number</code> <code>Object</code> <code>Boolean</code> <code>Null</code></li>
+<li>Bénéficier du typage JSON: Array, String, Number, Object, Boolean et Null</li>
 </ul>
 <blockquote>
 <p>On peut supporter <code>Content-Type: application/x-www-form-urlencoded</code> en parallèle.
@@ -986,7 +1045,7 @@ Obligera côter serveur à typer les valeurs manuellement et on n&#39;aura pas d
 <tbody>
 <tr>
 <td>406 Not acceptable</td>
-<td>Format de retour non disponible<br/>(la requête demande du XML alors qu&#39;on ne gère que du JSON)</td>
+<td>Format de retour non disponible<br/>(la requête demande du XML alors qu&#39;on ne gère que JSON)</td>
 </tr>
 <tr>
 <td>415 Unsupported Media Type</td>
@@ -1011,7 +1070,7 @@ X-Rate-Limit-Limit: 10000
 X-Rate-Limit-Remaining: 8532
 X-Rate-Limit-Reset: 1200</code></pre>
 <blockquote>
-<p>X-Request-UUID: utiliser la version 1 de la RFC 4122 car elle est time-based et donc indexable séquentiellement</p>
+<p><code>X-Request-UUID</code> utiliser la version 1 de la RFC 4122 car elle est time-based et donc indexable séquentiellement</p>
 </blockquote>
 </section>
   </div>
@@ -1027,11 +1086,11 @@ X-Rate-Limit-Reset: 1200</code></pre>
 <tbody>
 <tr>
 <td>200 Ok</td>
-<td>GET, PUT, PATCH et DELETE ainsi que pour POST lors d&#39;une &quot;action&quot;</td>
+<td><code>GET</code>, <code>PUT</code>, <code>PATCH</code> et <code>DELETE</code> ainsi que pour <code>POST</code> lors d&#39;une &quot;action&quot;</td>
 </tr>
 <tr>
 <td>201 Created</td>
-<td>POST lors de la création d&#39;un item</td>
+<td><code>POST</code> lors de la création d&#39;un item</td>
 </tr>
 <tr>
 <td>202 Accepted</td>
@@ -1039,7 +1098,7 @@ X-Rate-Limit-Reset: 1200</code></pre>
 </tr>
 <tr>
 <td>204 No Content</td>
-<td>DELETE sans body</td>
+<td><code>DELETE</code> sans body</td>
 </tr>
 <tr>
 <td>206 Partial content</td>
@@ -1206,7 +1265,7 @@ On peut aussi ajouter la première et la dernière page <code>rel=first</code> e
 <p>Dans ce cas on retourne un <a href="http://httpstatus.es/304"><code>304 Not Modified</code></a>.</p>
 <p>Sinon on retourne la ressource avec le header <code>Last-Modified</code>.</p>
 <blockquote>
-<p>On pourrait utiliser Etag, mais ça nécessite de maintenir un hash ou une révision (si la ressource était versionnée) par exemple, alors qu&#39;on aura toujours/très probablement un timestamp de modification.</p>
+<p>On pourrait utiliser <code>Etag</code>, mais ça nécessite de maintenir un hash ou une révision (si la ressource était versionnée) par exemple, alors qu&#39;on aura toujours/très probablement un timestamp de modification.</p>
 </blockquote>
 </section>
   </div>
@@ -1231,15 +1290,15 @@ On peut aussi ajouter la première et la dernière page <code>rel=first</code> e
 </thead>
 <tbody>
 <tr>
-<td>X-Rate-Limit-Limit</td>
+<td><code>X-Rate-Limit-Limit</code></td>
 <td>Le nombre de requête possible pendant la période</td>
 </tr>
 <tr>
-<td>X-Rate-Limit-Remaining</td>
+<td><code>X-Rate-Limit-Remaining</code></td>
 <td>Le nombre de requête qu&#39;il reste pour la période</td>
 </tr>
 <tr>
-<td>X-Rate-Limit-Reset</td>
+<td><code>X-Rate-Limit-Reset</code></td>
 <td>Le nombre de seconde qu&#39;il reste avant de remettre les compteurs à 0</td>
 </tr>
 </tbody>
@@ -1308,11 +1367,13 @@ On peut aussi ajouter la première et la dernière page <code>rel=first</code> e
   <div class="slide hidden  " id="slide-39">
     <section class="slide-content"><h1 id="merci">Merci</h1>
 <p><br/>
+Relecture, critiques, pull requests ;-)
+<br/><br/>
 <a href="https://twitter.com/mbagur">@mbagur</a>
 <br/>
-<a href="https://twitter.com/mbagur">@ynohat</a>
+<a href="https://twitter.com/ynohat">@ynohat</a>
 <br/>
-<a href="https://twitter.com/mbagur">@mikael_letang</a></p>
+<a href="https://twitter.com/mikael_letang">@mikael_letang</a></p>
 </section>
   </div>
   <div class="slide hidden" id="slide-40">

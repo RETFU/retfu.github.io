@@ -12,7 +12,7 @@ body {
 .slide-content {
 	font-size: 0.9em;
 	font-family: 'Helvetica Neue', Helvetica;
-	width: 70%;
+	width: 80%;
 	/*height:780px;*/
 	margin-top:40px;
 }
@@ -22,7 +22,8 @@ body {
 }
 
 h1 {
-	font-size: 2em;
+	font-size: 2.5em;
+	text-shadow: 1px 2px 4px #191919;
 }
 
 h2 {
@@ -114,9 +115,30 @@ pre {
 /*
 Slides
  */
+#slide-1 {
+	background: url('assets/restinpeace.jpg');
+  	background-size: cover;
+}
+
+#slide-1 h1 {
+	font-size: 3em;
+}
+
+#slide-5 {
+	background: url('assets/rtfm.jpg');
+  	background-size: cover;
+  	color: #FFF;
+}
+
 #slide-7 table {
 	margin-top:30px;
 	font-size: 0.7em;
+}
+
+#slide-8 {
+	background: url('assets/resource.jpg');
+  	background-size: cover;
+  	color: #FFF;
 }
 
 #slide-10 table {
@@ -134,9 +156,27 @@ Slides
 	font-size: 0.7em;
 }
 
+#slide-13 {
+	background: url('assets/representation.jpg');
+  	background-size: cover;
+  	color: #FFF;
+}
+
+#slide-18 {
+	background: url('assets/request.jpg');
+  	background-size: cover;
+  	color: #FFF;
+}
+
 #slide-21 table {
 	margin-top:30px;
 	font-size: 0.7em;
+}
+
+#slide-22 {
+	background: url('assets/answers.jpg');
+  	background-size: cover;
+  	color: #FFF;
 }
 
 #slide-24 table {
@@ -149,6 +189,12 @@ Slides
 	font-size: 0.7em;
 }
 
+#slide-34 {
+	background: url('assets/musthave.jpg');
+  	background-size: cover;
+  	color: #FFF;
+}
+
 #slide-35 table {
 	margin-top:30px;
 	font-size: 0.7em;
@@ -159,7 +205,22 @@ Slides
 	font-size: 0.6em;
 }
 
+#slide-39 {
+	background: url('assets/tv-quotes-bb-saul.jpg');
+  	background-size: cover;
+  	color: #FFF;
+}
 
 #slide-39 p {
 	text-align: center;
+}
+
+#slide-40 {
+	background: url('assets/o-BREAKING-BAD-WALTER-WHITE-facebook.jpg');
+  	background-size: cover;
+  	color: #FFF;
+}
+
+#slide-41 h1 {
+	text-shadow: none;
 }

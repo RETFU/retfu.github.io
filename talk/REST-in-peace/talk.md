@@ -34,7 +34,7 @@ Ressource = https://api.domain.com/v2/ **items/5**
 Représentation
 ```json
 {
-  "id": 7856,
+  "id": "110e8400-e29b-11d4-a716-446655897563",
   "name": "Jo",
   "age": 18,
   "isGeek": true
@@ -154,7 +154,7 @@ On utilise toujours **POST**.
 
 ```json
 {
-  "id": 7856,
+  "id": "110e8400-e29b-11d4-a716-446655897563",
   "name": "Jo",
   "age": 18,
   "isGeek": true
@@ -166,7 +166,7 @@ Plutôt que
 ```json
 {
   "data": {
-    "id": 7856,
+    "id": "110e8400-e29b-11d4-a716-446655897563",
     "name": "Jo",
     "age": 18,
     "isGeek": true
@@ -180,12 +180,12 @@ Plutôt que
 
 ```json
 {
-  "id": 7856,
+  "id": "110e8400-e29b-11d4-a716-446655897563",
   "name": "Jo",
   "age": 18,
   "isGeek": true,
   "country": {
-    "id": 569
+    "id": "110e8400-e29b-11d4-a716-446655898965"
   }
 }
 ```
@@ -194,11 +194,11 @@ Plutôt que
 
 ```json
 {
-  "id": 7856,
+  "id": "110e8400-e29b-11d4-a716-446655897563",
   "name": "Jo",
   "age": 18,
   "isGeek": true,
-  "country_id": 569
+  "country_id": "110e8400-e29b-11d4-a716-446655898965"
 }
 ```
 
@@ -212,12 +212,12 @@ X-Resource-Nested: true
 
 ```json
 {
-  "id": 7856,
+  "id": "110e8400-e29b-11d4-a716-446655897563",
   "name": "Jo",
   "age": 18,
   "isGeek": true,
   "country": {
-    "id": 569,
+    "id": "110e8400-e29b-11d4-a716-446655898965",
     "name": "France",
     "codeISO": "FR"
   }
@@ -241,7 +241,7 @@ $ curl -X POST https://api.domain.com/v2/items \
     -d '{"name": "Jo", "age": 18, "isGeek": true}'
 
 {
-  "id": 7856,
+  "id": "110e8400-e29b-11d4-a716-446655897563",
   "name": "Jo",
   "age": 18,
   "isGeek": true
@@ -288,6 +288,8 @@ X-Rate-Limit-Limit: 10000
 X-Rate-Limit-Remaining: 8532
 X-Rate-Limit-Reset: 1200
 ```
+
+> X-Request-UUID: utiliser la version 1 de la RFC 4122 car elle est time-based et donc indexable séquentiellement
 
 --
 

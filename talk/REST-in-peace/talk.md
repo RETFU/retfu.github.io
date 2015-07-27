@@ -38,7 +38,6 @@ Représentation
   "name": "Jo",
   "age": 18,
   "isGeek": true
-  ...
 }
 ```
 
@@ -104,7 +103,7 @@ Modèle de maturité de Richardson
 | PUT /items/1782 | Mise à jour de l'item 1782 |
 | DELETE /items/1782 | Suppression de l'item 1782 |
 
-> PATCH devrait être utiliser pour faire des updates partielles à la place de PUT pour être RESTfull.   
+> PATCH devrait être utiliser pour faire des updates partielles à la place de PUT pour être RESTful.   
 
 --
 
@@ -245,7 +244,6 @@ $ curl -X POST https://api.domain.com/v2/items \
   "name": "Jo",
   "age": 18,
   "isGeek": true
-  ...
 }
 ```
 
@@ -253,10 +251,10 @@ $ curl -X POST https://api.domain.com/v2/items \
 
 ### Body
 
-* JSON pour POST, PUT ou PATCH
+* JSON pour `POST`, `PUT` ou `PATCH`
 * Sérialisation identique entre le body requète et réponse
 * Passer des représentations complètes ou partielles
-* Bénéficier du typage JSON: `Array` `String` `Number` `Object` `Boolean` `Null`
+* Bénéficier du typage JSON: Array, String, Number, Object, Boolean et Null
 
 > On peut supporter `Content-Type: application/x-www-form-urlencoded` en parallèle.
 > Obligera côter serveur à typer les valeurs manuellement et on n'aura pas de structure de ressource out of box.
@@ -267,7 +265,7 @@ $ curl -X POST https://api.domain.com/v2/items \
 
 | HTTP status code | Information |
 | ------------ | ------------- |
-| 406 Not acceptable | Format de retour non disponible<br/>(la requête demande du XML alors qu'on ne gère que du JSON) |
+| 406 Not acceptable | Format de retour non disponible<br/>(la requête demande du XML alors qu'on ne gère que JSON) |
 | 415 Unsupported Media Type | Content type pas supporté<br/>(on envoie du XML alors qu'on ne suppporte que JSON) |
 
 --
@@ -289,7 +287,7 @@ X-Rate-Limit-Remaining: 8532
 X-Rate-Limit-Reset: 1200
 ```
 
-> X-Request-UUID: utiliser la version 1 de la RFC 4122 car elle est time-based et donc indexable séquentiellement
+> `X-Request-UUID` utiliser la version 1 de la RFC 4122 car elle est time-based et donc indexable séquentiellement
 
 --
 
@@ -297,10 +295,10 @@ X-Rate-Limit-Reset: 1200
 
 | HTTP status code | Information |
 | ------------ | ------------- |
-| 200 Ok | GET, PUT, PATCH et DELETE ainsi que pour POST lors d'une "action" |
-| 201 Created | POST lors de la création d'un item |
+| 200 Ok | `GET`, `PUT`, `PATCH` et `DELETE` ainsi que pour `POST` lors d'une "action" |
+| 201 Created | `POST` lors de la création d'un item |
 | 202 Accepted | La requête est ok, mais on la traitera plus tard |
-| 204 No Content | DELETE sans body |
+| 204 No Content | `DELETE` sans body |
 | 206 Partial content | Si la réponse ne renvoie pas l'ensemble de la resource (une liste par ex) |
 
 Lors d'un `200 Ok` **on doit retourner la ressource**.
@@ -452,7 +450,7 @@ Dans ce cas on retourne un [`304 Not Modified`](http://httpstatus.es/304).
 
 Sinon on retourne la ressource avec le header ```Last-Modified```.
 
-> On pourrait utiliser Etag, mais ça nécessite de maintenir un hash ou une révision (si la ressource était versionnée) par exemple, alors qu'on aura toujours/très probablement un timestamp de modification.
+> On pourrait utiliser `Etag`, mais ça nécessite de maintenir un hash ou une révision (si la ressource était versionnée) par exemple, alors qu'on aura toujours/très probablement un timestamp de modification.
 
 --
 
@@ -469,9 +467,9 @@ Sinon on retourne la ressource avec le header ```Last-Modified```.
 
 | Header | Description |
 | ------------ | ------------- |
-| X-Rate-Limit-Limit | Le nombre de requête possible pendant la période | 
-| X-Rate-Limit-Remaining | Le nombre de requête qu'il reste pour la période |
-| X-Rate-Limit-Reset | Le nombre de seconde qu'il reste avant de remettre les compteurs à 0 |
+| `X-Rate-Limit-Limit` | Le nombre de requête possible pendant la période | 
+| `X-Rate-Limit-Remaining` | Le nombre de requête qu'il reste pour la période |
+| `X-Rate-Limit-Reset` | Le nombre de seconde qu'il reste avant de remettre les compteurs à 0 |
 
 --
 
@@ -533,11 +531,13 @@ http://apidocjs.com
 
 # Merci
 <br/>
+Relecture, critiques, pull requests ;-)
+<br/><br/>
 [@mbagur](https://twitter.com/mbagur)
 <br/>
-[@ynohat](https://twitter.com/mbagur)
+[@ynohat](https://twitter.com/ynohat)
 <br/>
-[@mikael_letang](https://twitter.com/mbagur)
+[@mikael_letang](https://twitter.com/mikael_letang)
 
 --
 

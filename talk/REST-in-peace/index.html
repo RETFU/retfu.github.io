@@ -1186,7 +1186,7 @@ On peut aussi ajouter la première et la dernière page <code>rel=first</code> e
 <p>Dans ce cas on retourne un <a href="http://httpstatus.es/304"><code>304 Not Modified</code></a>.</p>
 <p>Sinon on retourne la ressource avec le header <code>Last-Modified</code>.</p>
 <blockquote>
-<p>On pourrait utiliser Etag, mais ça nécessite de maintenir un hash de la ressource alors qu&#39;on aura toujours un timestamp de modification.</p>
+<p>On pourrait utiliser Etag, mais ça nécessite de maintenir un hash ou une révision (si la ressource était versionnée) par exemple, alors qu&#39;on aura toujours/très probablement un timestamp de modification.</p>
 </blockquote>
 </section>
   </div>

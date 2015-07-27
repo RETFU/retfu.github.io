@@ -450,7 +450,7 @@ Dans ce cas on retourne un [`304 Not Modified`](http://httpstatus.es/304).
 
 Sinon on retourne la ressource avec le header ```Last-Modified```.
 
-> On pourrait utiliser Etag, mais ça nécessite de maintenir un hash de la ressource alors qu'on aura toujours un timestamp de modification.
+> On pourrait utiliser Etag, mais ça nécessite de maintenir un hash ou une révision (si la ressource était versionnée) par exemple, alors qu'on aura toujours/très probablement un timestamp de modification.
 
 --
 

@@ -531,4 +531,14 @@ http://apidocjs.com
 
 -- 
 
+# Merci
+<br/>
+[@mbagur](https://twitter.com/mbagur)
+<br/>
+[@ynohat](https://twitter.com/mbagur)
+<br/>
+[@mikael_letang](https://twitter.com/mbagur)
+
+--
+
 # Questions?

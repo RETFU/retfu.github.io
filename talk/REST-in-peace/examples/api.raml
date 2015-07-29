@@ -1,0 +1,76 @@
+#%RAML 0.8
+---
+title: User API
+baseUri: https://api.domain.com/{version}
+version: v1
+protocols: [ HTTP, HTTPS ]
+mediaType: application/json
+/users:
+    get:
+    post:
+        body:
+            application/json:
+                schema: |
+                    {
+                        "$schema": "http://json-schema.org/draft-04/schema",
+                        "properties": {
+                            "name": {
+                                "required": true,
+                                "type": "string"
+                            },
+                            "email": {
+                                "required": true,
+                                "type": "string",
+                                "pattern": "[A-Z0-9._%+-]+@[A-Z0-9.-]+\\.[A-Z]{2,4}"
+                            }
+                        },
+                        "required": false,
+                        "type": "object"
+                    }
+        responses:        
+            201:
+                body:
+                    application/json:
+                        schema: "{}"
+    /{userId}:
+        uriParameters:
+          userId:
+            type: integer
+        get:    
+            headers:
+                X-Resource-Nested:
+                    description: Embed all resources
+                    type: boolean
+            queryParameters:
+                name:
+                    displayName: Name
+                    type: string
+                    description: The name of the user
+                    example: Diego Maradonna
+                email:
+                    displayName: Email
+                    type: string
+                    description: The email of the user
+                    example: diego.maradonna@argentina.ar   
+            responses:
+                200:
+                    headers:
+                        X-Rate-Limit-Reset:
+                            description: The number of seconds to reset
+                            type: integer
+                            required: true
+                            minimum: 1
+                            maximum: 3600
+                            example: 34
+                    body:
+                        application/json:
+                500:
+                    body:
+                        application/json:
+    /comments:
+        get:
+        post:
+        /{id}:
+            get:
+            put:
+            delete:

@@ -6,12 +6,13 @@
 		<meta name="description" content="Fabien Furet / Développeur">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.1/normalize.min.css" rel="stylesheet" type="text/css">
-		<link href="http://fonts.googleapis.com/css?family=PT+Serif" rel="stylesheet" type="text/css">
+		<!-- <link href="http://fonts.googleapis.com/css?family=PT+Serif" rel="stylesheet" type="text/css"> -->
 		<link href="https://fonts.googleapis.com/css?family=Cardo:700" rel="stylesheet" type="text/css">
 		<style type="text/css">
 			.main {
-				font-family: 'PT Serif', serif;
-				background-color:;
+				font-family: 'Helvetica Neue', Helvetica;
+				line-height: 1.5;
+				color: #555;
 
 				margin-left: auto;
 				margin-right: auto;
@@ -22,25 +23,64 @@
 			h1 {
 				font-family: 'Cardo', serif;
 				font-size: 2.5em;
-				color:#2196F3;
-				margin-bottom: 0px;
+				color:#47a9ff;
+				margin-bottom: 40px;
 			}
 			h2 {
 				font-family: 'Cardo', serif;
-				font-size: 1.4em;
+				font-size: 1.8em;
 				margin-top: 0px;
+				color: #191919;
+				border-bottom: 2px solid #191919;
+				padding-bottom:10px;
 			}
 			a {
-				color:#f44336;
+				color:#47a9ff;
 			}
 
 			.links {
-				
+				margin-top: 80px;
+				font-size: 0.8em;
 			}
 
 			.aka {
 				font-size: 0.3em !important;
 			}
+
+			.tag {
+				display: inline-block;
+				padding: 4px 8px;
+				font-weight: bold;
+				line-height: 20px;
+				color: #fff;
+				text-align: center;
+				border-radius: 3px;
+				background-color: #999;
+				margin: 4px;
+			}
+
+				.tag-level-1 {
+					background-color: #80e1ff;
+					font-size: 0.6em;
+					padding: 2px 4px;
+				}
+				.tag-level-2 {
+					background-color: #6ed1ff;
+					font-size: 0.7em;
+					padding: 3px 6px;
+				}
+				.tag-level-3 {
+					background-color: #5ec1ff;
+					font-size: 0.8em;
+				}
+				.tag-level-4 {
+					background-color: #4dacff;
+					font-size: 0.9em;
+				}
+				.tag-level-5 {
+					background-color: #3a9bf0;
+					font-size: 1em;
+				}
 		</style>
 	</head>
 	<body>
@@ -51,16 +91,24 @@
 			<h1 itemscope="" itemtype="http://data-vocabulary.org/Person"><span itemprop="name">Fabien Furet</span> <span class="aka">aka RETFU</span></h1>
 			<h2>Développeur web</h2>
 			<p>
-				Cela fait plus de 10 ans que j'évolue dans le milieu du web, à la fois en backend et frontend.
+				Cela fait plus de 10 ans que j'évolue dans le milieu du web en backend et frontend.
 			</p>
 			<p>
-				Je suis plutôt spécialisé <a href="http://www.phptherightway.com">PHP</a> pour le backend, même s'il m'est arrivé d'utiliser python. Frontend classique: HTML5, CSS3, Javascript.<br />Je croise régulièrement Mysql, Saas, Compass, Phonegap, AppCache, IndexDB, Jquery, Memcache, Composer, NodeJS...
+				Je suis actuellement Directeur technique chez <a href="http://iwd.io">IWD</a> où j'aide l'équipe dev à produire des livrables de qualités dans les temps.
 			</p>
 			<p>
-				J'ai par le passé beaucoup travaillé en AS3 pour produire des jeux, des applications mono/multijoueur (coucou Flash Media Server) et des sites web.
+				<span class="tag tag-level-5">css</span> <span class="tag tag-level-4">composer</span> <span class="tag tag-level-4">app cache</span> <span class="tag tag-level-2">python</span> <span class="tag tag-level-2">pouchdb</span> <span class="tag tag-level-3">reactjs</span> <span class="tag tag-level-4">indexeddb</span> <span class="tag tag-level-4">raml</span> <span class="tag tag-level-2">couchdb</span> <span class="tag tag-level-2">jenkins</span> <span class="tag tag-level-4">apache</span> <span class="tag tag-level-3">nodejs</span> <span class="tag tag-level-3">gulp</span> <span class="tag tag-level-2">nginx</span> <span class="tag tag-level-3">browserify</span> <span class="tag tag-level-2">json schema</span> <span class="tag tag-level-5">http</span> <span class="tag tag-level-5">html5</span> <span class="tag tag-level-4">saas</span> <span class="tag tag-level-4">compass</span> <span class="tag tag-level-3">npm</span> <span class="tag tag-level-2">cordova</span> <span class="tag tag-level-3">reflux</span> <span class="tag tag-level-4">mysql</span> <span class="tag tag-level-3">memcache</span> <span class="tag tag-level-5">javascript</span> <span class="tag tag-level-3">express</span> <span class="tag tag-level-1">nagios</span> <span class="tag tag-level-5">php</span> <span class="tag tag-level-5">as3</span> <span class="tag tag-level-4">flash media server</span> <span class="tag tag-level-5">api rest</span>
 			</p>
+			<br/>
+			<h2>Talk</h2>
 			<p>
-				Je suis actuellement Directeur technique chez <a href="http://iwd.fr">IWD</a> où j'aide l'équipe dev à produire des livrables de qualités dans les temps.
+				<strong>REST in peace</strong><br/>
+				Bonnes pratiques pour construire une API "REST" pragmatique et efficace en 2015.<br/>
+				Les slides sont disponible <a href="http://fabienfuret.net/talk/REST-in-peace">içi</a>.
+				<br/><br/>
+				<strong>Standing desk WTF?</strong><br/>
+				Lighting talk sur mon retour d'expérience après 3 mois de standing desk.<br/>
+				Les slides sont disponible <a href="http://fabienfuret.net/talk/Standing-desk-WTF/">içi</a>.
 			</p>
 			<p class="links">
 				<a href="https://github.com/RETFU">Github</a> - <a href="https://twitter.com/RETFU">Twitter</a> - <a href="https://fr.linkedin.com/in/fabienfuret">Linkedin</a> - <a href="http://blogmarks.net/user/RETFU">Blogmarks</a>

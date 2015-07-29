@@ -2,6 +2,8 @@
 
 Source du site web et talk.
 
+# Talk
+
 ### REST in peace
 
 Bonnes pratiques pour construire une API "REST" pragmatique et efficace en 2015.<br/>

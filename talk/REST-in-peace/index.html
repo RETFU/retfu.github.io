@@ -1308,13 +1308,12 @@ On peut aussi ajouter la première et la dernière page <code>rel=first</code> e
 <li>Api et Webapp sur des domaines différents (Same-origin policy)</li>
 <li>Requête <code>OPTIONS</code> (preflighted request) pour <code>POST</code>, <code>PUT</code> et <code>DELETE</code></li>
 </ul>
-<pre><code class="lang-bash">$ curl -X OPTIONS https://api.domain.com/v2/items?q=toto&amp;isGeek=false
+<pre><code class="lang-bash">$ curl -X OPTIONS https://api.domain.com/v2/items?q=toto&amp;isGeek=<span class="literal">false</span>
 &amp;age=18,19&amp;sort=name,id \
-    -H "Accept-Encoding: gzip" \
-    -H "Access-Control-Allow-Methods: GET" \
-    -H "Access-Control-Allow-Headers: X-Rate-Limit-Limit, X-Rate-Limit-
-    Remaining, X-Rate-Limit-Reset, X-Total-Count, X-Page-Max-Range, X-Request-UUID, X-Resource-Nested" \
-    -H "Origin: http://superappjs.com"</code></pre>
+    -H <span class="string">"Accept-Encoding: gzip"</span> \
+    -H <span class="string">"Access-Control-Allow-Methods: GET"</span> \
+    -H <span class="string">"Access-Control-Allow-Headers: X-Resource-Nested"</span> \
+    -H <span class="string">"Origin: http://superappjs.com"</span></code></pre>
 <pre><code class="lang-http"><span class="attribute">Access-Control-Allow-Origin</span>: <span class="string">http://superappjs.com</span>
 <span class="attribute">Access-Control-Allow-Methods</span>: <span class="string">GET, POST, PUT, DELETE, OPTIONS</span>
 <span class="attribute">Access-Control-Allow-Headers</span>: <span class="string">X-Rate-Limit-Limit, X-Rate-Limit-Remaining, X-Rate-Limit-Reset, X-Total-Count, X-Page-Max-Range, X-Request-UUID, X-Resource-Nested</span></code></pre>

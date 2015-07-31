@@ -1306,8 +1306,8 @@ On peut aussi ajouter la première et la dernière page <code>rel=first</code> e
   <div class="slide hidden" id="slide-36">
     <section class="slide-content"><h3 id="cross-origin-resource-sharing-cors-">Cross-Origin Resource Sharing (CORS)</h3>
 <ul>
-<li>Api et Webapp sur des domaines différents</li>
-<li>Requête <code>OPTIONS</code> (preflighted request)</li>
+<li>Api et Webapp sur des domaines différents (Same-origin policy)</li>
+<li>Requête <code>OPTIONS</code> (preflighted request) pour <code>POST</code>, <code>PUT</code>, <code>PATCH</code> et <code>DELETE</code></li>
 </ul>
 <pre><code class="lang-bash">$ curl -X OPTIONS https://api.domain.com/v2/items?q=toto&amp;isGeek=false
 &amp;age=18,19&amp;sort=name,id \
@@ -1348,8 +1348,8 @@ On peut aussi ajouter la première et la dernière page <code>rel=first</code> e
 <li>Test<ul>
 <li>Codeception</li>
 <li>behat-rest-testing</li>
-<li>RAML + PHPUnit</li>
 <li>CasperJS</li>
+<li>RAML + PHPUnit</li>
 </ul>
 </li>
 <li>Spécification<ul>

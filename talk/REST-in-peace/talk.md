@@ -510,16 +510,17 @@ http://apidocjs.com
 
 ### Aller plus loin
 
-* Authentification
-* Test
-    * Codeception
-    * behat-rest-testing
-    * CasperJS
-    * RAML + PHPUnit
+Authentification
+
+Test: Codeception, behat-rest-testing, CasperJS...
+
+Spécification: json:api, JSON Schema...
+
+**RAML** (RESTful API Modeling Language)
 * Spécification
-    * json:api
-    * JSON Schema
-    * RAML
+* Test
+* Documentation
+* Génération
 
 -- 
 

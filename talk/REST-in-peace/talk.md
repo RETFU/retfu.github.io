@@ -236,7 +236,6 @@ $ curl -X POST https://api.domain.com/v2/items \
     -H "Accept: application/json" \
     -H "Accept-Encoding: gzip" \
     -H "Content-Type: application/json;charset=utf-8" \
-    -H "If-Modified-Since: Fri, 31 Jul 2015 20:41:30 GMT"
     -d '{"name": "Jo", "age": 18, "isGeek": true}'
 
 {
@@ -479,9 +478,7 @@ Sinon on retourne la ressource avec le header ```Last-Modified```.
 ```bash
 $ curl -X OPTIONS https://api.domain.com/v2/items?q=toto&isGeek=false
 &age=18,19&sort=name,id \
-    -H "Accept: application/json" \
     -H "Accept-Encoding: gzip" \
-    -H "If-Modified-Since: Fri, 31 Jul 2015 20:41:30 GMT" \
     -H "Access-Control-Allow-Methods: GET" \
     -H "Access-Control-Allow-Headers: X-Rate-Limit-Limit, X-Rate-Limit-
     Remaining, X-Rate-Limit-Reset, X-Total-Count, X-Page-Max-Range, X-Request-UUID, X-Resource-Nested" \

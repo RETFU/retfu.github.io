@@ -733,7 +733,7 @@ Slides
   </div>
   <div class="slide hidden  " id="slide-3">
     <section class="slide-content"><h3 id="qu-est-ce-que-rest-">Qu&#39;est-ce que REST?</h3>
-<p>URI = <a href="https://api.domain.com/v2/items/5">https://api.domain.com/v2/items/5</a> </p>
+<p>URL = <a href="https://api.domain.com/v2/items/5">https://api.domain.com/v2/items/5</a> </p>
 <p>Ressource = <a href="https://api.domain.com/v2/">https://api.domain.com/v2/</a> <strong>items/5</strong></p>
 <p>Représentation</p>
 <pre><code class="lang-json">{
@@ -815,7 +815,7 @@ Slides
 <li>Toujours au pluriel</li>
 <li>Nommé avec des - ou des _</li>
 <li>Ne reflète pas forcément votre modèle de donnée</li>
-<li>Une ressource = une URI</li>
+<li>Une ressource = une URL</li>
 <li>Une ressource = plusieurs représentations<br/>(JSON, XML, MessagePack...)</li>
 </ul>
 </section>
@@ -1008,7 +1008,6 @@ Donc <code>Accept: application/json; application/xml</code> mais on garde JSON e
     -H <span class="string">"Accept: application/json"</span> \
     -H <span class="string">"Accept-Encoding: gzip"</span> \
     -H <span class="string">"Content-Type: application/json;charset=utf-8"</span> \
-    -H <span class="string">"If-Modified-Since: Fri, 31 Jul 2015 20:41:30 GMT"</span>
     -d <span class="string">'{"name": "Jo", "age": 18, "isGeek": true}'</span>
 
 {
@@ -1107,7 +1106,7 @@ X-Rate-Limit-Reset: 1200</code></pre>
 </tbody>
 </table>
 <p>Lors d&#39;un <code>200 Ok</code> <strong>on doit retourner la ressource</strong>.</p>
-<p>Lors d&#39;un <code>201 Ok</code>: retourner la ressource et indiquer l&#39;URI de la nouvelle resource dans le header.  </p>
+<p>Lors d&#39;un <code>201 Ok</code>: retourner la ressource et indiquer l&#39;URL de la nouvelle resource dans le header.  </p>
 <pre><code class="lang-http"><span class="attribute">Location</span>: <span class="string">https://api.domain.com/v2/items/1783</span></code></pre>
 </section>
   </div>

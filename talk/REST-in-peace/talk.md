@@ -27,7 +27,7 @@ theme: sjaakvandenberg/cleaver-light
 
 ### Qu'est-ce que REST?
 
-URI = https://api.domain.com/v2/items/5 
+URL = https://api.domain.com/v2/items/5 
 
 Ressource = https://api.domain.com/v2/ **items/5**
 
@@ -87,7 +87,7 @@ Modèle de maturité de Richardson
 * Toujours au pluriel
 * Nommé avec des - ou des _
 * Ne reflète pas forcément votre modèle de donnée
-* Une ressource = une URI
+* Une ressource = une URL
 * Une ressource = plusieurs représentations<br/>(JSON, XML, MessagePack...)
 
 --
@@ -303,7 +303,7 @@ X-Rate-Limit-Reset: 1200
 
 Lors d'un `200 Ok` **on doit retourner la ressource**.
 
-Lors d'un `201 Ok`: retourner la ressource et indiquer l'URI de la nouvelle resource dans le header.  
+Lors d'un `201 Ok`: retourner la ressource et indiquer l'URL de la nouvelle resource dans le header.  
 
 ```http
 Location: https://api.domain.com/v2/items/1783

@@ -145,7 +145,7 @@ On utilise toujours **POST**.
 > Donc `Accept: application/json; application/xml` mais on garde JSON en choix n°1
 
 * JSON pretty print
-* Les ids des représentations sont des UUID
+* Les ids des représentations sont des UUID: `110e8400-e29b-11d4-a716-446655897563`
 
 --
 
@@ -281,7 +281,7 @@ Content-Type: application/json;charset=utf-8
 Content-Encoding:gzip
 Content-Length:126444
 Last-Modified: Wed, 08 Jul 2015 12:59:49 GMT
-X-Request-UUID: 454684315618613
+X-Request-UUID: 110e8400-e29b-11d4-a716-446655897563
 X-Rate-Limit-Limit: 10000
 X-Rate-Limit-Remaining: 8532
 X-Rate-Limit-Reset: 1200
@@ -393,7 +393,6 @@ HTTP/1.1 422 Unprocessable Entity
 
 ```bash
 $ curl -X POST https://api.domain.com/v2/items?page=2&per_page=100 \
-    -H "Content-Type: application/json"
     -H "Accept: application/json" \
     -H "Accept-Encoding: gzip" \
     -H "If-Modified-Since: Fri, 31 Jul 2015 20:41:30 GMT"
@@ -432,7 +431,6 @@ Le serveur doit retourner `400 Bad request` si on dépasse les capacités de l'A
 ```bash
 $ curl -X GET https://api.domain.com/v2/items?q=toto&isGeek=false
 &age=18,19&sort=name,id \
-    -H "Content-Type: application/json"
     -H "Accept: application/json" \
     -H "Accept-Encoding: gzip" \
     -H "If-Modified-Since: Fri, 31 Jul 2015 20:41:30 GMT"
@@ -481,7 +479,6 @@ Sinon on retourne la ressource avec le header ```Last-Modified```.
 ```bash
 $ curl -X OPTIONS https://api.domain.com/v2/items?q=toto&isGeek=false
 &age=18,19&sort=name,id \
-    -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -H "Accept-Encoding: gzip" \
     -H "If-Modified-Since: Fri, 31 Jul 2015 20:41:30 GMT" \

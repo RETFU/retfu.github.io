@@ -1021,7 +1021,7 @@ Donc <code>Accept: application/json; application/xml</code> mais on garde JSON e
   <div class="slide hidden" id="slide-20">
     <section class="slide-content"><h3 id="body">Body</h3>
 <ul>
-<li>JSON pour <code>POST</code>, <code>PUT</code> ou <code>PATCH</code></li>
+<li>JSON pour <code>POST</code> ou <code>PUT</code></li>
 <li>Sérialisation identique entre le body requète et réponse</li>
 <li>Passer des représentations complètes ou partielles</li>
 <li>Bénéficier du typage JSON: Array, String, Number, Object, Boolean et Null</li>
@@ -1085,7 +1085,7 @@ X-Rate-Limit-Reset: 1200</code></pre>
 <tbody>
 <tr>
 <td>200 Ok</td>
-<td><code>GET</code>, <code>PUT</code>, <code>PATCH</code> et <code>DELETE</code> ainsi que pour <code>POST</code> lors d&#39;une &quot;action&quot;</td>
+<td><code>GET</code>, <code>PUT</code> et <code>DELETE</code> ainsi que pour <code>POST</code> lors d&#39;une &quot;action&quot;</td>
 </tr>
 <tr>
 <td>201 Created</td>
@@ -1105,8 +1105,8 @@ X-Rate-Limit-Reset: 1200</code></pre>
 </tr>
 </tbody>
 </table>
-<p>Lors d&#39;un <code>200 Ok</code> <strong>on doit retourner la ressource</strong>.</p>
-<p>Lors d&#39;un <code>201 Ok</code>: retourner la ressource et indiquer l&#39;URL de la nouvelle resource dans le header.  </p>
+<p>Lors d&#39;un <code>200 Ok</code> <strong>on doit retourner la représentation</strong>.</p>
+<p>Lors d&#39;un <code>201 Ok</code>: retourner la représentation et indiquer l&#39;URL de la nouvelle resource dans le header.  </p>
 <pre><code class="lang-http"><span class="attribute">Location</span>: <span class="string">https://api.domain.com/v2/items/1783</span></code></pre>
 </section>
   </div>
@@ -1306,13 +1306,11 @@ On peut aussi ajouter la première et la dernière page <code>rel=first</code> e
     <section class="slide-content"><h3 id="cross-origin-resource-sharing-cors-">Cross-Origin Resource Sharing (CORS)</h3>
 <ul>
 <li>Api et Webapp sur des domaines différents (Same-origin policy)</li>
-<li>Requête <code>OPTIONS</code> (preflighted request) pour <code>POST</code>, <code>PUT</code>, <code>PATCH</code> et <code>DELETE</code></li>
+<li>Requête <code>OPTIONS</code> (preflighted request) pour <code>POST</code>, <code>PUT</code> et <code>DELETE</code></li>
 </ul>
 <pre><code class="lang-bash">$ curl -X OPTIONS https://api.domain.com/v2/items?q=toto&amp;isGeek=false
 &amp;age=18,19&amp;sort=name,id \
-    -H "Accept: application/json" \
     -H "Accept-Encoding: gzip" \
-    -H "If-Modified-Since: Fri, 31 Jul 2015 20:41:30 GMT" \
     -H "Access-Control-Allow-Methods: GET" \
     -H "Access-Control-Allow-Headers: X-Rate-Limit-Limit, X-Rate-Limit-
     Remaining, X-Rate-Limit-Reset, X-Total-Count, X-Page-Max-Range, X-Request-UUID, X-Resource-Nested" \
@@ -1342,21 +1340,15 @@ On peut aussi ajouter la première et la dernière page <code>rel=first</code> e
   </div>
   <div class="slide hidden" id="slide-38">
     <section class="slide-content"><h3 id="aller-plus-loin">Aller plus loin</h3>
+<p>Authentification</p>
+<p>Test: Codeception, behat-rest-testing, CasperJS...</p>
+<p>Spécification: json:api, JSON Schema...</p>
+<p><strong>RAML</strong> (RESTful API Modeling Language)</p>
 <ul>
-<li>Authentification</li>
-<li>Test<ul>
-<li>Codeception</li>
-<li>behat-rest-testing</li>
-<li>CasperJS</li>
-<li>RAML + PHPUnit</li>
-</ul>
-</li>
-<li>Spécification<ul>
-<li>json:api</li>
-<li>JSON Schema</li>
-<li>RAML</li>
-</ul>
-</li>
+<li>Spécification</li>
+<li>Test</li>
+<li>Documentation</li>
+<li>Génération</li>
 </ul>
 </section>
   </div>

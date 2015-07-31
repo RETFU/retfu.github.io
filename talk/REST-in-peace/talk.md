@@ -300,9 +300,9 @@ X-Rate-Limit-Reset: 1200
 | 204 No Content | `DELETE` sans body |
 | 206 Partial content | Si la réponse ne renvoie pas l'ensemble de la resource (une liste par ex) |
 
-Lors d'un `200 Ok` **on doit retourner la ressource**.
+Lors d'un `200 Ok` **on doit retourner la représentation**.
 
-Lors d'un `201 Ok`: retourner la ressource et indiquer l'URL de la nouvelle resource dans le header.  
+Lors d'un `201 Ok`: retourner la représentation et indiquer l'URL de la nouvelle resource dans le header.  
 
 ```http
 Location: https://api.domain.com/v2/items/1783

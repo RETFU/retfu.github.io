@@ -14,6 +14,10 @@ mediaType: application/json
                     {
                         "$schema": "http://json-schema.org/draft-04/schema",
                         "properties": {
+                            "id": {
+                                "required": true,
+                                "type": "string"
+                            },
                             "name": {
                                 "required": true,
                                 "type": "string"
@@ -31,11 +35,31 @@ mediaType: application/json
             201:
                 body:
                     application/json:
-                        schema: "{}"
+                        schema: |
+                            {
+                                "$schema": "http://json-schema.org/draft-04/schema",
+                                "properties": {
+                                    "id": {
+                                        "required": true,
+                                        "type": "string"
+                                    },
+                                    "name": {
+                                        "required": true,
+                                        "type": "string"
+                                    },
+                                    "email": {
+                                        "required": true,
+                                        "type": "string",
+                                        "pattern": "[A-Z0-9._%+-]+@[A-Z0-9.-]+\\.[A-Z]{2,4}"
+                                    }
+                                },
+                                "required": false,
+                                "type": "object"
+                            }
     /{userId}:
         uriParameters:
           userId:
-            type: integer
+            type: string
         get:    
             headers:
                 X-Resource-Nested:

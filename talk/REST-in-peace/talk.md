@@ -473,8 +473,8 @@ Sinon on retourne la ressource avec le header ```Last-Modified```.
 
 ### Cross-Origin Resource Sharing (CORS) 
 
-* Api et Webapp sur des domaines différents
-* Requête `OPTIONS` (preflighted request)
+* Api et Webapp sur des domaines différents (Same-origin policy)
+* Requête `OPTIONS` (preflighted request) pour `POST`, `PUT`, `PATCH` et `DELETE`
 
 ```bash
 $ curl -X OPTIONS https://api.domain.com/v2/items?q=toto&isGeek=false
@@ -517,8 +517,8 @@ http://apidocjs.com
 * Test
     * Codeception
     * behat-rest-testing
-    * RAML + PHPUnit
     * CasperJS
+    * RAML + PHPUnit
 * Spécification
     * json:api
     * JSON Schema

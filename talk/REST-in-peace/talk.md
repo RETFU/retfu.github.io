@@ -250,7 +250,7 @@ $ curl -X POST https://api.domain.com/v2/items \
 
 ### Body
 
-* JSON pour `POST`, `PUT` ou `PATCH`
+* JSON pour `POST` ou `PUT`
 * Sérialisation identique entre le body requète et réponse
 * Passer des représentations complètes ou partielles
 * Bénéficier du typage JSON: Array, String, Number, Object, Boolean et Null
@@ -294,7 +294,7 @@ X-Rate-Limit-Reset: 1200
 
 | HTTP status code | Information |
 | ------------ | ------------- |
-| 200 Ok | `GET`, `PUT`, `PATCH` et `DELETE` ainsi que pour `POST` lors d'une "action" |
+| 200 Ok | `GET`, `PUT` et `DELETE` ainsi que pour `POST` lors d'une "action" |
 | 201 Created | `POST` lors de la création d'un item |
 | 202 Accepted | La requête est ok, mais on la traitera plus tard |
 | 204 No Content | `DELETE` sans body |
@@ -473,7 +473,7 @@ Sinon on retourne la ressource avec le header ```Last-Modified```.
 ### Cross-Origin Resource Sharing (CORS) 
 
 * Api et Webapp sur des domaines différents (Same-origin policy)
-* Requête `OPTIONS` (preflighted request) pour `POST`, `PUT`, `PATCH` et `DELETE`
+* Requête `OPTIONS` (preflighted request) pour `POST`, `PUT` et `DELETE`
 
 ```bash
 $ curl -X OPTIONS https://api.domain.com/v2/items?q=toto&isGeek=false

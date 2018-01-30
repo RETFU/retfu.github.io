@@ -1,0 +1,117 @@
+/*
+overriding basic theme
+ */
+body {
+	font-size: 2.5em;
+}
+
+.slide {
+	padding-top: 25px;
+}
+
+.slide-content {
+	font-size: 0.9em;
+	font-family: 'Helvetica Neue', Helvetica;
+	width: 80%;
+	/*height:780px;*/
+	margin-top:40px;
+}
+
+.slide-content img{
+	width:auto;
+}
+
+h1 {
+	font-size: 2.5em;
+	text-shadow: 1px 2px 4px #191919;
+}
+
+h2 {
+	font-size: 1.3em;
+}
+
+h3 {
+	font-size: 1.2em;
+	margin-bottom: 40px;
+}
+
+h4 {
+	font-size: 1.0em;
+	margin-bottom: 0px;
+}
+
+ul {
+	line-height: 1.8em;
+	padding-top:0px;
+	margin:0px;
+}
+
+blockquote {
+	padding: 0 15px;
+	color: #777;
+	border-left: 4px solid #ddd;
+	margin: 0px;
+	font-size:0.8em;
+}
+
+table {
+	padding: 0;
+	border-collapse: collapse;
+	width:100%;
+}
+	table tr {
+		border-top: 1px solid #cccccc;
+		background-color: white;
+		margin: 0;
+		padding: 0;
+ }
+		table tr:nth-child(2n) {
+			background-color: #f8f8f8;
+		}
+		table tr th {
+			font-weight: bold;
+			border: 1px solid #cccccc;
+			text-align: left;
+			margin: 0;
+			padding: 10px 17px;
+		}
+		table tr td {
+			border: 1px solid #cccccc;
+			text-align: left;
+			margin: 0;
+			padding: 10px 17px;
+		}
+		table tr th :first-child, table tr td :first-child {
+			margin-top: 0;
+		}
+		table tr th :last-child, table tr td :last-child {
+			margin-bottom: 0;
+		}
+
+a {
+	color: #47a9ff;
+}
+a:hover {
+	color: #47a9ff;
+	border-bottom: 3px solid #47a9ff;
+}
+
+pre {
+	font-size: 0.7em;
+}
+
+.author h1 {
+	font-size: 1.5em;
+	font-weight: bold;
+	font-family: 'Helvetica Neue', Helvetica;
+}
+
+.author h3 {
+	font-size: 1em;
+	font-family: 'Helvetica Neue', Helvetica;
+	margin-bottom:0;
+}
+
+/*
+Slides
+ */

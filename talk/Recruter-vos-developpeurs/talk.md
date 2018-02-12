@@ -1,4 +1,4 @@
-title: Recruter vos developpeurs en 2018
+title: Recruter vos developpeurs
 author:
   name: Fabien Furet
   twitter: RETFU
@@ -10,17 +10,22 @@ theme: sjaakvandenberg/cleaver-light
 
 --
 
-# Recruter vos developpeurs en 2018
+# Recruter vos **developpeurs**
+## Retour d'expérience
 
 --
 
 ### Contexte IWD
 
 * SaaS dans le merchandising/marketing, grand compte
-* ~70 collaborateurs dont ~16 geek dans l'équipe dev
+* ~70 collaborateurs dont ~16 dans l'équipe dev
 * Paris, New York, Singapore, Los Angeles, Bordeaux, Caen et Lyon
 * Forte volonté d'augmenter les effectifs et particulièrement dans mon équipe
-* Difficulté à attirer des talents
+* Difficulté à attirer des talents, IWD Who?
+
+--
+
+# Objectifs
 
 --
 
@@ -30,11 +35,16 @@ theme: sjaakvandenberg/cleaver-light
 * Etre autonome (ne pas dépendre d'un cabinet ou de RH)
 * Pouvoir déleguer à n'importe quelles étapes du processus
 * Ne pas être dépendant de moi
-* Travailler/communiquer notre "image employeur"
+* Travailler/communiquer notre "image employeur" => IWD is a fucking place to work!!
+
+--
+
+# Processus
 
 --
 
 ### Processus
+
 
 * Annonce
 * Sourcing
@@ -48,18 +58,22 @@ theme: sjaakvandenberg/cleaver-light
 
 --
 
-### Annonce 1/2
+# L'annonce
+
+--
+
+### L'annonce 1/2
 
 * Les **valeurs** de la société doivent transpirer
 * Etre **honnête**, ne pas cacher du legacy par exemple 😅
 * Donner un maximum de détails sur le **contexte** du job
-* Ne pas tutoyer
+* Ne pas tuttoyer
 * Ne pas rédiger en mode kikool startup franglais t'as vu
 * Donner le **SALAIRE 🙏** ou une fourchette
 
 --
 
-### Annonce 2/2
+### L'annonce 2/2
 
 * Introduire la société
 * L'équipe
@@ -72,6 +86,11 @@ Exemple: [Dev senior](https://www.welcometothejungle.co/companies/iwd/jobs/devel
 
 --
 
+# Sourcing
+
+
+--
+
 ### Sourcing
 
 Comment trouver les candidats?
@@ -80,6 +99,11 @@ Comment trouver les candidats?
 * Plateforme "de communication" type [Welcome to the jungle](https://www.welcometothejungle.co), [Jobteaser](https://www.jobteaser.com)  (~300€/mois)
 * Plateforme qui "qualifie" les candidats, type [Talen.io](https://www.talent.io), [Hired](https://hired.com), [bluecoders.io](https://bluecoders.io) (~15% salaire brut annuel)
 * Recruteur (>15% salaire brut annuel)
+
+--
+
+# 1er contact par email
+
 --
 
 ### 1er contact par email
@@ -91,6 +115,10 @@ Phase d'accroche, de séduction 💕
 * Expliquer le processus de recrutement
 * Soliciter une vidéo conf
 * PS: remote, salaire, langue parlée...
+
+--
+
+# Video conférence
 
 --
 
@@ -123,11 +151,19 @@ Questions "techniques":
 * Questions sur l'ecosystem, les bonnes pratiques...
 --
 
+# Arrêt du processus 😩
+
+--
+
 ### Arrêt du processus 😩
 
 Si c'est le candidat qui arrête, répondre de manière positive "bonne chance pour ton nouveau job"... On ne sait jamais, on se recroisera peut-être. Ne pas oublier de le sourcer.
 
 Si c'est vous, restez formel mais toujorus positif. Si après votre refus le candidat vous demande pourquoi, soyez franc et direct, c'est le meilleur service que vous pouvez lui rendre.
+
+--
+
+# Challenge technique
 
 --
 
@@ -156,7 +192,12 @@ Ce qu'on cherche à voir:
 
 --
 
+# Rencontre à Paris
+
+--
+
 ### Rencontre à Paris
+
 
 > Dans 90% on a très envie de recruter le candidat
 
@@ -167,6 +208,10 @@ Ce qu'on cherche à voir:
 * Proposition formelle dans la foulée par mail
 
 > Si non Francilien, rembourse le billet de TGV
+
+--
+
+# Yeah mother fucker 😁 🙌 ✌ 🚀 🌈 🎉 🎊
 
 --
 
@@ -181,6 +226,10 @@ Préparer le onboarding et les 2 premières semaines: formations, setup, doc...
 Préparer une US qu'il attaquera au bout de max 3j.
 
 Si remote, prévoir l'hébergement pour le premier mois sur Paris (3j/semaines)
+
+--
+
+# Suivi
 
 --
 
@@ -206,7 +255,12 @@ Classification:
 
 --
 
+# Bilan
+
+--
+
 ### Bilan
+
 
 Sur la dernière années:
 * 5 recrutements
@@ -216,9 +270,13 @@ Sur la dernière années:
 
 --
 
-### Témoignage Damien Pobel
+# Témoignage
 
-> Lead developer à Lyon, il est notre dernière recrue  
+--
+
+### Damien Pobel, Lead developer
+
+> Il est notre dernière recrue à Lyon.
 > 🙏 ajouter le sur twitter sinon je dois retirer cette slide [@dpobel](https://twitter.com/dpobel)
 
 Qu'est-ce qui t'as donner envie de répondre à ma solicition sur talen.io?
@@ -234,7 +292,6 @@ Qu'est-ce qui a fait que tu nous as dis oui 💒?
 * l’aspect remote tout en ayant un collègue à Lyon, le meilleur des 2 mondes en gros 🎉
 
 --
-
 
 # Merci
 <br/>

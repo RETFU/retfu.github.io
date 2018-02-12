@@ -12,7 +12,7 @@ body {
 .slide-content {
 	font-size: 0.9em;
 	font-family: 'Helvetica Neue', Helvetica;
-	width: 80%;
+	width: 90%;
 	/*height:780px;*/
 	margin-top:40px;
 }
@@ -22,8 +22,9 @@ body {
 }
 
 h1 {
-	font-size: 2.5em;
+	font-size: 3em;
 	text-shadow: 1px 2px 4px #191919;
+	color: #FFF;
 }
 
 h2 {
@@ -115,3 +116,94 @@ pre {
 /*
 Slides
  */
+#slide-1 {
+	background: url('assets/01.jpg');
+  	background-size: cover;
+}
+
+#slide-3 {
+	background: url('assets/02.jpg');
+  	background-size: cover;
+}
+
+#slide-5 {
+	background: url('assets/05.jpg');
+  	background-size: cover;
+}
+
+#slide-7 {
+	background: url('assets/10.jpg');
+  	background-size: cover;
+}
+
+#slide-10 {
+	background: url('assets/11.jpg');
+  	background-size: cover;
+}
+
+
+
+#slide-12 {
+	background: url('assets/08.jpg');
+  	background-size: cover;
+}
+
+
+
+#slide-14 {
+	background: url('assets/12.jpg');
+  	background-size: cover;
+}
+
+
+
+#slide-17 {
+	background: url('assets/13.jpg');
+  	background-size: cover;
+}
+
+
+#slide-19 {
+	background: url('assets/15.jpg');
+  	background-size: cover;
+}
+
+
+#slide-24 {
+	background: url('assets/16.jpg');
+  	background-size: cover;
+}
+
+
+#slide-26 {
+	background: url('assets/17.jpg');
+  	background-size: cover;
+}
+
+#slide-29 {
+	background: url('assets/20.jpg');
+  	background-size: cover;
+}
+
+#slide-31 {
+	background: url('assets/19.jpg');
+  	background-size: cover;
+}
+
+#slide-33 {
+	background: url('assets/18.jpg');
+  	background-size: cover;
+}
+
+#slide-34 {
+	background: url('assets/21.jpg');
+  	background-size: cover;
+}
+
+
+
+
+#slide-22 {
+	background: url('assets/09.jpg');
+  	background-size: cover;
+}

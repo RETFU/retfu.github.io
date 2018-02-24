@@ -21,7 +21,11 @@ theme: sjaakvandenberg/cleaver-light
 * ~70 collaborateurs dont ~16 dans l'équipe dev 🚀
 * Paris, New York, Singapore, Los Angeles, Bordeaux, Caen et Lyon
 * Forte volonté d'augmenter les effectifs et particulièrement dans l'équipe dev 🚀
-* Difficulté à attirer des talents, [IWD](https://iwd.io) who?
+* Difficulté à attirer des talents:
+  * Tout le monde cherche des devs
+  * Grosse concurrence, surtout à Paris
+  * [IWD](https://iwd.io) who?
+
 
 --
 
@@ -177,7 +181,7 @@ Phase d'accroche, de séduction 💕
 ### Video conférence 5/7
 
 * On ne juge pas, si pas de réponse, ce n'est pas grave, ce n'est pas un concours
-> **Qu’est qui fait qu’un code est bon?**  
+> **Qu’est-ce qu’un code est bon?**  
 > Découplage, injection de dépendance, orienté métier ("DDD"), coding style, tests, maintenabilité, évolutivité, ...  
 > **A quoi sert une Interface en POO?**  
 > Définir un contrat, découplage, injection de dépendance, évolutivité...    
@@ -249,7 +253,7 @@ S'il vous demande pourquoi, soyez **franc et direct**.
 * Example [Challenge IWD](https://github.com/iwonderanddev/tech-challenges)
 
 > `Tips` prendre le temps d'itérer sur le challenge, ça vaut le coup de l'améliorer en fonction des rétours
-> `Tips` faire plusieurs challenge dérivés en fonction du profil junior/sénior ou backend/frontend
+> `Tips` faire plusieurs challenges dérivés en fonction du profil junior/sénior ou backend/frontend
 
 --
 
@@ -316,11 +320,11 @@ Le plus dure est fait.
 ### Bilan
 
 Sur la dernière année:
-* Actuellement 12 candidats dans le pipe pour 3 postes (2 devs + ops)
 * ~70 candidats "étudiés"
 * ~30 vidéos conférence
 * ~20 challenges techique
 * 5 recrutements 🎉
+* Actuellement 12 candidats dans le pipe pour 3 postes (2 devs + ops)
 
 --
 

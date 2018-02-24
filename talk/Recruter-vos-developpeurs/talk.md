@@ -19,7 +19,7 @@ theme: sjaakvandenberg/cleaver-light
 
 * SaaS dans le merchandising/marketing, grand compte
 * ~70 collaborateurs dont ~16 dans l'équipe dev 🚀
-* Paris, New York, Singapore, Los Angeles, Bordeaux, Caen et Lyon
+* Paris, New York, Singapoure, Los Angeles, Bordeaux, Caen et Lyon
 * Forte volonté d'augmenter les effectifs et particulièrement dans l'équipe dev 🚀
 * Difficulté à attirer des talents:
   * Tout le monde cherche des devs
@@ -75,7 +75,7 @@ theme: sjaakvandenberg/cleaver-light
 * Donner un maximum de détails sur le **contexte** du job
 * Ne pas tutoyer
 * Ne pas rédiger en mode *"kikool startup franglais t'as vu"*
-* Donner le **SALAIRE 🙏** ou une fourchette ([linkedin va deviner de toutes façon](https://siecledigital.fr/2018/02/14/lestimation-des-salaires-desormais-visible-sur-linkedin/))
+* Donner le **SALAIRE 🙏** ou une fourchette ([linkedin va deviner de toute façon](https://siecledigital.fr/2018/02/14/lestimation-des-salaires-desormais-visible-sur-linkedin/))
 
 --
 
@@ -140,10 +140,10 @@ Phase d'accroche, de séduction 💕
 
 * Donner **confiance** au candidat
 * Ne pas le prendre de haut
-* Etre souriant, appaisé, **ouvert**
+* Etre souriant, apaisé, **ouvert**
 * **Ne pas juger** ses choix de "carrière" ou technique
 * Doit être une **discussion** de dev entre dev
-* On ne représente pas la contexte, la vidéo l'a déjà fait
+* On ne représente pas le contexte, la vidéo l'a déjà fait
 
 --
 
@@ -158,7 +158,7 @@ Phase d'accroche, de séduction 💕
 
 ### Video conférence 3/7
 
-* L'ammener à parler de sa dernière expérience et à se projeter chez vous
+* L'amener à parler de sa dernière expérience et à se projeter chez nous
 > **Qu'est ce que vous aimez dans votre job actuel?**  
 > L'équipe, les pratiques, la techno, le challenge...  
 > **Ce qui vous plaît moins?**  
@@ -170,7 +170,7 @@ Phase d'accroche, de séduction 💕
 
 ### Video conférence 4/7
 
-* Quesions ouvertes, pas de réponse toutes faites
+* Questions ouvertes, pas de réponses toutes faites
 > **Comment organisez-vous votre veille technique?**  
 > N'en fait pas, quotidienne, voir s'il se laisse vivre, ce qui l'intéresse en ce moment  
 > **Dernier gros challenge technique?**  
@@ -181,7 +181,7 @@ Phase d'accroche, de séduction 💕
 ### Video conférence 5/7
 
 * On ne juge pas, si pas de réponse, ce n'est pas grave, ce n'est pas un concours
-> **Qu’est-ce qu’un code est bon?**  
+> **Qu’est-ce qu’un bon code?**  
 > Découplage, injection de dépendance, orienté métier ("DDD"), coding style, tests, maintenabilité, évolutivité, ...  
 > **A quoi sert une Interface en POO?**  
 > Définir un contrat, découplage, injection de dépendance, évolutivité...    
@@ -195,7 +195,7 @@ Phase d'accroche, de séduction 💕
 * Mise en situation d'une problématique  
 > **Comment gardez-vous une vision claire de votre prod?**  
 > Logs, monitoring, Nagios, New Relics, ELK, alerting...  
-> **Vous avez une grosse charge sur un services. Comment faîtes-vous pour la gérer?**  
+> **Vous avez une grosse charge sur un service. Comment faîtes-vous pour la gérer?**  
 > Cache applicatif et/ou http et/ou client, load balancer...
 
 --
@@ -247,12 +247,12 @@ S'il vous demande pourquoi, soyez **franc et direct**.
 * Fait à la **maison**
 * Définir une **deadline** avec le candidat (10j s'il le faut)
 * L'exercice doit être décrit avec **précision**, **autonomie**
-* Les **objectifs** de l'exercice doivent être claire
+* Les **objectifs** de l'exercice doivent être clairs
 * **Rapide** à faire ~2h
-* Partir d'une vrai **problématique métier**
-* Example [Challenge IWD](https://github.com/iwonderanddev/tech-challenges)
+* Partir d'une vraie **problématique métier**
+* Exemple [Challenge IWD](https://github.com/iwonderanddev/tech-challenges)
 
-> `Tips` prendre le temps d'itérer sur le challenge, ça vaut le coup de l'améliorer en fonction des rétours
+> `Tips` prendre le temps d'itérer sur le challenge, ça vaut le coup de l'améliorer en fonction des retours
 > `Tips` faire plusieurs challenges dérivés en fonction du profil junior/sénior ou backend/frontend
 
 --
@@ -293,12 +293,12 @@ Dans 90% des cas, on a déjà très envie de recruter le candidat
 
 ### Yeah mother fucker 😁 🙌 ✌ 🚀 🌈 🎉 🎊
 
-Le plus dure est fait.
+Le plus dur est fait.
 
 * Il faut rapidement préparer le contrat pour sécuriser l'embauche.
 * Préparer le onboarding et les 2 premières semaines: formations, setup, doc...
 * Préparer une US qu'il attaquera au bout de max 3j.
-* Si remote, prévoir l'hébergement pour le premier mois sur Paris (3j/semaines)  
+* Si remote, prévoir l'hébergement pour le premier mois sur Paris (3j/semaine)  
   Très important pour s'imprégner de l'esprit de l'équipe, de son fonctionnement, de faire parti d'une aventure.
 
 --
@@ -322,7 +322,7 @@ Le plus dure est fait.
 Sur la dernière année:
 * ~70 candidats "étudiés"
 * ~30 vidéos conférence
-* ~20 challenges techique
+* ~20 challenges techiques
 * 5 recrutements 🎉
 * Actuellement 12 candidats dans le pipe pour 3 postes (2 devs + ops)
 
@@ -337,7 +337,7 @@ Sur la dernière année:
 > Il est notre dernière recrue à Lyon. 🙏 ajouter le sur twitter [@dpobel](https://twitter.com/dpobel) sinon je dois retirer cette slide
 
 **Qu'est-ce qui t'as donner envie de répondre à ma solicition sur talen.io?**
-> Le process de recrutement était **claire**. Le fait que ça se passe sur talent.io, la relation est un peu inversée et donc à priori si on est contacté ce que ça paraît coller côté recruteur.  
+> Le process de recrutement était **clair**. Le fait que ça se passe sur talent.io, la relation est un peu inversée et donc à priori si on est contacté ce que ça paraît coller côté recruteur.  
 La **vidéo** exprimait bien le **contexte** du job, de l'équipe et de la société.
 
 **Qu'est-ce qui a fait que tu nous as dis oui 💒?**

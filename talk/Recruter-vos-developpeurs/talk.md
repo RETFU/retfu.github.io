@@ -19,7 +19,7 @@ theme: sjaakvandenberg/cleaver-light
 
 * SaaS dans le merchandising/marketing, grand compte
 * ~70 collaborateurs dont ~16 dans l'équipe dev 🚀
-* Paris, New York, Singapoure, Los Angeles, Bordeaux, Caen et Lyon
+* Paris, New York, Singapour, Los Angeles, Bordeaux, Caen et Lyon
 * Forte volonté d'augmenter les effectifs et particulièrement dans l'équipe dev 🚀
 * Difficulté à attirer des talents:
   * Tout le monde cherche des devs
@@ -104,7 +104,7 @@ Comment trouver les candidats?
 
 * Poster une annonce sur un jobboard type [Remixjob](https://remixjob.com) (~200€)
 * Plateforme "de communication" type [Wttj](https://www.welcometothejungle.co), [Jobteaser](https://www.jobteaser.com)  (~300€/mois)
-* Plateforme qui "qualifie/filtre", type [Talen.io](https://www.talent.io),
+* Plateforme qui "qualifie/filtre", type [Talent.io](https://www.talent.io),
  [bluecoders](https://bluecoders.io) (~15% salaire brut annuel)
 * Recruteur dédié (>15% salaire brut annuel)
 
@@ -152,7 +152,7 @@ Phase d'accroche, de séduction 💕
 
 * Faire rebondir par rapport à la vidéo: test, code review, continuous delivery
 > **Que pourriez-vous proposer pour améliorer/aider l’équipe (process, outils...)?**  
-> On cherche à connaître son expérience, ces pratiques, s'il voit déjà des améliorations (QA, A/B testing...)
+> On cherche à connaître son expérience, ses pratiques, s'il voit déjà des améliorations (QA, A/B testing...)
 
 --
 
@@ -174,7 +174,7 @@ Phase d'accroche, de séduction 💕
 > **Comment organisez-vous votre veille technique?**  
 > N'en fait pas, quotidienne, voir s'il se laisse vivre, ce qui l'intéresse en ce moment  
 > **Dernier gros challenge technique?**  
-> On creuse une expérience récente, on challenge ces choix, on voit s'il maîtrise son sujet  
+> On creuse une expérience récente, on challenge ses choix, on voit s'il maîtrise son sujet  
 
 --
 
@@ -195,7 +195,7 @@ Phase d'accroche, de séduction 💕
 * Mise en situation d'une problématique  
 > **Comment gardez-vous une vision claire de votre prod?**  
 > Logs, monitoring, Nagios, New Relics, ELK, alerting...  
-> **Vous avez une grosse charge sur un service. Comment faîtes-vous pour la gérer?**  
+> **Vous avez une grosse charge sur un service. Comment faites-vous pour la gérer?**  
 > Cache applicatif et/ou http et/ou client, load balancer...
 
 --
@@ -204,11 +204,11 @@ Phase d'accroche, de séduction 💕
 
 * Plus spécifique aux technos, sans tomber dans la question de syntaxe
 > **Avantage/inconvénient de la techno X**  
-> Avoir du recul, connaître les forces/faiblesses, comparer à d'autres techo PHP vs Node  
+> Avoir du recul, connaître les forces/faiblesses, comparer à d'autres technos PHP vs Node  
 > **Une/Deux questions spécifiques au language (Trait en PHP, this/Promise en JS)**  
-> Connaissance des ajouts "récent" du language, concept de base  
+> Connaissance des ajouts "récent" du language, concepts de base  
 > **Questions sur l'ecosystem, les bonnes pratiques...**  
-> Connaissance de la communautés, se tient à jour...
+> Connaissance de la communauté, se tient à jour...
 
 
 --
@@ -262,7 +262,7 @@ S'il vous demande pourquoi, soyez **franc et direct**.
 Définir ce que vous cherchez à voir:
 
 * Le **métier** doit émerger dans le code
-* Le **découplage**, des Interfaces pour contractualiser, injection de dépendance
+* Le **découplage**, des Interfaces pour contractualiser, injection de dépendances
 * La **qualité**: tests, coding style...
 * La **maintenabilité** du code sur le long terme
 * Best practice: SOLID, KISS, YAGNI...
@@ -334,9 +334,9 @@ Sur la dernière année:
 
 ### Damien Pobel, Lead developer
 
-> Il est notre dernière recrue à Lyon. 🙏 ajouter le sur twitter [@dpobel](https://twitter.com/dpobel) sinon je dois retirer cette slide
+> Il est notre dernière recrue à Lyon. 🙏 ajoutez le sur twitter [@dpobel](https://twitter.com/dpobel) sinon je dois retirer cette slide
 
-**Qu'est-ce qui t'as donner envie de répondre à ma solicition sur talen.io?**
+**Qu'est-ce qui t'a donné envie de répondre à ma solicitation sur talent.io?**
 > Le process de recrutement était **clair**. Le fait que ça se passe sur talent.io, la relation est un peu inversée et donc à priori si on est contacté ce que ça paraît coller côté recruteur.  
 La **vidéo** exprimait bien le **contexte** du job, de l'équipe et de la société.
 

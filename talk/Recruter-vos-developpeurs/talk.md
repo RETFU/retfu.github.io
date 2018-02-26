@@ -70,23 +70,23 @@ theme: sjaakvandenberg/cleaver-light
 
 ### L'annonce 1/2
 
-* Les **valeurs** de la société doivent transpirer
-* Être **honnête**, ne pas cacher du legacy par exemple 😅
-* Donner un maximum de détails sur le **contexte** du job
-* Ne pas tutoyer
-* Ne pas rédiger en mode *"kikool startup franglais t'as vu"*
-* Donner le **SALAIRE 🙏** ou une fourchette ([Linkedin va deviner de toute façon](https://siecledigital.fr/2018/02/14/lestimation-des-salaires-desormais-visible-sur-linkedin/))
+* On fait "transpirer" les **valeurs** de la société
+* On est **honnête**, on ne cache pas le legacy 😅
+* On donne un maximum de détails sur le **contexte** du job
+* Pas de tutoiement
+* Pas de mode *"kikool startup franglais t'as vu"*
+* On donne systématiquement une fourchette pour le salaire ([Linkedin devinera de toute façon](https://siecledigital.fr/2018/02/14/lestimation-des-salaires-desormais-visible-sur-linkedin/))
 
 --
 
 ### L'annonce 2/2
 
-* Introduire la société
+* La société
 * L'équipe
 * Les produits/services: leurs métiers, ce qu'ils résolvent, la stack technique...
 * Infrastructure
 * Pratique de l'équipe: mise en production, qualité, tests, codes reviews...
-* Profil du candidat: ce que vous recherchez
+* Profil du candidat: ce qu'on recherche
 * Exemple d'annonce: [Développeur web sénior](https://remixjobs.com/emploi/Developpeur-Web-Experimente-H-F-/42317)
 
 > `Tips` maîtrise du framework X on s'en fout
@@ -100,13 +100,12 @@ theme: sjaakvandenberg/cleaver-light
 
 ### Sourcing
 
-Comment trouver les candidats?
+Où trouve-t-on nos candidats?
 
-* Poster une annonce sur un jobboard type [Remixjob](https://remixjob.com) (~200€)
-* Plateforme "de communication" type [Wttj](https://www.welcometothejungle.co), [Jobteaser](https://www.jobteaser.com)  (~300€/mois)
-* Plateforme qui "qualifie/filtre", type [Talent.io](https://www.talent.io),
- [bluecoders](https://bluecoders.io) (~15% salaire brut annuel)
-* Recruteur dédié (>15% salaire brut annuel)
+* Jobboard type [Remixjob](https://remixjob.com) (~200€)
+* Plateforme "de communication" [Welcome to the jungle 🤘](https://www.welcometothejungle.co) (~300€/mois)
+* Plateforme qui "qualifie/filtre" [Talent.io](https://www.talent.io), [bluecoders](https://bluecoders.io) (~15% salaire brut annuel)
+* ~~Recruteur dédié (>15% salaire brut annuel)~~
 
 --
 
@@ -120,9 +119,9 @@ Phase d'accroche, de séduction 💕
 
 * Lien vers une vidéo privée (~15min) de présentation de l'équipe, des produits...
 * Quelques liens supplémentaires vers le site, Welcome to the jungle...
-* Expliquer le processus de recrutement
-* Solliciter une vidéo conf
-* PS: remote, salaire, langue parlée...
+* On explique le processus de recrutement
+* On sollicite une vidéo conf
+* En fonction des candidats, on abordera les aspects remote, salaire, langue parlée...
 
 --
 
@@ -138,11 +137,11 @@ Phase d'accroche, de séduction 💕
 
 ### Vidéo conférence 1/7
 
-* Donner **confiance** au candidat
-* Ne pas le prendre de haut
-* Être souriant, apaisé, **ouvert**
-* **Ne pas juger** ses choix de "carrière" ou techniques
-* Doit être une **discussion** de dev entre dev
+* On essaie de donner **confiance** au candidat
+* On ne le prend pas de haut
+* On est souriant, apaisé, **ouvert**
+* **Pas de jugement** sur ses choix de "carrière" ou techniques
+* C'est une **discussion** de dev entre dev
 * On ne représente pas le contexte, la vidéo l'a déjà fait
 
 --
@@ -151,7 +150,7 @@ Phase d'accroche, de séduction 💕
 
 
 * Faire rebondir par rapport à la vidéo: test, code review, continuous delivery
-> **Que pourriez-vous proposer pour améliorer/aider l’équipe (process, outils...)?**
+> **Que pourriez-vous proposer pour améliorer/aider l’équipe (process, outils...)?**  
 > On cherche à connaître son expérience, ses pratiques, s'il voit déjà des améliorations (QA, A/B testing...)
 
 --
@@ -159,56 +158,56 @@ Phase d'accroche, de séduction 💕
 ### Vidéo conférence 3/7
 
 * L'amener à parler de sa dernière expérience et à se projeter chez nous
-> **Qu'est ce que vous aimez dans votre job actuel?**
-> L'équipe, les pratiques, la techno, le challenge...
-> **Ce qui vous plaît moins?**
-> Salaire, techno, stagnation, leadership...
-> **Pourquoi voulez-vous travailler chez nous?**
-> Pratiques, équipe, techno, impact, évolution, salaire...
+> **Qu'est ce que vous aimez dans votre job actuel?**  
+> L'équipe, les pratiques, la techno, le challenge...  
+> **Ce qui vous plaît moins?**  
+> Salaire, techno, stagnation, leadership...  
+> **Pourquoi voulez-vous travailler chez nous?**  
+> Pratiques, équipe, techno, impact, évolution, salaire...  
 
 --
 
 ### Vidéo conférence 4/7
 
 * Questions ouvertes, pas de réponses toutes faites
-> **Comment organisez-vous votre veille technique?**
-> N'en fait pas, quotidienne, voir s'il se laisse vivre, ce qui l'intéresse en ce moment
-> **Dernier gros challenge technique?**
-> On creuse une expérience récente, on challenge ses choix, on voit s'il maîtrise son sujet
+> **Comment organisez-vous votre veille technique?**  
+> N'en fait pas, quotidienne, voir s'il se laisse vivre, ce qui l'intéresse en ce moment  
+> **Dernier gros challenge technique?**  
+> On creuse une expérience récente, on challenge ses choix, on voit s'il maîtrise son sujet  
 
 --
 
 ### Vidéo conférence 5/7
 
 * On ne juge pas, si pas de réponse, ce n'est pas grave, ce n'est pas un concours
-> **Qu’est-ce qu’un bon code?**
-> Découplage, injection de dépendance, orienté métier ("DDD"), coding style, tests, maintenabilité, évolutivité, ...
-> **A quoi sert une Interface en POO?**
-> Définir un contrat, découplage, injection de dépendance, évolutivité...
-> **De quoi est composée une requête HTTP?**
-> Connaissance du protocole, http2
+> **Qu’est-ce qu’un bon code?**  
+> Découplage, injection de dépendance, orienté métier ("DDD"), coding style, tests, maintenabilité, évolutivité, ...  
+> **A quoi sert une Interface en POO?**  
+> Définir un contrat, découplage, injection de dépendance, évolutivité...  
+> **De quoi est composée une requête HTTP?**  
+> Connaissance du protocole, http2  
 
 --
 
 ### Vidéo conférence 6/7
 
-* Mise en situation d'une problématique
-> **Comment gardez-vous une vision claire de votre prod?**
-> Logs, monitoring, Nagios, New Relics, ELK, alerting...
-> **Vous avez une grosse charge sur un service. Comment faites-vous pour la gérer?**
-> Cache applicatif et/ou http et/ou client, load balancer...
+* Mise en situation d'une problématique  
+> **Comment gardez-vous une vision claire de votre prod?**  
+> Logs, monitoring, Nagios, New Relics, ELK, alerting...   
+> **Vous avez une grosse charge sur un service. Comment faites-vous pour la gérer?**  
+> Cache applicatif et/ou http et/ou client, load balancer...  
 
 --
 
 ### Vidéo conférence 7/7
 
 * Plus spécifique aux technos, sans tomber dans la question de syntaxe
-> **Avantages/inconvénients de la techno X**
-> Avoir du recul, connaître les forces/faiblesses, comparer à d'autres technos PHP vs Node
-> **Une/Deux questions spécifiques au language (Trait en PHP, this/Promise en JS)**
-> Connaissance des ajouts "récents" du language, concepts de base
-> **Questions sur l'ecosystem, les bonnes pratiques...**
-> Connaissance de la communauté, se tient à jour...
+> **Avantages/inconvénients de la techno X**  
+> Avoir du recul, connaître les forces/faiblesses, comparer à d'autres technos PHP vs Node  
+> **Une/Deux questions spécifiques au language (Trait en PHP, this/Promise en JS)**  
+> Connaissance des ajouts "récents" du language, concepts de base  
+> **Questions sur l'ecosystem, les bonnes pratiques...**  
+> Connaissance de la communauté, se tient à jour...  
 
 
 --
@@ -220,15 +219,15 @@ Phase d'accroche, de séduction 💕
 ### Arrêt du processus 😩
 
 #### Initié par le candidat
-Répondre de manière positive "bonne chance pour ton nouveau job"...
-On ne sait jamais, on se recroisera peut-être. Ne pas oublier de le sourcer.
+On répond de manière positive "bonne chance pour ton nouveau job"...  
+Ne pas oublier de le sourcer.
 
 
-#### Initié par vous
-Restez formel mais toujours positif.
+#### Initié par nous
+On est formel mais toujours positif.  
 S'il vous demande pourquoi, soyez **franc et direct**.
 
-> `Tips` ne jamais insulter l'avenir
+> `Tips` ne jamais insulter l'avenir, on se recroisera peut-être
 
 --
 
@@ -246,11 +245,11 @@ S'il vous demande pourquoi, soyez **franc et direct**.
 
 * Fait à la **maison**
 * Définir une **deadline** avec le candidat (10j s'il le faut)
-* L'exercice doit être décrit avec **précision**, **autonomie**
-* Les **objectifs** de l'exercice doivent être clairs
+* L'exercice est décrit avec le plus de **précision** possible, **autonomie**
+* Les **objectifs** de l'exercice sont clairs
 * **Rapide** à faire ~2h
-* Partir d'une vraie **problématique métier**
-* Exemple [Challenge IWD](https://github.com/iwonderanddev/tech-challenges)
+* On décrit une vraie **problématique métier**, simplifiée
+* [Notre challenge technique](https://github.com/iwonderanddev/tech-challenges)
 
 > `Tips` prendre le temps d'itérer sur le challenge, ça vaut le coup de l'améliorer en fonction des retours
 >
@@ -260,7 +259,7 @@ S'il vous demande pourquoi, soyez **franc et direct**.
 
 ### Challenge technique 2/2
 
-Définir ce que vous cherchez à voir:
+On a défini ce qu'on cherche à voir en amont:
 
 * Le **métier** doit émerger dans le code
 * Le **découplage**, des Interfaces pour contractualiser, injection de dépendances
@@ -296,10 +295,10 @@ Dans 90% des cas, on a déjà très envie de recruter le candidat
 
 Le plus dur est fait.
 
-* Il faut rapidement préparer le contrat pour sécuriser l'embauche.
-* Préparer le onboarding et les 2 premières semaines: formations, setup, doc...
-* Préparer une US qu'il attaquera au bout de max 3j.
-* Si remote, prévoir l'hébergement pour le premier mois sur Paris (3j/semaine)
+* On prépare le **contrat** pour sécuriser l'embauche.
+* On prévoît le **onboarding** et les 2 premières semaines: formations, setup, doc...
+* ... ainsi que la **première US** qu'il attaquera au bout de max 3 jours.
+* Pour le remote, 3j/semaine le premier mois sur Paris.  
   Très important pour s'imprégner de l'esprit de l'équipe, de son fonctionnement, de faire parti d'une aventure.
 
 --

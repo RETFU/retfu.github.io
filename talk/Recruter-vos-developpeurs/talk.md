@@ -37,8 +37,8 @@ theme: sjaakvandenberg/cleaver-light
 
 * Pouvoir interagir avec plus de candidats
 * Gagner du temps
-* Etre autonome (ne pas dépendre d'un cabinet ou de RH)
-* Pouvoir déleguer à n'importe quelle étape du processus
+* Être autonome (ne pas dépendre d'un cabinet ou de RH)
+* Pouvoir déléguer à n'importe quelle étape du processus
 * Ne pas être dépendant de moi
 * Travailler/communiquer notre "image employeur" => [IWD](https://iwd.io) is a fucking place to work!!
 
@@ -57,9 +57,9 @@ theme: sjaakvandenberg/cleaver-light
 * **Challenge technique** (~2h)
 * Rencontre dans les bureaux de Paris (~1h)
 * Proposition
-* Onboarding / fidélisation 😀
+* On boarding / fidélisation 😀
 
-> `Tips` un budget dédié fait gagner du temps et comme le temps c'est de l'argent...  
+> `Tips` un budget dédié fait gagner du temps et comme le temps c'est de l'argent...
 
 
 --
@@ -71,11 +71,11 @@ theme: sjaakvandenberg/cleaver-light
 ### L'annonce 1/2
 
 * Les **valeurs** de la société doivent transpirer
-* Etre **honnête**, ne pas cacher du legacy par exemple 😅
+* Être **honnête**, ne pas cacher du legacy par exemple 😅
 * Donner un maximum de détails sur le **contexte** du job
 * Ne pas tutoyer
 * Ne pas rédiger en mode *"kikool startup franglais t'as vu"*
-* Donner le **SALAIRE 🙏** ou une fourchette ([linkedin va deviner de toute façon](https://siecledigital.fr/2018/02/14/lestimation-des-salaires-desormais-visible-sur-linkedin/))
+* Donner le **SALAIRE 🙏** ou une fourchette ([Linkedin va deviner de toute façon](https://siecledigital.fr/2018/02/14/lestimation-des-salaires-desormais-visible-sur-linkedin/))
 
 --
 
@@ -89,7 +89,7 @@ theme: sjaakvandenberg/cleaver-light
 * Profil du candidat: ce que vous recherchez
 * Exemple d'annonce: [Développeur web sénior](https://remixjobs.com/emploi/Developpeur-Web-Experimente-H-F-/42317)
 
-> `Tips` maîtrise du framework X on s'en fout  
+> `Tips` maîtrise du framework X on s'en fout
 
 
 --
@@ -121,7 +121,7 @@ Phase d'accroche, de séduction 💕
 * Lien vers une vidéo privée (~15min) de présentation de l'équipe, des produits...
 * Quelques liens supplémentaires vers le site, Welcome to the jungle...
 * Expliquer le processus de recrutement
-* Soliciter une vidéo conf
+* Solliciter une vidéo conf
 * PS: remote, salaire, langue parlée...
 
 --
@@ -132,82 +132,82 @@ Phase d'accroche, de séduction 💕
 
 --
 
-# Video conférence
+# Vidéo conférence
 
 --
 
-### Video conférence 1/7
+### Vidéo conférence 1/7
 
 * Donner **confiance** au candidat
 * Ne pas le prendre de haut
-* Etre souriant, apaisé, **ouvert**
-* **Ne pas juger** ses choix de "carrière" ou technique
+* Être souriant, apaisé, **ouvert**
+* **Ne pas juger** ses choix de "carrière" ou techniques
 * Doit être une **discussion** de dev entre dev
 * On ne représente pas le contexte, la vidéo l'a déjà fait
 
 --
 
-### Video conférence 2/7
+### Vidéo conférence 2/7
 
 
 * Faire rebondir par rapport à la vidéo: test, code review, continuous delivery
-> **Que pourriez-vous proposer pour améliorer/aider l’équipe (process, outils...)?**  
+> **Que pourriez-vous proposer pour améliorer/aider l’équipe (process, outils...)?**
 > On cherche à connaître son expérience, ses pratiques, s'il voit déjà des améliorations (QA, A/B testing...)
 
 --
 
-### Video conférence 3/7
+### Vidéo conférence 3/7
 
 * L'amener à parler de sa dernière expérience et à se projeter chez nous
-> **Qu'est ce que vous aimez dans votre job actuel?**  
-> L'équipe, les pratiques, la techno, le challenge...  
-> **Ce qui vous plaît moins?**  
-> Salaire, techno, stagnation, leadership...  
-> **Pourquoi voulez-vous travailler chez nous?**  
+> **Qu'est ce que vous aimez dans votre job actuel?**
+> L'équipe, les pratiques, la techno, le challenge...
+> **Ce qui vous plaît moins?**
+> Salaire, techno, stagnation, leadership...
+> **Pourquoi voulez-vous travailler chez nous?**
 > Pratiques, équipe, techno, impact, évolution, salaire...
 
 --
 
-### Video conférence 4/7
+### Vidéo conférence 4/7
 
 * Questions ouvertes, pas de réponses toutes faites
-> **Comment organisez-vous votre veille technique?**  
-> N'en fait pas, quotidienne, voir s'il se laisse vivre, ce qui l'intéresse en ce moment  
-> **Dernier gros challenge technique?**  
-> On creuse une expérience récente, on challenge ses choix, on voit s'il maîtrise son sujet  
+> **Comment organisez-vous votre veille technique?**
+> N'en fait pas, quotidienne, voir s'il se laisse vivre, ce qui l'intéresse en ce moment
+> **Dernier gros challenge technique?**
+> On creuse une expérience récente, on challenge ses choix, on voit s'il maîtrise son sujet
 
 --
 
-### Video conférence 5/7
+### Vidéo conférence 5/7
 
 * On ne juge pas, si pas de réponse, ce n'est pas grave, ce n'est pas un concours
-> **Qu’est-ce qu’un bon code?**  
-> Découplage, injection de dépendance, orienté métier ("DDD"), coding style, tests, maintenabilité, évolutivité, ...  
-> **A quoi sert une Interface en POO?**  
-> Définir un contrat, découplage, injection de dépendance, évolutivité...    
-> **De quoi est composée une requête HTTP?**  
-> Connaissance du protocol, http2  
+> **Qu’est-ce qu’un bon code?**
+> Découplage, injection de dépendance, orienté métier ("DDD"), coding style, tests, maintenabilité, évolutivité, ...
+> **A quoi sert une Interface en POO?**
+> Définir un contrat, découplage, injection de dépendance, évolutivité...
+> **De quoi est composée une requête HTTP?**
+> Connaissance du protocole, http2
 
 --
 
-### Video conférence 6/7
+### Vidéo conférence 6/7
 
-* Mise en situation d'une problématique  
-> **Comment gardez-vous une vision claire de votre prod?**  
-> Logs, monitoring, Nagios, New Relics, ELK, alerting...  
-> **Vous avez une grosse charge sur un service. Comment faites-vous pour la gérer?**  
+* Mise en situation d'une problématique
+> **Comment gardez-vous une vision claire de votre prod?**
+> Logs, monitoring, Nagios, New Relics, ELK, alerting...
+> **Vous avez une grosse charge sur un service. Comment faites-vous pour la gérer?**
 > Cache applicatif et/ou http et/ou client, load balancer...
 
 --
 
-### Video conférence 7/7
+### Vidéo conférence 7/7
 
 * Plus spécifique aux technos, sans tomber dans la question de syntaxe
-> **Avantage/inconvénient de la techno X**  
-> Avoir du recul, connaître les forces/faiblesses, comparer à d'autres technos PHP vs Node  
-> **Une/Deux questions spécifiques au language (Trait en PHP, this/Promise en JS)**  
-> Connaissance des ajouts "récent" du language, concepts de base  
-> **Questions sur l'ecosystem, les bonnes pratiques...**  
+> **Avantages/inconvénients de la techno X**
+> Avoir du recul, connaître les forces/faiblesses, comparer à d'autres technos PHP vs Node
+> **Une/Deux questions spécifiques au language (Trait en PHP, this/Promise en JS)**
+> Connaissance des ajouts "récents" du language, concepts de base
+> **Questions sur l'ecosystem, les bonnes pratiques...**
 > Connaissance de la communauté, se tient à jour...
 
 
@@ -219,13 +219,13 @@ Phase d'accroche, de séduction 💕
 
 ### Arrêt du processus 😩
 
-#### Initié par le candidat  
-Répondre de manière positive "bonne chance pour ton nouveau job"...  
-On ne sait jamais, on se recroisera peut-être. Ne pas oublier de le sourcer.  
+#### Initié par le candidat
+Répondre de manière positive "bonne chance pour ton nouveau job"...
+On ne sait jamais, on se recroisera peut-être. Ne pas oublier de le sourcer.
 
 
-#### Initié par vous  
-Restez formel mais toujours positif.  
+#### Initié par vous
+Restez formel mais toujours positif.
 S'il vous demande pourquoi, soyez **franc et direct**.
 
 > `Tips` ne jamais insulter l'avenir
@@ -253,6 +253,7 @@ S'il vous demande pourquoi, soyez **franc et direct**.
 * Exemple [Challenge IWD](https://github.com/iwonderanddev/tech-challenges)
 
 > `Tips` prendre le temps d'itérer sur le challenge, ça vaut le coup de l'améliorer en fonction des retours
+>
 > `Tips` faire plusieurs challenges dérivés en fonction du profil junior/sénior ou backend/frontend
 
 --
@@ -265,7 +266,7 @@ Définir ce que vous cherchez à voir:
 * Le **découplage**, des Interfaces pour contractualiser, injection de dépendances
 * La **qualité**: tests, coding style...
 * La **maintenabilité** du code sur le long terme
-* Best practice: SOLID, KISS, YAGNI...
+* Best practices: SOLID, KISS, YAGNI...
 
 --
 
@@ -275,11 +276,11 @@ Définir ce que vous cherchez à voir:
 
 ### Rencontre à Paris
 
-Dans 90% des cas, on a déjà très envie de recruter le candidat  
+Dans 90% des cas, on a déjà très envie de recruter le candidat
 * Visite des locaux
 * Présentation des équipes sales 👯, client 🙆, dev 🚀...
 * Répondre aux dernières interrogations
-* Echanger avec des membres de l'équipe dev
+* Échanger avec des membres de l'équipe dev
 * Rencontre avec le CEO
 * Proposition formelle par écrit
 
@@ -298,7 +299,7 @@ Le plus dur est fait.
 * Il faut rapidement préparer le contrat pour sécuriser l'embauche.
 * Préparer le onboarding et les 2 premières semaines: formations, setup, doc...
 * Préparer une US qu'il attaquera au bout de max 3j.
-* Si remote, prévoir l'hébergement pour le premier mois sur Paris (3j/semaine)  
+* Si remote, prévoir l'hébergement pour le premier mois sur Paris (3j/semaine)
   Très important pour s'imprégner de l'esprit de l'équipe, de son fonctionnement, de faire parti d'une aventure.
 
 --
@@ -322,7 +323,7 @@ Le plus dur est fait.
 Sur la dernière année:
 * ~70 candidats "étudiés"
 * ~30 vidéos conférence
-* ~20 challenges techiques
+* ~20 challenges techniques
 * 5 recrutements 🎉
 * Actuellement 12 candidats dans le pipe pour 3 postes (2 devs + ops)
 
@@ -336,8 +337,8 @@ Sur la dernière année:
 
 > Il est notre dernière recrue à Lyon. 🙏 ajoutez le sur twitter [@dpobel](https://twitter.com/dpobel) sinon je dois retirer cette slide
 
-**Qu'est-ce qui t'a donné envie de répondre à ma solicitation sur talent.io?**
-> Le process de recrutement était **clair**. Le fait que ça se passe sur talent.io, la relation est un peu inversée et donc à priori si on est contacté ce que ça paraît coller côté recruteur.  
+**Qu'est-ce qui t'a donné envie de répondre à ma sollicitation sur talent.io?**
+> Le process de recrutement était **clair**. Le fait que ça se passe sur talent.io, la relation est un peu inversée et donc a priori si on est contacté ce que ça paraît coller côté recruteur.
 La **vidéo** exprimait bien le **contexte** du job, de l'équipe et de la société.
 
 **Qu'est-ce qui a fait que tu nous as dis oui 💒?**
@@ -347,8 +348,8 @@ La **vidéo** exprimait bien le **contexte** du job, de l'équipe et de la soci�
 
 # Merci
 <br/>
-## Relecture, critiques, pull requests 😉  
-## [@mbagur](https://twitter.com/mbagur) [@mikael_letang](https://twitter.com/mikael_letang) [@dpobel](https://twitter.com/dpobel)  
+## Relecture, critiques, pull requests 😉
+## [@mbagur](https://twitter.com/mbagur) [@mikael_letang](https://twitter.com/mikael_letang) [@dpobel](https://twitter.com/dpobel)
 
 --
 

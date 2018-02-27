@@ -89,9 +89,6 @@ theme: sjaakvandenberg/cleaver-light
 * Profil du candidat: ce qu'on recherche
 * Exemple d'annonce: [Développeur web sénior](https://remixjobs.com/emploi/Developpeur-Web-Experimente-H-F-/42317)
 
-> `Tips` maîtrise du framework X on s'en fout
-
-
 --
 
 # Sourcing

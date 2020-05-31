@@ -1,0 +1,133 @@
+.main {
+  font-family: "Work Sans", sans-serif;
+  line-height: 1.5;
+  color: #173753;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 800px;
+  padding-left: 1em;
+  padding-right: 1em;
+  font-size: 1.2em;
+}
+h1 {
+  font-family: "Work Sans", sans-serif;
+  font-size: 3.3em;
+  color: #35ae77;
+  margin-bottom: 50px;
+  font-weight: 500;
+}
+h2 {
+  font-family: "Work Sans", sans-serif;
+  font-size: 2.3em;
+  margin-top: 20px;
+  margin-bottom: 0px;
+  color: #0a8bfd;
+  font-weight: 500;
+}
+a {
+  color: #0a8bfd;
+}
+a:hover {
+  text-decoration: none;
+}
+
+.links {
+  margin-top: 90px;
+  font-size: 1em;
+}
+
+.links a {
+  color: #35ae77;
+}
+
+.aka {
+  font-size: 0.3em !important;
+}
+
+.tag {
+  display: inline-block;
+  padding: 4px 6px;
+  line-height: 20px;
+  color: #fff;
+  text-align: center;
+  border-radius: 3px;
+  background-color: #999;
+  margin: 4px;
+  font-weight: 400;
+}
+
+.tag-level-1 {
+  background-color: #80e1ff;
+  font-size: 0.5em;
+  padding: 2px 4px;
+}
+.tag-level-2 {
+  background-color: #6ed1ff;
+  font-size: 0.6em;
+  padding: 3px 6px;
+}
+.tag-level-3 {
+  background-color: #5ec1ff;
+  font-size: 0.7em;
+}
+.tag-level-4 {
+  background-color: #5cb0f9;
+  font-size: 0.8em;
+}
+.tag-level-5 {
+  background-color: #0a8bfd;
+  font-size: 0.9em;
+}
+.intro {
+  font-weight: 500;
+}
+
+.books {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+  object-fit: contain;
+  line-height: 1;
+  padding: 1em;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+.books .tag {
+  display: inline-block;
+  padding: 4px 6px;
+  line-height: 20px;
+  color: #fff;
+  text-align: center;
+  border-radius: 3px;
+  background-color: #999;
+  margin: 4px;
+  font-weight: 400;
+}
+
+.books img {
+  max-width: 200px;
+  margin-right: 1em;
+  font-size: 1em;
+}
+
+.books h3 {
+  margin: 0;
+  padding: 0;
+  font-size: 1.5em;
+}
+
+.books .sub-title {
+  font-size: 1.1em;
+  font-style: italic;
+  padding-top: 0.5em;
+  margin: 0;
+}
+
+.books .details {
+  font-size: 1em;
+  padding-top: 0.5em;
+  padding-bottom: 1em;
+  margin: 0;
+}

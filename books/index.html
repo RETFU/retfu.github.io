@@ -2,9 +2,10 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>Fabien Furet Books</title>
+    <title>Fabien Furet lectures</title>
     <meta name="description" content="Fabien Furet / Books" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex, nofollow">
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.1/normalize.min.css"
       rel="stylesheet"
@@ -16,215 +17,244 @@
     />
     <link href="../style.css" rel="stylesheet" type="text/css" />
     <script type="text/javascript">
-      var books = [
-        {
-          title: "Dormez tranquilles jusqu'en 2100",
-          readYear: 2020,
-          subtitle: "Et autre malentendus sur le climat et l'énergie",
-          author: "Jean-Marc Jancovici",
-          pages: 196,
-          year: 2017,
-          image: "cover/dormez-tranquile.jpg",
-          tag: "essai",
-          rating: "📚📚📚📚",
-          notes: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis elit non quam elementum efficitur. Quisque imperdiet augue a dolor semper gravida. Cras consequat vehicula feugiat. Vestibulum arcu elit, hendrerit sit amet augue non, interdum pellentesque nunc. Aliquam in dui at nisl aliquam faucibus. Vivamus congue posuere sem molestie dictum. Aenean eu imperdiet nulla. Proin efficitur maximus erat, quis ullamcorper lorem consectetur eget. Donec mollis lorem ac lacus commodo fermentum. Nunc justo ipsum, mollis non enim et,
-          condimentum facilisis risus. Morbi maximus vitae elit quis vehicula.`
-        },
-        {
-          title: "Le secret de l'Occident",
-          readYear: 2020,
-          subtitle: "Vers une théorie générale du progrès scientifique",
-          author: "David Cosandey",
-          pages: 865,
-          year: 2018,
-          image: "cover/secret-occident.jpg",
-          tag: "essai",
-          rating: "📚📚📚📚📚",
-          notes: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis elit non quam elementum efficitur. Quisque imperdiet augue a dolor semper gravida. Cras consequat vehicula feugiat. Vestibulum arcu elit, hendrerit sit amet augue non, interdum pellentesque nunc. Aliquam in dui at nisl aliquam faucibus. Vivamus congue posuere sem molestie dictum. Aenean eu imperdiet nulla. Proin efficitur maximus erat, quis ullamcorper lorem consectetur eget. Donec mollis lorem ac lacus commodo fermentum. Nunc justo ipsum, mollis non enim et,
-          condimentum facilisis risus. Morbi maximus vitae elit quis vehicula.`
-        },
-        {
-          title: "L’horloge de la nature: Prévoir le temps",
-          readYear: 2020,
-          subtitle: "Comprendre les saisons, les animaux et les plantes",
-          author: "Peter Wohlleben",
-          pages: 179,
-          year: 2018,
-          image: "cover/horloge-nature.jpg",
-          tag: "ecologie",
-          rating: "📚📚📚",
-          notes: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis elit non quam elementum efficitur. Quisque imperdiet augue a dolor semper gravida. Cras consequat vehicula feugiat. Vestibulum arcu elit, hendrerit sit amet augue non, interdum pellentesque nunc. Aliquam in dui at nisl aliquam faucibus. Vivamus congue posuere sem molestie dictum. Aenean eu imperdiet nulla. Proin efficitur maximus erat, quis ullamcorper lorem consectetur eget. Donec mollis lorem ac lacus commodo fermentum. Nunc justo ipsum, mollis non enim et,
-          condimentum facilisis risus. Morbi maximus vitae elit quis vehicula.`
-        },
-        {
-          title: "La Spirale du déclassement",
-          readYear: 2020,
-          subtitle: " Les désillusions des classes moyenness",
-          author: "Louis Chauvel",
-          pages: 188,
-          year: 2019,
-          image: "cover/la-spirale-declassement.jpg",
-          tag: "sociologie",
-          rating: "📚",
-          notes: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis elit non quam elementum efficitur. Quisque imperdiet augue a dolor semper gravida. Cras consequat vehicula feugiat. Vestibulum arcu elit, hendrerit sit amet augue non, interdum pellentesque nunc. Aliquam in dui at nisl aliquam faucibus. Vivamus congue posuere sem molestie dictum. Aenean eu imperdiet nulla. Proin efficitur maximus erat, quis ullamcorper lorem consectetur eget. Donec mollis lorem ac lacus commodo fermentum. Nunc justo ipsum, mollis non enim et,
-          condimentum facilisis risus. Morbi maximus vitae elit quis vehicula.`
-        },
-        {
-          title: "The Valley",
-          readYear: 2020,
-          subtitle: "Une histoire politique de la silicon valley",
-          author: "Fabien Benoit",
-          pages: 276,
-          year: 2019,
-          image: "cover/the-valley.jpg",
-          tag: "essai",
-          rating: "📚📚📚📚",
-          notes: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis elit non quam elementum efficitur. Quisque imperdiet augue a dolor semper gravida. Cras consequat vehicula feugiat. Vestibulum arcu elit, hendrerit sit amet augue non, interdum pellentesque nunc. Aliquam in dui at nisl aliquam faucibus. Vivamus congue posuere sem molestie dictum. Aenean eu imperdiet nulla. Proin efficitur maximus erat, quis ullamcorper lorem consectetur eget. Donec mollis lorem ac lacus commodo fermentum. Nunc justo ipsum, mollis non enim et,
-          condimentum facilisis risus. Morbi maximus vitae elit quis vehicula.`
-        },
-        {
-          title: "Le Modèle californien",
-          readYear: 2020,
-          subtitle: "Comment l'esprit collaboratif change le monde",
-          author: "Monique Dagnaud",
-          pages: 204,
-          year: 2016,
-          image: "cover/modele-californien.jpg",
-          tag: "essai",
-          rating: "? ? ?",
-          notes: `A lire 🤓`
-        },
-        {
-          title: "Homo Deus",
-          readYear: 2020,
-          subtitle: "Une brève histoire de l'avenir",
-          author: "Yuval Noah Harari",
-          pages: 464,
-          year: 2017,
-          image: "cover/home-deus.jpg",
-          tag: "essai",
-          rating: "📚📚",
-          notes: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis elit non quam elementum efficitur. Quisque imperdiet augue a dolor semper gravida. Cras consequat vehicula feugiat. Vestibulum arcu elit, hendrerit sit amet augue non, interdum pellentesque nunc. Aliquam in dui at nisl aliquam faucibus. Vivamus congue posuere sem molestie dictum. Aenean eu imperdiet nulla. Proin efficitur maximus erat, quis ullamcorper lorem consectetur eget. Donec mollis lorem ac lacus commodo fermentum. Nunc justo ipsum, mollis non enim et,
-          condimentum facilisis risus. Morbi maximus vitae elit quis vehicula. `
-        },
-        {
-          title: "Nos Ancêtres les Gaulois et autres fadaises",
-          subtitle: "L'histoire de France sans clichés",
-          author: "François Reynaet",
-          pages: 528,
-          year: 2010,
-          image: "cover/ancetres-gaulois.jpg",
-          tag: "histoire",
-          rating: "📚📚📚📚📚",
-          notes: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis elit non quam elementum efficitur. Quisque imperdiet augue a dolor semper gravida. Cras consequat vehicula feugiat. Vestibulum arcu elit, hendrerit sit amet augue non, interdum pellentesque nunc. Aliquam in dui at nisl aliquam faucibus. Vivamus congue posuere sem molestie dictum. Aenean eu imperdiet nulla. Proin efficitur maximus erat, quis ullamcorper lorem consectetur eget. Donec mollis lorem ac lacus commodo fermentum. Nunc justo ipsum, mollis non enim et,
-          condimentum facilisis risus. Morbi maximus vitae elit quis vehicula. `
-        },
-        {
-          title: "Les Vikings",
-          subtitle: null,
-          author: "Régis Boyer",
-          pages: 442,
-          year: 2015,
-          image: "cover/vikings.jpg",
-          tag: "histoire",
-          rating: "? ? ?",
-          notes: `A lire 🤓`
-        },
-        {
-          title: "Les origines franques Ve - IXe siècle",
-          subtitle: null,
-          author: "Stéphane Lebecq",
-          pages: 320,
-          year: 1990,
-          image: "cover/origines-franque.jpg",
-          tag: "histoire",
-          rating: "📚📚📚📚📚",
-          notes: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis elit non quam elementum efficitur. Quisque imperdiet augue a dolor semper gravida. Cras consequat vehicula feugiat. Vestibulum arcu elit, hendrerit sit amet augue non, interdum pellentesque nunc. Aliquam in dui at nisl aliquam faucibus. Vivamus congue posuere sem molestie dictum. Aenean eu imperdiet nulla. Proin efficitur maximus erat, quis ullamcorper lorem consectetur eget. Donec mollis lorem ac lacus commodo fermentum. Nunc justo ipsum, mollis non enim et,
-          condimentum facilisis risus. Morbi maximus vitae elit quis vehicula. `
-        },
-        {
-          title: "L'héritage des Charles",
-          readYear: 2020,
-          subtitle: "De la mort de Charlemagne aux environs de l'an mil",
-          author: "Laurent Theis",
-          pages: 288,
-          year: 2016,
-          image: "cover/lheritage-des-charles.jpg",
-          tag: "histoire",
-          rating: "📚📚📚📚📚",
-          notes: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis elit non quam elementum efficitur. Quisque imperdiet augue a dolor semper gravida. Cras consequat vehicula feugiat. Vestibulum arcu elit, hendrerit sit amet augue non, interdum pellentesque nunc. Aliquam in dui at nisl aliquam faucibus. Vivamus congue posuere sem molestie dictum. Aenean eu imperdiet nulla. Proin efficitur maximus erat, quis ullamcorper lorem consectetur eget. Donec mollis lorem ac lacus commodo fermentum. Nunc justo ipsum, mollis non enim et,
-          condimentum facilisis risus. Morbi maximus vitae elit quis vehicula.
-          Etiam at justo eu felis varius volutpat non euismod eros. Maecenas fermentum leo sed blandit egestas. Nam et augue semper, lacinia ex quis, rhoncus purus. Mauris scelerisque mi erat, in bibendum odio tincidunt ac.`
-        },
-        {
-          title: "L'Ordre seigneurial, XIe-XIIe siècle",
-          subtitle: null,
-          author: "Dominique Barthélemy",
-          pages: 320,
-          year: 1990,
-          image: "cover/lordre-segnerial.jpg",
-          tag: "histoire",
-          rating: "📚📚📚",
-          notes:
-            "my notesksd,f: sdf:skdf s:dfl skdflks dflsdkfl sldfld flsf sdfsdf "
-        },
-        {
-          title: "Temps d'équilibres, temps de ruptures, XIIIe siècle.",
-          subtitle: null,
-          author: "Monique Bourin-derruau",
-          pages: 338,
-          year: 1990,
-          image: "cover/temp-dequilibre.jpg",
-          tag: "histoire",
-          rating: "📚📚📚📚",
-          notes: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis elit non quam elementum efficitur. Quisque imperdiet augue a dolor semper gravida. Cras consequat vehicula feugiat. Vestibulum arcu elit, hendrerit sit amet augue non, interdum pellentesque nunc. Aliquam in dui at nisl aliquam faucibus. Vivamus congue posuere sem molestie dictum. Aenean eu imperdiet nulla. Proin efficitur maximus erat, quis ullamcorper lorem consectetur eget. Donec mollis lorem ac lacus commodo fermentum. Nunc justo ipsum, mollis non enim et,
-          condimentum facilisis risus. Morbi maximus vitae elit quis vehicula.
-          Etiam at justo eu felis varius volutpat non euismod eros. Maecenas fermentum leo sed blandit egestas. Nam et augue semper, lacinia ex quis, rhoncus purus. Mauris scelerisque mi erat, in bibendum odio tincidunt ac.`
-        },
-        {
-          title: "Temps de crises, temps d'espoirs, XIVe-XVe siècle.",
-          subtitle: null,
-          author: "Alain Demurger",
-          pages: 378,
-          year: 1990,
-          image: "cover/temps-de-crise.jpg",
-          tag: "histoire",
-          rating: "? ? ?",
-          notes: `A lire 🤓`
-        }
-      ];
+      var books = [{
+          year: 2021, books: [{
+            title: "Temps de crises, temps d'espoirs, XIVe-XVe siècle.",
+            subtitle: null,
+            author: "Alain Demurger",
+            pages: 378,
+            year: 1990,
+            image: "cover/temps-de-crise.jpg",
+            tag: "histoire",
+            rating: "? ? ?",
+            link: "https://www.seuil.com/ouvrage/temps-de-crises-temps-d-espoirs-alain-demurger/9782020122214"
+          }]
+        }, {
+          year: 2020, books: [
+            {
+              title: "Dormez tranquilles jusqu'en 2100",
+              subtitle: "Et autre malentendus sur le climat et l'énergie",
+              author: "Jean-Marc Jancovici",
+              pages: 196,
+              year: 2017,
+              image: "cover/dormez-tranquile.jpg",
+              tag: "essai",
+              rating: "📚📚📚📚",
+              link: "https://www.odilejacob.fr/catalogue/petits-prix/de-599-eur-a-999-eur/dormez-tranquilles-jusquen-2100_9782738132529.php"
+            },
+            {
+              title: "Le secret de l'Occident",
+              subtitle: "Vers une théorie générale du progrès scientifique",
+              author: "David Cosandey",
+              pages: 865,
+              year: 2018,
+              image: "cover/secret-occident.jpg",
+              tag: "essai",
+              rating: "📚📚📚📚📚",
+              link: "https://www.decitre.fr/livres/le-secret-de-l-occident-9782081218710.html"
+            },
+            {
+              title: "Une Histoire populaire des Etats-Unis de 1492 a nos jours",
+              subtitle: null,
+              author: "Howard Zinn",
+              pages: 810,
+              year: 1980,
+              image: "cover/histoire-populaire-usa.jpg",
+              tag: "histoire",
+              rating: "📚📚📚📚📚",
+              link: "https://www.decitre.fr/livres/une-histoire-populaire-des-etats-unis-d-amerique-9782910846794.html"
+            },
+            {
+              title: "L’horloge de la nature: Prévoir le temps",
+              subtitle: "Comprendre les saisons, les animaux et les plantes",
+              author: "Peter Wohlleben",
+              pages: 179,
+              year: 2018,
+              image: "cover/horloge-nature.jpg",
+              tag: "ecologie",
+              rating: "📚📚📚",
+              link: "https://www.decitre.fr/livres/l-horloge-de-la-nature-9788893194211.html"
+            },
+            {
+              title: "L'Arabe du futur - volume 5",
+              subtitle: null,
+              author: "Riad Sattouf",
+              pages: 176,
+              year: 2020,
+              image: "cover/arabe-du-futur5.jpg",
+              tag: "bd",
+              rating: "📚📚📚📚📚",
+              link: "https://www.allary-editions.fr/publication/larabe-du-futur-5/"
+            },
+            {
+              title: "La Spirale du déclassement",
+              subtitle: " Les désillusions des classes moyenness",
+              author: "Louis Chauvel",
+              pages: 188,
+              year: 2019,
+              image: "cover/la-spirale-declassement.jpg",
+              tag: "sociologie",
+              rating: "📚",
+              link: "https://www.decitre.fr/livres/la-spirale-du-declassement-9782757879849.html"
+            },
+            {
+              title: "Quand les nations refont l'histoire",
+              subtitle: "L'invention des origines médiévales de l'Europe",
+              author: "Patrick Geary",
+              pages: 242,
+              year: 2004,
+              image: "cover/ancetres-gaulois.jpg",
+              tag: "histoire",
+              rating: "📚📚📚📚📚",
+              link: "quand-les-nation-refont-lhistoire.jpg"
+            },
+            {
+              title: "The Valley",
+              subtitle: "Une histoire politique de la silicon valley",
+              author: "Fabien Benoit",
+              pages: 276,
+              year: 2019,
+              image: "cover/the-valley.jpg",
+              tag: "essai",
+              rating: "📚📚📚📚",
+              link: "https://www.decitre.fr/livres/the-valley-9782352046844.html"
+            },
+            {
+              title: "Le Modèle californien",
+              subtitle: "Comment l'esprit collaboratif change le monde",
+              author: "Monique Dagnaud",
+              pages: 204,
+              year: 2016,
+              image: "cover/modele-californien.jpg",
+              tag: "essai",
+              rating: "📚📚",
+              link: "https://www.odilejacob.fr/catalogue/sciences-humaines/economie-et-finance/modele-californien_9782738134196.php"
+            },
+            {
+              title: "Une brève histoire du temps",
+              subtitle: "Du big bang aux trous noirs",
+              author: "Stephen Hawking",
+              pages: 245,
+              year: 1989,
+              image: "cover/une-breve-histoire-du-temps.jpg",
+              tag: "science",
+              rating: "📚📚📚📚",
+              link: "https://editions.flammarion.com/une-breve-histoire-du-temps/9782081452015"
+            },
+            {
+              title: "Homo Deus",
+              subtitle: "Une brève histoire de l'avenir",
+              author: "Yuval Noah Harari",
+              pages: 464,
+              year: 2017,
+              image: "cover/home-deus.jpg",
+              tag: "essai",
+              rating: "📚📚",
+              link: "https://www.albin-michel.fr/ouvrages/homo-deus-9782226393876"
+            },
+            {
+              title: "Nos Ancêtres les Gaulois et autres fadaises",
+              subtitle: "L'histoire de France sans clichés",
+              author: "François Reynaet",
+              pages: 528,
+              year: 2010,
+              image: "cover/ancetres-gaulois.jpg",
+              tag: "histoire",
+              rating: "📚📚📚📚📚",
+              link: "https://www.fayard.fr/histoire/nos-ancetres-les-gaulois-et-autres-fadaises-9782213655154"
+            },
+            {
+              title: "Les Vikings",
+              subtitle: "Histoire et civilisation",
+              author: "Régis Boyer",
+              pages: 442,
+              year: 1991,
+              image: "cover/vikings.jpg",
+              tag: "histoire",
+              rating: "📚📚📚📚📚",
+              link: "https://www.decitre.fr/livres/les-vikings-9782262050337.html"
+            },
+            {
+              title: "Les origines franques Ve - IXe siècle",
+              subtitle: null,
+              author: "Stéphane Lebecq",
+              pages: 320,
+              year: 1990,
+              image: "cover/origines-franque.jpg",
+              tag: "histoire",
+              rating: "📚📚📚📚📚",
+              link: "https://www.seuil.com/ouvrage/les-origines-franques-ve-ixe-siecle-stephane-lebecq/9782020115520"
+            },
+            {
+              title: "L'héritage des Charles",
+              subtitle: "De la mort de Charlemagne aux environs de l'an mil",
+              author: "Laurent Theis",
+              pages: 288,
+              year: 1990,
+              image: "cover/lheritage-des-charles.jpg",
+              tag: "histoire",
+              rating: "📚📚📚📚📚",
+              link: "https://www.seuil.com/ouvrage/l-heritage-des-charles-laurent-theis/9782757859919"
+            },
+            {
+              title: "L'Ordre seigneurial, XIe-XIIe siècle",
+              subtitle: null,
+              author: "Dominique Barthélemy",
+              pages: 320,
+              year: 1990,
+              image: "cover/lordre-segnerial.jpg",
+              tag: "histoire",
+              rating: "📚📚📚",
+              link: "https://halldulivre.com/livre/9782020115544-l-ordre-seigneurial-xie-xiie-siecle-dominique-barthelemy/"
+            },
+            {
+              title: "Temps d'équilibres, temps de ruptures, XIIIe siècle.",
+              subtitle: null,
+              author: "Monique Bourin-derruau",
+              pages: 338,
+              year: 1990,
+              image: "cover/temp-dequilibre.jpg",
+              tag: "histoire",
+              rating: "📚📚📚📚",
+              link: "https://www.seuil.com/ouvrage/temps-d-equilibres-temps-de-ruptures-xiiie-siecle-monique-bourin-derruau/9782020122207"
+            }
+          ]
+        }];
 
-      function toCamelCase(str) {
-        return str
-          .toLowerCase()
-          .replace(/[^a-zA-Z0-9]+(.)/g, function(match, chr) {
-            return chr.toUpperCase();
-          });
-      }
-
-      window.addEventListener("DOMContentLoaded", event => {
-        var template = document.querySelector("#book");
-        books.forEach(function(book) {
+        function formatBook(book) {
+          var template = document.querySelector("#book");
           var clone = document.importNode(template.content, true);
           clone.querySelector(".books img").src = book.image;
           clone.querySelector(".books img").alt = book.title;
-          clone.querySelector(".books h3 a").textContent = book.title;
-          clone.querySelector(".books h3 a").href = `#${toCamelCase(
-            book.title
-          )}`;
-          clone.querySelector(".books h3 a").id = `#${toCamelCase(book.title)}`;
+          clone.querySelector(".books .title a").textContent = book.title;
+          clone.querySelector(".books .title a").href = book.link;
+          clone.querySelector(".books .title a").title = book.title;
           if (book.subtitle !== null)
             clone.querySelector(".books .sub-title").textContent =
               book.subtitle;
           clone.querySelector(
             ".books .details"
-          ).textContent = `${book.author} - ${book.year} - ${book.pages}`;
+          ).textContent = `${book.author} - ${book.year} - ${book.pages} page`;
           clone.querySelector(".books .tag").textContent = book.tag;
-          clone.querySelector(".books .rating").textContent = book.rating;
-          clone.querySelector(".books .notes").textContent = book.notes;
+           clone.querySelector(".books .rating").textContent = `Avis ${book.rating}`;
+          // clone.querySelector(".books .notes").textContent = book.notes;
           document.querySelector("#main-books").appendChild(clone);
+        }
+
+        function formatYear(year) {
+          var template = document.querySelector("#year");
+          var clone = document.importNode(template.content, true);
+          clone.querySelector("h3").textContent = year;
+          document.querySelector("#main-books").appendChild(clone);
+        }
+
+        window.addEventListener("DOMContentLoaded", event => {
+          books.forEach(function (bookByYears) {
+            formatYear(bookByYears.year)
+            bookByYears.books.forEach(formatBook)
+          }
+          );
         });
-      });
     </script>
   </head>
   <body>
@@ -233,49 +263,23 @@
         <span itemprop="name">Fabien Furet</span>
         <span class="aka">aka RETFU</span>
       </h1>
-      <h2>Books I’ve read 📚</h2>
-      <p class="intro">
-        Quick notes to keep track of my reading and to share.My books are mostly
-        in french, start this in 2020. Have fun.
-      </p>
-      <br />
+      <h2>Lectures 📚</h2>
       <div id="main-books">
+        <template id="year"><h3></h3></template>
         <template id="book">
           <div class="books">
             <img src="" alt="" />
             <div>
-              <h3><a href=""></a></h3>
+              <h3 class="title"><a href=""></a></h3>
               <p class="sub-title"></p>
               <p class="details"></p>
-              <span class="tag"></span><span class="rating"></span>
-              <p class="notes"></p>
+              <span class="rating"></span><br/><br/>
+              <span class="tag"></span>
+              <!-- <p class="notes"></p> -->
             </div>
           </div>
         </template>
       </div>
     </div>
-    <script>
-      (function(i, s, o, g, r, a, m) {
-        i["GoogleAnalyticsObject"] = r;
-        (i[r] =
-          i[r] ||
-          function() {
-            (i[r].q = i[r].q || []).push(arguments);
-          }),
-          (i[r].l = 1 * new Date());
-        (a = s.createElement(o)), (m = s.getElementsByTagName(o)[0]);
-        a.async = 1;
-        a.src = g;
-        m.parentNode.insertBefore(a, m);
-      })(
-        window,
-        document,
-        "script",
-        "//www.google-analytics.com/analytics.js",
-        "ga"
-      );
-      ga("create", "UA-57157993-1", "auto");
-      ga("send", "pageview");
-    </script>
   </body>
 </html>

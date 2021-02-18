@@ -94,18 +94,6 @@ a:hover {
   margin-bottom: 2em;
 }
 
-.books .tag {
-  display: inline-block;
-  padding: 4px 6px;
-  line-height: 20px;
-  color: #fff;
-  text-align: center;
-  border-radius: 3px;
-  background-color: rgb(204, 201, 201);
-  margin: 4px;
-  font-size: 0.8em;
-}
-
 .books img {
   max-width: 150px;
   margin-right: 1em;
@@ -115,11 +103,11 @@ a:hover {
 .books h3 {
   margin: 0;
   padding: 0;
-  font-size: 1.2em;
+  font-size: 1.6em;
 }
 
 .books .sub-title {
-  font-size: 1em;
+  font-size: 1.1em;
   font-style: italic;
   padding-top: 0.7em;
   margin: 0;
@@ -127,8 +115,8 @@ a:hover {
 
 .books .details {
   font-size: 0.9em;
-  padding-top: 0.7em;
-  padding-bottom: 4em;
+  padding-top: 1em;
+  padding-bottom: 1em;
   margin: 0;
 }
 
@@ -137,5 +125,8 @@ a:hover {
 }
 
 .books .tag {
-  font-size: 0.9em;
+  font-size: 0.8em;
+  margin: 0;
+  margin-bottom: 1em;
+  background-color: rgb(204, 201, 201);
 }

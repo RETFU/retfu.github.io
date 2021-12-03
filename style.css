@@ -7,7 +7,7 @@
   max-width: 800px;
   padding-left: 1em;
   padding-right: 1em;
-  font-size: 1.2em;
+  font-size: 1.5em;
 }
 h1 {
   font-family: "Work Sans", sans-serif;
@@ -46,11 +46,11 @@ a:hover {
 
 .tag {
   display: inline-block;
-  padding: 4px 6px;
+  padding: 8px;
   line-height: 20px;
   color: #fff;
   text-align: center;
-  border-radius: 3px;
+  border-radius: 5px;
   background-color: #999;
   margin: 4px;
   font-weight: 400;

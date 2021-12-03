@@ -1,7 +1,7 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
     "content-hash": "5fd5934894283cc3a16c13382e65e662",
@@ -30,6 +30,10 @@
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
+            "support": {
+                "issues": "https://github.com/lotsofcode/tag-cloud/issues",
+                "source": "https://github.com/lotsofcode/tag-cloud/tree/4.0.1"
+            },
             "time": "2014-08-05T19:40:53+00:00"
         }
     ],
@@ -40,5 +44,6 @@
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],
-    "platform-dev": []
+    "platform-dev": [],
+    "plugin-api-version": "2.1.0"
 }

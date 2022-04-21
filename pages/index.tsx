@@ -1,10 +1,12 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
+import { ReactElement } from 'react';
 import styled from 'styled-components';
 import theme from 'styled-theming';
+import ExternalLink from '../components/ExternalLink';
 import Tag, { Tag as TagType } from '../components/Tag';
-import { themeLink } from '../style/Theme';
+import { themeLink, themeMain } from '../style/Theme';
 
 const Header = styled.h1`
   font-family: 'Work Sans', sans-serif;
@@ -30,10 +32,6 @@ const Opportunity = styled.h2`
   text-align: center;
   margin-bottom: 50px;
   color: aliceblue;
-`;
-
-const ExternalLink = styled.a`
-  ${themeLink}
 `;
 
 const SubTitle = styled.h2`
@@ -96,7 +94,7 @@ const tags: TagType[] = [
   { name: 'code review', level: 5 },
 ];
 
-const Home: NextPage = () => {
+const Home = () => {
   return (
     <>
       <Head>
@@ -111,7 +109,10 @@ const Home: NextPage = () => {
         Looking for a new opportunity
         <br />
         DM me on{' '}
-        <ExternalLink href="https://twitter.com/RETFU">Twitter</ExternalLink>
+        <ExternalLink href="https://twitter.com/RETFU" variant="normal">
+          Twitter
+        </ExternalLink>{' '}
+        for my resume
       </Opportunity>
       <section>
         <SubTitle>Skills 🚀</SubTitle>
@@ -157,6 +158,55 @@ const Home: NextPage = () => {
           Feedback after 3 months
         </p>
       </section>
+    </>
+  );
+};
+
+const Root = styled.main`
+  ${themeMain}
+`;
+
+const Footer = styled.footer`
+  margin-top: 60px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 800px;
+  padding: 1em;
+  font-size: 1em;
+`;
+
+const StyledLink = styled.a`
+  font-family: 'Work Sans', sans-serif;
+  font-size: 1em;
+  ${themeLink}
+`;
+
+Home.getLayout = function getLayout(page: ReactElement) {
+  return (
+    <>
+      <Root>{page}</Root>
+      <Footer>
+        <Link href="/books" passHref>
+          <StyledLink href="/books" variant="footer">
+            Livres
+          </StyledLink>
+        </Link>
+        {' - '}
+        <StyledLink href="https://github.com/RETFU" variant="footer">
+          Github
+        </StyledLink>
+        {' - '}
+        <StyledLink href="https://twitter.com/RETFU" variant="footer">
+          Twitter
+        </StyledLink>
+        {' - '}
+        <StyledLink
+          href="https://fr.linkedin.com/in/fabienfuret"
+          variant="footer"
+        >
+          Linkedin
+        </StyledLink>
+      </Footer>
     </>
   );
 };

@@ -13,6 +13,7 @@
     "next": "12.1.5",
     "react": "18.0.0",
     "react-dom": "18.0.0",
+    "react-toggle-dark-mode": "1.0.4",
     "styled-components": "5.3.5",
     "styled-theming": "2.2.0"
   },

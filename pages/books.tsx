@@ -1,16 +1,16 @@
 import Head from 'next/head';
-import Image from 'next/image';
 import { ReactElement } from 'react';
 import styled from 'styled-components';
+import AccessibilityPanel from '../components/AccessibilityPanel';
 import ExternalLink from '../components/ExternalLink';
 import Tag from '../components/Tag';
 import { AllMyBooks } from '../data/Books';
-import { themeLink, themeMain } from '../style/Theme';
+import { themeHeaderColor, themeMain } from '../style/Theme';
 
 const Header = styled.h1`
   font-family: 'Work Sans', sans-serif;
   font-size: 3.3em;
-  color: #35ae77;
+  color: ${themeHeaderColor};
   margin-bottom: 50px;
   font-weight: 500;
 `;
@@ -42,6 +42,7 @@ const BookYear = styled.h3`
 const BookTitle = styled.h3`
   margin: 0;
   padding: 0;
+  padding-top: 20px;
   font-size: 1.5em;
 `;
 
@@ -71,8 +72,9 @@ const Books = () => {
         <meta name="description" content="Fabien Furet / Books" />
         <meta name="robots" content="noindex, nofollow" />
       </Head>
-      <Header itemScope itemType="http://data-vocabulary.org/Person">
-        <span itemProp="name">My Books</span>
+      <AccessibilityPanel />
+      <Header>
+        <span>My Books</span>
       </Header>
       <section>
         {AllMyBooks.map(({ year, books }) => {

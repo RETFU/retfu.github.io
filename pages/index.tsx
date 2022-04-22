@@ -1,17 +1,21 @@
-import type { NextPage } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
 import { ReactElement } from 'react';
 import styled from 'styled-components';
-import theme from 'styled-theming';
+import AccessibilityPanel from '../components/AccessibilityPanel';
 import ExternalLink from '../components/ExternalLink';
 import Tag, { Tag as TagType } from '../components/Tag';
-import { themeLink, themeMain } from '../style/Theme';
+import {
+  themeHeaderColor,
+  themeLink,
+  themeMain,
+  themeSubTitleColor,
+} from '../style/Theme';
 
 const Header = styled.h1`
   font-family: 'Work Sans', sans-serif;
   font-size: 3.3em;
-  color: #35ae77;
+  color: ${themeHeaderColor};
   margin-bottom: 50px;
   font-weight: 500;
 `;
@@ -39,7 +43,7 @@ const SubTitle = styled.h2`
   font-size: 2.3em;
   margin-top: 40px;
   margin-bottom: 0px;
-  color: #0a8bfd;
+  color: ${themeSubTitleColor};
   font-weight: 500;
 `;
 
@@ -101,6 +105,7 @@ const Home = () => {
         <title>Fabien Furet</title>
         <meta name="description" content="Personal website" />
       </Head>
+      <AccessibilityPanel />
       <Header itemScope itemType="http://data-vocabulary.org/Person">
         <span itemProp="name">Fabien Furet</span>{' '}
         <Aka itemProp="alternateName">aka RETFU</Aka>

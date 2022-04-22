@@ -16,7 +16,7 @@ export const themeMain = theme('mode', {
   dark: css`
     font-family: 'Work Sans', sans-serif;
     line-height: 1.5;
-    color: #173753;
+    color: #f5f2e7;
     margin-left: auto;
     margin-right: auto;
     max-width: 800px;
@@ -28,7 +28,17 @@ export const themeMain = theme('mode', {
 
 export const themePageBackgroundColor = theme('mode', {
   light: '#ffffff',
-  dark: '#000',
+  dark: '#2C3333',
+});
+
+export const themeHeaderColor = theme('mode', {
+  light: '#35ae77',
+  dark: '#FFF',
+});
+
+export const themeSubTitleColor = theme('mode', {
+  light: '#0a8bfd',
+  dark: '#AB46D2',
 });
 
 export const themeLink = theme.variants('mode', 'variant', {
@@ -40,7 +50,7 @@ export const themeLink = theme.variants('mode', 'variant', {
       }
     `,
     dark: css`
-      color: darkgray;
+      color: #395b64;
       &:hover {
         text-decoration: none;
       }
@@ -54,7 +64,7 @@ export const themeLink = theme.variants('mode', 'variant', {
       }
     `,
     dark: css`
-      color: darkblue;
+      color: #2666cf;
       &:hover {
         text-decoration: none;
       }

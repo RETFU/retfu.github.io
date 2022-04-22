@@ -6,6 +6,7 @@ import { themeMain } from '../style/Theme';
 import myPicture from '../public/fab.jpeg';
 import Link from 'next/link';
 import ExternalLink from '../components/ExternalLink';
+import AccessibilityPanel from '../components/AccessibilityPanel';
 
 const Header = styled.header`
   text-align: center;
@@ -69,6 +70,7 @@ const Resume = () => {
         />
         <meta property="og:url" content="https://fabienfuret.net/resume/" />
       </Head>
+      <AccessibilityPanel />
       <Header>
         <HeaderImage src={myPicture} width={250} height={250} />
         <HeaderText>Fabien Furet</HeaderText>
@@ -99,8 +101,9 @@ const Resume = () => {
         🏡 Full remote position
         <br />
         👨‍💻 Individual Contributor at least 50% of my time, more is better <br />
-        📱 Idealy frontend on <strong>mobile</strong> with React Native
-        ecosystem or <strong>web</strong> with React, open to work on backend
+        📱 Frontend on <strong>mobile</strong> with React Native or{' '}
+        <strong>web</strong> with React, open to work on{' '}
+        <strong>backend</strong>
         <br />
         👨‍🦰 Also I could manage/mentor a team or animate/organize a guild/chapter
         <br />
@@ -134,9 +137,11 @@ const Resume = () => {
         👨‍🔧 Practice <br />
         - Industry standards: test, code review, continuous integration etc...
         <br />
-        - Manage by goals, mostly via OKR with a product mindset: discovery,
-        client-centricity, why, outcomes, effectiveness & cross-functionnal
-        teams
+        - Product mindset: discovery, client-centricity, outcomes, effectiveness
+        & cross-functionnal teams
+        <br />
+        - Manage by creating clear, focused and measurable goals for a team,
+        improving processes
         <br />
         <br />
         👨‍💻 Tech <br />
@@ -162,7 +167,7 @@ const Resume = () => {
         <br />
         - Serverless: GCP Cloud Function only
         <br />
-        - IA & data science: a bit of ELK but no more
+        - IA & data science: a bit of ELK but not more
         <br />
         <br />
         👴 Old
@@ -198,8 +203,7 @@ const Resume = () => {
         <ExternalLink variant="normal" href="https://www.iwd.io/about-us">
           company
         </ExternalLink>{' '}
-        from 3 to 120 people, 3 to 30000+ users, 0 to 10M$+ revenue, 0 to 5
-        offices across the globe
+        from 3 to 120+ employees, 30000+ users, 12M$+ revenue
         <br />
         💰 Help raise funding with{' '}
         <ExternalLink variant="normal" href="https://bit.ly/3oibWj5">
@@ -230,11 +234,11 @@ const Resume = () => {
         </ExternalLink>{' '}
         & manage a remote team of 35+ people based in 🇫🇷 🇷🇴 🇺🇸 🇸🇬
         <br />
-        👌 Quality as core value: code review, unit/integration/e2e testing,
-        robust CI, automation: {'"one button deploy"'} mindset
+        👌 Quality as core value: code review, testing, robust CI, automation ={' '}
+        {'"one button deploy"'} mindset
         <br />
-        👨‍💻 Tech team turnover{' < '}6% = autonomous + quality + sustainable
-        rhythm + remote + training/mentoring
+        👨‍💻 Turnover{' < '}6% = autonomous + quality + sustainable rhythm +
+        remote + training/mentoring
         <br />
         👨‍🏫 Mentor the{' '}
         <ExternalLink

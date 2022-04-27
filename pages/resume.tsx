@@ -55,7 +55,7 @@ const Resume = () => {
   return (
     <>
       <Head>
-        <title>Fabien Furet resume 🤓</title>
+        <title>Fabien Furet resume</title>
         <meta name="description" content="My detailed resume for recruiters" />
         <meta name="robots" content="noindex, nofollow" />
         <meta property="og:site_name" content="Fabien Furet" />
@@ -84,13 +84,11 @@ const Resume = () => {
         <ExternalLink variant="normal" href="mailto:fabien.furet@gmail.com">
           fabien.furet@gmail.com
         </ExternalLink>
-        {' // '}
-        +33687321068
         <br />
         <ExternalLink variant="normal" href="https://github.com/RETFU">
           Github
         </ExternalLink>{' '}
-        -
+        -{' '}
         <ExternalLink variant="normal" href="https://twitter.com/RETFU">
           Twitter
         </ExternalLink>{' '}
@@ -154,11 +152,16 @@ const Resume = () => {
         - Node.js
         <br />-{' '}
         <ExternalLink variant="normal" href="https://phptherightway.com/">
-          LAMP stack
-        </ExternalLink>{' '}
-        veteran
+          PHP
+        </ExternalLink>
         <br />
-        - See more detailed in Career section bellow
+        - MySQL
+        <br />
+        - Redis
+        <br />
+        - Elasticsearch
+        <br />
+        - See more details in Career section bellow
         <br />
         <br />
         👨‍🎓 To be improved
@@ -172,8 +175,12 @@ const Resume = () => {
         <br />
         👴 Old
         <br />
-        - ActionScript 2 & 3 <br />
-        - Adobe media server (realtime server) <br />- ASP / Access
+        - ActionScript 2 & 3<br />
+        - Adobe media server (realtime server)
+        <br />
+        - Adobe PhoneGap
+        <br />- Cordova
+        <br />- ASP / Access
       </section>
       <SectionTitle>Career</SectionTitle>
       <section>
@@ -237,8 +244,8 @@ const Resume = () => {
         👌 Quality as core value: code review, testing, robust CI, automation ={' '}
         {'"one button deploy"'} mindset
         <br />
-        👨‍💻 Turnover{' < '}6% = autonomous + quality + sustainable rhythm +
-        remote + training/mentoring
+        👨‍💻 Turnover{' < '}6% = autonomous + quality + sustainable + remote +
+        training/mentoring
         <br />
         👨‍🏫 Mentor the{' '}
         <ExternalLink
@@ -271,19 +278,20 @@ const Resume = () => {
         <br />
         <strong>Stack</strong>
         <br />
-        - Web: TypeScript + React (Cypress, Jest, React Testing Library, React
-        Query)
+        - Mobile: TypeScript + React Native (Eslint, Jest, React Testing
+        Library, Detox, Redux Toolkit, Styled-component, Formik) - Firebase
+        platform: Messaging, Firestore, Cloud Function...
         <br />
-        - Mobile: TypeScript + React Native (Detox, Jest, React Testing Library,
-        Redux) - Firebase platform: Messaging, Firestore, Cloud Function...
+        - Web: TypeScript + React (Eslint, Cypress, Jest, React Testing Library,
+        React Query, Postcss, Formik)
         <br />
         - 2D editor: TypeScript + React (Jest, Testcafe) + custom rendering
         engine via Canvas
         <br />
         - 3D editor: C# - Unity SDK
         <br />
-        - Backend: REST API with PHP (Symfony, PHPUnit, PHPStan) + MYSQL + REDIS
-        + ELASTICSEARCH
+        - Backend: REST API with PHP (Symfony, PHPUnit, PHPStan) + MySQL + Redis
+        + Elasticsearch
         <br />
         - Infrastructure: AWS via Ansible/Terraform
         <br />

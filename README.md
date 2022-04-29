@@ -1,6 +1,6 @@
 # Source code of fabienfuret.net
 
-Overengine website to try things 😅
+Over-engineering website to try things 😅
 
-- React / Nextjs / Styled-component
+- React / Nextjs / styled-component
 - Deploy with Vercel

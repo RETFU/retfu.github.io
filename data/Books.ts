@@ -25,6 +25,17 @@ export const AllMyBooks = [
         link: 'https://www.oreilly.com/library/view/the-managers-path/9781491973882/',
       },
       {
+        title: 'Le premier homme',
+        subtitle: '',
+        author: 'Albert Camus & Jacques Ferrandez',
+        pages: 184,
+        year: 2017,
+        image: 'cover/le-premier-homme.jpeg',
+        tag: 'bd',
+        rating: '📚📚📚',
+        link: 'https://www.gallimard-bd.fr/9782075074155/le-premier-homme.html',
+      },
+      {
         title: 'La Guerre hors limites',
         subtitle: '',
         author: 'Liang Qiao & Xiangsui Wang',

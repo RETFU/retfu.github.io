@@ -2,7 +2,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { ReactElement } from 'react';
 import styled from 'styled-components';
-import AccessibilityPanel from '../components/AccessibilityPanel';
+import theme from 'styled-theming';
 import ExternalLink from '../components/ExternalLink';
 import Tag, { Tag as TagType } from '../components/Tag';
 import {
@@ -24,13 +24,18 @@ const Aka = styled.span`
   font-size: 0.3em;
 `;
 
+const opportunityBackgroundColor = theme('mode', {
+  light: '#fdb00a',
+  dark: '#270082',
+});
+
 const Opportunity = styled.h2`
   font-family: 'Work Sans', sans-serif;
   font-weight: 500;
   font-size: 1.5em;
   margin-top: 20px;
   margin-bottom: 0px;
-  background-color: #fdb00a;
+  background-color: ${opportunityBackgroundColor};
   border-radius: 20px;
   padding: 20px;
   text-align: center;
@@ -105,7 +110,6 @@ const Home = () => {
         <title>Fabien Furet</title>
         <meta name="description" content="Personal website" />
       </Head>
-      <AccessibilityPanel />
       <Header itemScope itemType="http://data-vocabulary.org/Person">
         <span itemProp="name">Fabien Furet</span>{' '}
         <Aka itemProp="alternateName">aka RETFU</Aka>

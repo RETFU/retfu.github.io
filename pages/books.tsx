@@ -1,7 +1,6 @@
 import Head from 'next/head';
 import { ReactElement } from 'react';
 import styled from 'styled-components';
-import AccessibilityPanel from '../components/AccessibilityPanel';
 import ExternalLink from '../components/ExternalLink';
 import Tag from '../components/Tag';
 import { AllMyBooks } from '../data/Books';
@@ -72,7 +71,6 @@ const Books = () => {
         <meta name="description" content="Fabien Furet / Books" />
         <meta name="robots" content="noindex, nofollow" />
       </Head>
-      <AccessibilityPanel />
       <Header>
         <span>My Books</span>
       </Header>

@@ -1,5 +1,11 @@
-import { css } from 'styled-components';
+import { createGlobalStyle, css } from 'styled-components';
 import theme from 'styled-theming';
+
+export const ThemeMode = {
+  light: 'light',
+  dark: 'dark',
+} as const;
+export type ThemeMode = typeof ThemeMode[keyof typeof ThemeMode];
 
 export const themeMain = theme('mode', {
   light: css`
@@ -28,7 +34,7 @@ export const themeMain = theme('mode', {
 
 export const themePageBackgroundColor = theme('mode', {
   light: '#ffffff',
-  dark: '#2C3333',
+  dark: '#1A1A40',
 });
 
 export const themeHeaderColor = theme('mode', {
@@ -38,7 +44,7 @@ export const themeHeaderColor = theme('mode', {
 
 export const themeSubTitleColor = theme('mode', {
   light: '#0a8bfd',
-  dark: '#AB46D2',
+  dark: '#fa58b6',
 });
 
 export const themeLink = theme.variants('mode', 'variant', {
@@ -50,7 +56,7 @@ export const themeLink = theme.variants('mode', 'variant', {
       }
     `,
     dark: css`
-      color: #395b64;
+      color: #5a0bc0;
       &:hover {
         text-decoration: none;
       }
@@ -64,10 +70,17 @@ export const themeLink = theme.variants('mode', 'variant', {
       }
     `,
     dark: css`
-      color: #2666cf;
+      color: #0a8bfd;
       &:hover {
         text-decoration: none;
       }
     `,
   },
 });
+
+export const GlobalStyle = createGlobalStyle`
+  body {
+    background-color:${themePageBackgroundColor};
+    transition: all 0.30s linear;
+  }
+`;

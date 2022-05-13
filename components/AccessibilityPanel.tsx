@@ -1,6 +1,6 @@
 import { DarkModeSwitch } from 'react-toggle-dark-mode';
 import styled from 'styled-components';
-import useDarkMode from '../style/useDarkMode';
+import { ThemeMode } from '../style/Theme';
 
 const Container = styled.div`
   position: fixed;
@@ -8,17 +8,22 @@ const Container = styled.div`
   top: 1em;
 `;
 
-const AccessibilityPanel = () => {
-  return <></>;
-  const darkMode = useDarkMode();
+type AccessibilityPanelProps = {
+  onChange: () => void;
+  themeMode: ThemeMode;
+};
+
+const AccessibilityPanel = ({
+  onChange,
+  themeMode,
+}: AccessibilityPanelProps) => {
   return (
     <Container>
       <DarkModeSwitch
         style={{ marginBottom: '2rem' }}
-        checked={darkMode.mode === 'dark'}
-        onChange={darkMode.toggle}
+        checked={themeMode === ThemeMode.dark}
+        onChange={onChange}
         size={40}
-        moonColor="black"
       />
     </Container>
   );

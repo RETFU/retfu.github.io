@@ -2,11 +2,11 @@ import Head from 'next/head';
 import Image from 'next/image';
 import { ReactElement } from 'react';
 import styled from 'styled-components';
-import { themeMain } from '../style/Theme';
+import { themeMain, themeSubTitleColor } from '../style/Theme';
 import myPicture from '../public/fab.jpeg';
 import Link from 'next/link';
 import ExternalLink from '../components/ExternalLink';
-import AccessibilityPanel from '../components/AccessibilityPanel';
+import theme from 'styled-theming';
 
 const Header = styled.header`
   text-align: center;
@@ -31,16 +31,21 @@ const SectionTitle = styled.h2`
   font-family: 'Work Sans', sans-serif;
   font-size: 2em;
   font-weight: 500;
-  color: #173753;
+  color: ${themeSubTitleColor};
   border-bottom: 1px solid #ccc;
   padding-top: 80px;
 `;
+
+const careerTitleLinkColor = theme('mode', {
+  light: '#0a8bfd',
+  dark: '#7A0BC0',
+});
 
 const CareerTitle = styled.h3`
   font-family: 'Work Sans', sans-serif;
   font-size: 1.5em;
   margin: 0;
-  color: #0a8bfd;
+  color: ${careerTitleLinkColor};
 `;
 
 const CarreerSubTitle = styled.h4`
@@ -69,8 +74,11 @@ const Resume = () => {
           content="https://fabienfuret.net/resume/fab.jpeg"
         />
         <meta property="og:url" content="https://fabienfuret.net/resume/" />
+        <link
+          rel="icon"
+          href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🤓</text></svg>"
+        />
       </Head>
-      <AccessibilityPanel />
       <Header>
         <HeaderImage src={myPicture} width={250} height={250} />
         <HeaderText>Fabien Furet</HeaderText>
@@ -467,7 +475,7 @@ const Resume = () => {
         📚{' '}
         <Link href="/books" passHref>
           <ExternalLink href="/books" variant="normal">
-            Livres
+            Books
           </ExternalLink>
         </Link>
         , mainly history and essay books

@@ -79,6 +79,9 @@ export const themeLink = theme.variants('mode', 'variant', {
 });
 
 export const GlobalStyle = createGlobalStyle`
+  html {
+    scroll-behavior:smooth;
+  }
   body {
     background-color:${themePageBackgroundColor};
     transition: all 0.30s linear;

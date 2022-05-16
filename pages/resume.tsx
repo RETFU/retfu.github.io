@@ -106,10 +106,9 @@ const Resume = () => {
       <section>
         🏡 Full remote position
         <br />
-        👨‍💻 Individual Contributor at least 50% of my time, more is better <br />
-        📱 Frontend on <strong>mobile</strong> with React Native or{' '}
-        <strong>web</strong> with React, open to work on{' '}
-        <strong>backend</strong>
+        👨‍💻 Individual Contributor or Squad/Team Manager (hands-on ideally)
+        <br />
+        💁‍♂️ Frontend and/or Backend
         <br />
         👨‍🦰 Also I could manage/mentor a team or animate/organize a guild/chapter
         <br />
@@ -118,13 +117,9 @@ const Resume = () => {
         <br />
         Depending of the size/organization of the company, something like:
         <br />
-        - Senior Engineer
-        <br />
-        - Lead Engineer
+        - Senior/Lead Engineer
         <br />
         - Engineer Manager
-        <br />
-        - Staff Engineer
         <br />- ...
       </section>
       <SectionTitle>Skills</SectionTitle>
@@ -172,7 +167,7 @@ const Resume = () => {
         - See more details in Career section bellow
         <br />
         <br />
-        👨‍🎓 To be improved
+        {/* 👨‍🎓 To be improved
         <br />
         - Docker: CI side ok, never run it in production
         <br />
@@ -180,7 +175,7 @@ const Resume = () => {
         <br />
         - IA & data science: a bit of ELK but not more
         <br />
-        <br />
+        <br /> */}
         👴 Old
         <br />
         - ActionScript 2 & 3<br />

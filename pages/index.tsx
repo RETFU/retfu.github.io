@@ -197,7 +197,7 @@ Home.getLayout = function getLayout(page: ReactElement) {
       <Footer>
         <Link href="/books" passHref>
           <StyledLink href="/books" variant="footer">
-            Livres
+            Books
           </StyledLink>
         </Link>
         {' - '}

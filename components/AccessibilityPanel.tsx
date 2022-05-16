@@ -20,10 +20,10 @@ const AccessibilityPanel = ({
   return (
     <Container>
       <DarkModeSwitch
-        style={{ marginBottom: '2rem' }}
         checked={themeMode === ThemeMode.dark}
         onChange={onChange}
         size={40}
+        data-testid="switch"
       />
     </Container>
   );

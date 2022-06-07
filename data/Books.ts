@@ -9,7 +9,7 @@ export const AllMyBooks = [
         pages: 320,
         year: 2013,
         image: 'cover/rino-or.jpg',
-        tag: 'histore',
+        tag: 'histoire',
         rating: 'en cours de lecture',
         link: 'https://www.gallimard.fr/Catalogue/GALLIMARD/Folio/Folio-histoire/Le-rhinoceros-d-or',
       },

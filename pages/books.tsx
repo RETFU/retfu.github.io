@@ -89,6 +89,7 @@ const Books = () => {
                   rating,
                   link,
                   author,
+                  year,
                 }) => {
                   return (
                     <Book key={title}>

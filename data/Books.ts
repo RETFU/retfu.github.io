@@ -3,6 +3,17 @@ export const AllMyBooks = [
     year: 2022,
     books: [
       {
+        title: "Le rhinocéros d'or",
+        subtitle: 'Histoire du Moyen Age Africain',
+        author: 'François-Xavier Fauvelle-Aymar',
+        pages: 320,
+        year: 2013,
+        image: 'cover/rino-or.jpg',
+        tag: 'histore',
+        rating: 'en cours de lecture',
+        link: 'https://www.gallimard.fr/Catalogue/GALLIMARD/Folio/Folio-histoire/Le-rhinoceros-d-or',
+      },
+      {
         title: 'Building Mobile Apps at Scale',
         subtitle: '39 Engineering Challenges',
         author: 'Gergely Orosz',
@@ -10,7 +21,7 @@ export const AllMyBooks = [
         year: 2021,
         image: 'cover/build-app-at-scale.jpg',
         tag: 'tech',
-        rating: 'en cours de lecture',
+        rating: '📚📚📚',
         link: 'https://www.mobileatscale.com/',
       },
       {

@@ -231,7 +231,7 @@ const Resume = () => {
         💪{' '}
         <ExternalLink
           variant="normal"
-          href="https://github.com/iwonderanddev/jobladder/tree/new-job-ladder#readme"
+          href="https://github.com/iwonderanddev/jobladder"
         >
           Build
         </ExternalLink>

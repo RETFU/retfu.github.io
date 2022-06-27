@@ -114,7 +114,7 @@ const Home = () => {
         <span itemProp="name">Fabien Furet</span>{' '}
         <Aka itemProp="alternateName">aka RETFU</Aka>
       </Header>
-      <Opportunity>
+      {/* <Opportunity>
         Looking for a new opportunity
         <br />
         DM me on{' '}
@@ -122,7 +122,7 @@ const Home = () => {
           Twitter
         </ExternalLink>{' '}
         for my resume
-      </Opportunity>
+      </Opportunity> */}
       <section>
         <SubTitle>Skills 🚀</SubTitle>
         <p>

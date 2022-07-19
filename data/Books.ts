@@ -3,6 +3,17 @@ export const AllMyBooks = [
     year: 2022,
     books: [
       {
+        title: 'La révolution néolithique dans le monde',
+        subtitle: '',
+        author: 'Jean-Paul Demoule',
+        pages: 488,
+        year: 2010,
+        image: 'cover/la-revolution-neolithique.jpeg',
+        tag: 'histoire',
+        rating: 'en cours de lecture',
+        link: 'https://books.openedition.org/editionscnrs/15605',
+      },
+      {
         title: "Le rhinocéros d'or",
         subtitle: 'Histoire du Moyen Age Africain',
         author: 'François-Xavier Fauvelle-Aymar',
@@ -10,7 +21,7 @@ export const AllMyBooks = [
         year: 2013,
         image: 'cover/rino-or.jpg',
         tag: 'histoire',
-        rating: 'en cours de lecture',
+        rating: '📚📚📚',
         link: 'https://www.gallimard.fr/Catalogue/GALLIMARD/Folio/Folio-histoire/Le-rhinoceros-d-or',
       },
       {

@@ -3,6 +3,29 @@ export const AllMyBooks = [
     year: 2022,
     books: [
       {
+        title: 'Dragon Ball',
+        subtitle: '6/17',
+        author: 'Akira Toriyama',
+        pages: 200,
+        year: 1985,
+        image: 'cover/dragon-ball.webp',
+        tag: 'manga',
+        rating: 'en cours de lecture',
+        link: 'https://www.glenat.com/dragon-ball/dragon-ball-edition-originale-tome-01-9782723434621',
+      },
+      {
+        title: "L'Année sauvage",
+        subtitle: 'Une vie sans technologie au rythme de la nature',
+        author: 'Mark Boyle',
+        pages: 413,
+        year: 2021,
+        image: 'cover/annee-sauvage.webp',
+        tag: 'essai',
+        rating: 'en cours de lecture',
+        link: 'https://arenes.fr/livre/lannee-sauvage/',
+      },
+
+      {
         title: 'La révolution néolithique dans le monde',
         subtitle: '',
         author: 'Jean-Paul Demoule',
@@ -10,7 +33,7 @@ export const AllMyBooks = [
         year: 2010,
         image: 'cover/la-revolution-neolithique.jpeg',
         tag: 'histoire',
-        rating: 'en cours de lecture',
+        rating: '📚📚📚📚',
         link: 'https://books.openedition.org/editionscnrs/15605',
       },
       {

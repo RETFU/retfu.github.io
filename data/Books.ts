@@ -4,7 +4,7 @@ export const AllMyBooks = [
     books: [
       {
         title: 'Dragon Ball',
-        subtitle: '6/17',
+        subtitle: 'Tome6/17',
         author: 'Akira Toriyama',
         pages: 200,
         year: 1985,
@@ -14,6 +14,17 @@ export const AllMyBooks = [
         link: 'https://www.glenat.com/dragon-ball/dragon-ball-edition-originale-tome-01-9782723434621',
       },
       {
+        title: 'Le Laboureur et les Mangeurs de vent',
+        subtitle: 'Liberté intérieure et confortable servitude',
+        author: 'Boris Cyrulnik',
+        pages: 272,
+        year: 2022,
+        image: 'cover/laboureur-et-les-mangeurs-de-vent.jpeg',
+        tag: 'essai',
+        rating: 'en cours de lecture',
+        link: 'https://www.odilejacob.fr/catalogue/psychologie/psychologie-generale/laboureur-et-les-mangeurs-de-vent_9782415001360.php',
+      },
+      {
         title: "L'Année sauvage",
         subtitle: 'Une vie sans technologie au rythme de la nature',
         author: 'Mark Boyle',
@@ -21,10 +32,9 @@ export const AllMyBooks = [
         year: 2021,
         image: 'cover/annee-sauvage.webp',
         tag: 'essai',
-        rating: 'en cours de lecture',
+        rating: '📚📚📚',
         link: 'https://arenes.fr/livre/lannee-sauvage/',
       },
-
       {
         title: 'La révolution néolithique dans le monde',
         subtitle: '',

@@ -93,7 +93,7 @@ export const AllMyBooks = [
         year: 2019,
         image: 'cover/homo-domesticus.jpeg',
         tag: 'history',
-        rating: 'en cours de lecture',
+        rating: '📚📚📚📚',
         link: 'https://www.editionsladecouverte.fr/homo_domesticus-9782707199232',
       },
       {
